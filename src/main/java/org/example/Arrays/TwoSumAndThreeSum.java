@@ -23,6 +23,7 @@ class TwoSumAndThreeSum{
         System.out.println("Min Number In Array Is : "+ findMin(arr));
         System.out.println("Second Max Number In Array Is : "+ secondMaximum(arr));
         System.out.println("Second Min Number In Array Is : "+ secondMinimum(arr));
+        swap(4,7);
 
     }
 
@@ -97,6 +98,12 @@ class TwoSumAndThreeSum{
         return arr[1];
     }
 
-
+    public static void swap(int a, int b){
+        a = a  + b;
+        b = a - b;
+        a = a - b;
+        System.out.println("a: "+a);
+        System.out.println("b: "+b);
+    }
 
 }
