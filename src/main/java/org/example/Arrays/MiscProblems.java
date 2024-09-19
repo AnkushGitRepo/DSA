@@ -4,16 +4,11 @@ class MiscProblems{
         int arr[] = {13,46,24,52,20,9};
         int [] sortedArray = selectionSort(arr);
         print(sortedArray);
+        int[] reversedArray = reverseArray(arr);
+        print(reversedArray);
     }
 
-    public static int[] reverseArray(int [] arr){
-        int j = 0;
-        int [] reversedArray = new int[arr.length];
-        for(int i = arr.length-1; i >= 0; i--){
-                reversedArray[j++] = arr[i];
-        }
-        return reversedArray;
-    }
+
 
     public static void print(int [] arr){
         for(int i = 0; i < arr.length; i++){
@@ -35,5 +30,14 @@ class MiscProblems{
             arr[i] = temp;
         }
         return arr;
+    }
+
+    public static int[] reverseArray(int arr[]){
+        int[] resultArray = new int[arr.length];
+        int j = 0;
+        for (int i = arr.length - 1; i >= 0; i--){
+            resultArray[j++] = arr[i];
+        }
+        return resultArray;
     }
 }
