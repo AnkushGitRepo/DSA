@@ -1,11 +1,24 @@
+import java.util.Scanner;
 
 class MiscProblems{
     public static void main(String[] args) {
-        int arr[] = {13,46,24,52,20,9};
+        Scanner newObj = new Scanner(System.in);
+        int arr[] = {13,46,24,52,20,9,9,9,9,20};
         int [] sortedArray = selectionSort(arr);
         print(sortedArray);
         int[] reversedArray = reverseArray(arr);
         print(reversedArray);
+        int [] rotatedArray = rotate(sortedArray, 2001);
+        print(rotatedArray);
+        print(reverseWithSpace(sortedArray, 2000));
+        int [] frequencyArray = freqArraySearch(arr);
+        System.out.print("Enter Number of Times You Want To Search: ");
+        int times = newObj.nextInt();
+        for (int i = 1; i <= times; i++){
+            System.out.print("Enter the number you want to search: ");
+            int numb = newObj.nextInt();
+            System.out.println("Number of Times Appear In Array: "+ frequencyArray[numb]);
+        }
     }
 
 
@@ -40,4 +53,49 @@ class MiscProblems{
         }
         return resultArray;
     }
+
+    public static int[] rotate(int arr[] , int k){
+        k = k % arr.length;
+        int j = 0;
+        int [] result = new int[arr.length];
+        for(int i = arr.length - k; i <= arr.length - 1; i++){
+            result[j++] = arr[i];
+        }
+        for(int i = 0; i < arr.length - k; i++){
+            result[j++] = arr[i];
+        }
+        return result;
+    }
+
+    public static void swap(int [] arr, int i, int j){
+        arr[i] = arr[i] + arr[j];
+        arr[j] = arr[i] - arr[j];
+        arr[i] = arr[i] - arr[j];
+    }
+
+    public static void reverse(int [] arr, int i, int j){
+        while(i < j){
+            swap(arr,i,j);
+            i++;
+            j--;
+        }
+    }
+
+    public static int[] reverseWithSpace(int []arr , int k){
+       int n = arr.length;
+       k = k % n;
+       reverse(arr,0,n-k-1);
+       reverse(arr, n-k, n-1);
+       reverse(arr, 0, n- 1);
+       return arr;
+    }
+
+    public static int[] freqArraySearch(int [] arr){
+        int [] freq = new int[10000];
+        for(int i = 0; i < arr.length; i++){
+            freq[arr[i]] += 1;
+         }
+        return freq;
+    }
+
 }
