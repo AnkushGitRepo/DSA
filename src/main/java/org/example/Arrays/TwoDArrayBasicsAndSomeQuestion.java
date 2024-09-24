@@ -36,6 +36,51 @@ class TwoDArrayBasicsAndSomeQuestion{
         System.out.println("Reversed 2D Array");
         int [][] reverse2DArray = reverse2DArray(arr4);
         print(reverse2DArray);
+
+        // Transpose Of Matrix
+        System.out.println("Transpose Of Matrix Test 1");
+        int [][] arr5 = {{1,2,3},{4,5,6},{7,8,9}};
+        print(arr5);
+        int [][] transposeMatrix = transposeOfMatrix(arr5);
+        print(transposeMatrix);
+
+        System.out.println("Transpose Of Matrix Test 2");
+        int [][] arr6 = {{1,2},{3,4},{5,6}};
+        print(arr6);
+        int [][] transposeMatrix2 = transposeOfMatrix(arr6);
+        print(transposeMatrix2);
+
+        // Transpose Of Matrix In Place
+        System.out.println("Transpose Of Matrix In Place Test 1");
+        int [][] arr7 = {{1,2,3},{4,5,6},{7,8,9}};
+        print(arr7);
+        transposeOfMatrixInPlace(arr7);
+        print(arr7);
+
+        System.out.println("Transpose Of Matrix In Place Test 2");
+        int [][] arr8 = {{1,2},{3,4},{5,6}};
+        print(arr8);
+        transposeOfMatrixInPlace(arr8);
+        print(arr8);
+
+        // Rotate 2D Array
+        System.out.println("Rotate 2D Array Test 1");
+        int [][] arr9 = {{1,2,3},{4,5,6},{7,8,9}};
+        print(arr9);
+        int [][] rotate2DArray = rotate2DArray(arr9);
+        print(rotate2DArray);
+
+        System.out.println("Rotate 2D Array Test 2");
+        int [][] arr10 = {{1,2},{3,4},{5,6}};
+        print(arr10);
+        int [][] rotate2DArray2 = rotate2DArray(arr10);
+        print(rotate2DArray2);
+
+        // Pascal Triangle
+        System.out.println("Pascal Triangle");
+        int [][] pascalTriangle = pascalTriangle(5);
+        print(pascalTriangle);
+
     }
 
 
@@ -128,5 +173,59 @@ class TwoDArrayBasicsAndSomeQuestion{
             i++;
             j--;
         }
+    }
+
+    // Transpose Of Matrix
+    public static int[][] transposeOfMatrix(int [][] arr){
+        int [][] transposeMatrix = new int[arr[0].length][arr.length];
+        for(int i = 0; i < arr[0].length; i++){
+            for(int j = 0; j < arr.length; j++){
+                transposeMatrix[i][j] = arr[j][i];
+            }
+        }
+        return transposeMatrix;
+    }
+
+
+    // Transpose Of Matrix In Place : Do not use extra space and create result array.
+    // Note: This method will only work for square matrix. If you
+    public static void transposeOfMatrixInPlace(int [][] arr){
+        if(arr.length != arr[0].length){
+            System.out.println("Transpose Of Matrix In Place Not Possible: Not A Square Matrix");
+            return;
+        }
+        for(int i = 0; i < arr.length; i++){
+            for(int j = i + 1; j < arr[0].length; j++){
+                arr[i][j] = arr[i][j] + arr[j][i];
+                arr[j][i] = arr[i][j] - arr[j][i];
+                arr[i][j] = arr[i][j] - arr[j][i];
+            }
+        }
+    }
+
+    // Rotate 2D Array : Rotate 2D Array by 90 degree Clockwise.
+    public static int[][] rotate2DArray(int [][] arr ){
+        arr = transposeOfMatrix(arr);
+        for(int i = 0; i < arr.length; i++){
+            reverse(arr[i], 0 , arr[i].length - 1);
+        }
+        return arr;
+    }
+
+    // Pascal Triangle
+    public static int[][] pascalTriangle(int n){
+        int [][] pascalTriangle = new int[n][];
+        for(int i =0; i < n; i++){
+            // Each Row Has i+1 Elements
+            pascalTriangle[i] = new int[i+1];
+            // First and Last Element of Each Row is 1
+            pascalTriangle[i][0] = pascalTriangle[i][i] = 1;
+
+            // Fill Rest of the Element
+            for(int j = 1; j < i; j++){
+                pascalTriangle[i][j] = pascalTriangle[i-1][j] + pascalTriangle[i-1][j-1];
+            }
+        }
+        return pascalTriangle;
     }
 }

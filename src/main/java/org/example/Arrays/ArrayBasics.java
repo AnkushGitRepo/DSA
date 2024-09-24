@@ -3,13 +3,13 @@ import java.util.Scanner;
 
 public class ArrayBasics {
     public static void main(String[] args) {
-        int [] arr;
+        int[] arr;
         Scanner newObj = new Scanner(System.in);
         System.out.print("Enter the size of array: ");
         int n = newObj.nextInt();
         arr = new int[n];
-        for(int i = 0; i < arr.length; i++){
-            System.out.print("Enter element "+(i+1)+": ");
+        for (int i = 0; i < arr.length; i++) {
+            System.out.print("Enter element " + (i + 1) + ": ");
             arr[i] = newObj.nextInt();
         }
 
@@ -42,62 +42,62 @@ public class ArrayBasics {
 //        System.out.println();
 //        System.out.println();
 
-        System.out.println("Is Sorted : "+isSorted(arr));
+        System.out.println("Is Sorted : " + isSorted(arr));
 
         System.out.println("Smallest And Largest Element: ");
         print(smallestAndLargestElementInArray(arr));
 
     }
 
-    public static void print(int [] arr){
-        for(int i = 0; i < arr.length; i++){
-            System.out.print(arr[i]+" ");
+    public static void print(int[] arr) {
+        for (int i = 0; i < arr.length; i++) {
+            System.out.print(arr[i] + " ");
         }
         System.out.println();
     }
 
-    public static int[] copyArray(int[] arr){
-        int [] copyArray = new int[arr.length];
-        for (int i = 0; i < arr.length; i++){
+    public static int[] copyArray(int[] arr) {
+        int[] copyArray = new int[arr.length];
+        for (int i = 0; i < arr.length; i++) {
             copyArray[i] = arr[i];
         }
         return copyArray;
     }
 
-    public static int freqOfElement(int [] arr, int value){
+    public static int freqOfElement(int[] arr, int value) {
         int count = 0;
-        for (int i = 0; i < arr.length; i++){
-            if (arr[i] == value){
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] == value) {
                 count++;
             }
         }
         return count;
     }
 
-    public static int lastOccurrenceOfElement(int [] arr, int value){
+    public static int lastOccurrenceOfElement(int[] arr, int value) {
         int count = -1;
-        for (int i = 0; i < arr.length; i++){
-            if (arr[i] == value){
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] == value) {
                 count = i;
             }
         }
         return count;
     }
 
-    public static int numberOfStrictlyGreaterValue(int [] arr, int value){
+    public static int numberOfStrictlyGreaterValue(int[] arr, int value) {
         int count = 0;
-        for (int i = 0; i < arr.length; i++){
-            if (arr[i] > value){
-                count ++;
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] > value) {
+                count++;
             }
         }
         return count;
     }
 
-    public static boolean isSorted(int [] arr){
+    public static boolean isSorted(int[] arr) {
         boolean check = true;
-        for(int i = 1; i < arr.length; i++){
-            if (arr[i] < arr[i-1]){
+        for (int i = 1; i < arr.length; i++) {
+            if (arr[i] < arr[i - 1]) {
                 check = false;
                 break;
             }
@@ -105,8 +105,8 @@ public class ArrayBasics {
         return check;
     }
 
-    public static int[] smallestAndLargestElementInArray (int arr[]){
-       Arrays.sort(arr);
-       return new int [] {arr[2], arr[arr.length-1]};
+    public static int[] smallestAndLargestElementInArray(int arr[]) {
+        Arrays.sort(arr);
+        return new int[]{arr[2], arr[arr.length - 1]};
     }
 }
