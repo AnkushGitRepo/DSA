@@ -81,6 +81,27 @@ class TwoDArrayBasicsAndSomeQuestion{
         int [][] pascalTriangle = pascalTriangle(5);
         print(pascalTriangle);
 
+        // Print Spiral Matrix Test 1
+        System.out.println("Print Spiral Matrix");
+        int [][] arr11 = {{1,2,3,4},{5,6,7,8},{9,10,11,12}};
+        System.out.println("Original Matrix: Test 1");
+        print(arr11);
+        System.out.println("Print Spiral Matrix: Test 1");
+        printSpiralMatrix(arr11);
+
+        // Print Spiral Matrix Test 2
+        System.out.println("Print Spiral Matrix");
+        int [][] arr12 = {{1,2,3},{4,5,6},{7,8,9}};
+        System.out.println("Original Matrix: Test 2");
+        print(arr12);
+        System.out.println("Print Spiral Matrix: Test 2");
+        printSpiralMatrix(arr12);
+
+        // Generate Spiral Matrix
+        System.out.println("Generate Spiral Matrix for n = 4");
+        int [][] spiralMatrix = generateSpiralMatrix(4);
+        print(spiralMatrix);
+
     }
 
 
@@ -227,5 +248,86 @@ class TwoDArrayBasicsAndSomeQuestion{
             }
         }
         return pascalTriangle;
+    }
+
+    // Print Spiral Matrix
+    public static void printSpiralMatrix(int [][] arr){
+        int topRow = 0;
+        int bottomRow = arr.length - 1;
+        int leftCol = 0;
+        int rightCol = arr[0].length - 1;
+        int totalElements = 0;
+        while(totalElements < arr.length * arr[0].length){
+            // topRow -> leftCol to rightCol
+            for(int i  = leftCol; i <= rightCol && totalElements < arr.length * arr[0].length; i++){
+                System.out.print(" "+arr[topRow][i]);
+                totalElements++;
+            }
+            topRow++;
+
+            // rightCol -> topRow to bottomRow
+            for(int i = topRow; i <= bottomRow && totalElements < arr.length * arr[0].length; i++){
+                System.out.print(" "+arr[i][rightCol]);
+                totalElements++;
+            }
+            rightCol--;
+
+            // bottomRow -> rightCol to leftCol
+            for(int i = rightCol; i >= leftCol && totalElements < arr.length * arr[0].length; i--){
+                System.out.print(" "+arr[bottomRow][i]);
+                totalElements++;
+            }
+            bottomRow--;
+
+            // leftCol -> bottomRow to topRow
+            for(int i = bottomRow; i >= topRow && totalElements < arr.length * arr[0].length; i--){
+                System.out.print(" "+arr[i][leftCol]);
+                totalElements++;
+            }
+            leftCol++;
+        }
+        System.out.println("\n");
+    }
+
+    // Generate a n*n matrix filled with elements 1 to n^2 in spiral order.
+    public static int[][] generateSpiralMatrix(int n){
+        int [][] spiralMatrix = new int[n][n];
+        int topRow = 0;
+        int bottomRow = n - 1;
+        int leftCol = 0;
+        int rightCol = n - 1;
+        int totalElements = 0;
+        int num = 1;
+
+        while(totalElements < n * n){
+            // topRow -> leftCol to rightCol
+            for(int i = leftCol; i <= rightCol && totalElements < n * n ; i++){
+                spiralMatrix[topRow][i] = num++;
+                totalElements++;
+            }
+            topRow++;
+
+            // rightCol -> topRow to bottomRow
+            for(int i = topRow; i <= bottomRow && totalElements < n *n; i++){
+                spiralMatrix[i][rightCol] = num++;
+                totalElements++;
+            }
+            rightCol--;
+
+            // bottomRow -> rightCol to leftCol
+            for(int i = rightCol; i >= leftCol && totalElements < n * n; i--){
+                spiralMatrix[bottomRow][i] = num++;
+                totalElements++;
+            }
+            bottomRow--;
+
+            //leftCol -> bottomRow to topRow
+            for(int i = bottomRow; i >= topRow && totalElements < n * n; i--){
+                spiralMatrix[i][leftCol] = num++;
+                totalElements++;
+            }
+            leftCol++;
+        }
+        return spiralMatrix;
     }
 }
