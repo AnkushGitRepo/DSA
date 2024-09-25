@@ -12,6 +12,8 @@ This repository is purely for my personal practice and improvement. It is not in
   - **`README.md`**: A brief description of the topic and important concepts.
   - **Solutions**: Each question's solution will be named according to the problem statement and will contain a structured solution.
   - **Problem Description**: In some cases, solution will be paired with the problem description in the same folder.
+ 
+### [Google Sheet Of Problems](https://docs.google.com/spreadsheets/d/1TetBwm7t2C7iLewzVCl_U6UT0U6bGjCu0xr4HdeLsyA/edit?usp=sharing)
 
 ### Topics Covered (ongoing):
 - Arrays
