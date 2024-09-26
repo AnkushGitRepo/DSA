@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Data Structures and Algorithms (DSA) - Arrays
 
 This folder contains solutions to various array-related problems, demonstrating the use of data structures and algorithms in Java. The code is organized into different files, each tackling specific problems and concepts related to arrays.
@@ -54,3 +55,6 @@ Each problem is solved using different approaches, from brute force to optimized
 If you'd like to contribute more array-related problems or solutions, feel free to  start a discussion and post your question and solution.
 
 Happy coding! 🚀
+=======
+
+>>>>>>> 28949b5b82bea21af9db463d3b7fd1fd5cf279f8
