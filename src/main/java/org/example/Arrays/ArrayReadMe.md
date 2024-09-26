@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Data Structures and Algorithms (DSA) - Arrays
 
 This folder contains solutions to various array-related problems, demonstrating the use of data structures and algorithms in Java. The code is organized into different files, each tackling specific problems and concepts related to arrays.
@@ -44,6 +43,13 @@ This file covers the classic array problems of finding pairs or triplets that su
 - **Two Sum Problem**: Finding two numbers in an array that add up to a specific target.
 - **Three Sum Problem**: Finding three numbers in an array that add up to a specific target.
 
+### 5. [ArrayListBasics.java](https://github.com/AnkushGitRepo/DSA/blob/main/src/main/java/org/example/Arrays/ArrayListBasics.java)
+This file demonstrates the use of `ArrayList` in Java, covering:
+- **ArrayList Initialization**: Creating and initializing ArrayLists.
+- **ArrayList Operations**: Adding, removing, and updating elements in ArrayLists.
+- **ArrayList Methods**: Common methods used with ArrayLists.
+- **ArrayList vs. Arrays**: Comparing the features and use cases of ArrayLists and arrays.
+
 Each problem is solved using different approaches, from brute force to optimized solutions using sorting techniques. These problems are common in coding interviews and provide great practice for improving algorithmic efficiency.
 
 ## How to Use
@@ -56,5 +62,3 @@ If you'd like to contribute more array-related problems or solutions, feel free 
 
 Happy coding! 🚀
 =======
-
->>>>>>> 28949b5b82bea21af9db463d3b7fd1fd5cf279f8
