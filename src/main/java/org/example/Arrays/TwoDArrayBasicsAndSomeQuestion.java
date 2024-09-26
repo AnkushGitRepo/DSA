@@ -102,6 +102,20 @@ class TwoDArrayBasicsAndSomeQuestion{
         int [][] spiralMatrix = generateSpiralMatrix(4);
         print(spiralMatrix);
 
+        // Prefix Sum Of 2D Array
+        System.out.println("Prefix Sum Of 2D Array");
+        int [][] arr13 = {{1,2,3},{4,5,6},{7,8,9}};
+        System.out.println("Original Matrix: Test 1");
+        print(arr13);
+        System.out.println("Sum Of Rectangle: [l1 = 1, r1 = 1, l2 = 2, r2 = 2] : "+sumOfRectangle(arr13, 1, 1, 2, 2));
+
+        System.out.println("Original Matrix: Test 2");
+        int [][] arr14 = {{1,2,3,4},{5,6,7,8},{9,10,11,12}};
+        print(arr14);
+        System.out.println("Sum Of Rectangle: [l1 = 1, r1 = 1, l2 = 2, r2 = 2] : "+sumOfRectangle(arr14, 1, 1, 2, 2));
+
+
+
     }
 
 
@@ -330,4 +344,59 @@ class TwoDArrayBasicsAndSomeQuestion{
         }
         return spiralMatrix;
     }
+
+    /**
+ * Computes the prefix sum of a given 2D array.
+ * The prefix sum is calculated both row-wise and column-wise.
+ *
+ * @param arr The input 2D array for which the prefix sum is to be calculated.
+ *
+ * Time Complexity: O(n * m), where n is the number of rows and m is the number of columns.
+ * Space Complexity: O(1), as the prefix sum is calculated in place.
+ */
+public static void findPrefixSumOf2DArray(int[][] arr) {
+    // Row Wise Prefix Sum
+    for (int i = 0; i < arr.length; i++) {
+        for (int j = 1; j < arr[0].length; j++) {
+            arr[i][j] += arr[i][j - 1];
+        }
+    }
+
+    // Column Wise Prefix Sum
+    for (int j = 0; j < arr[0].length; j++) {
+        for (int i = 1; i < arr.length; i++) {
+            arr[i][j] += arr[i - 1][j];
+        }
+    }
+}
+
+/**
+ * Returns the sum of elements in a submatrix defined by the coordinates (l1, r1) to (l2, r2).
+ * The method first computes the prefix sum of the entire matrix and then uses it to find the sum of the submatrix.
+ *
+ * @param arr The input 2D array.
+ * @param l1  The starting row index of the submatrix.
+ * @param r1  The starting column index of the submatrix.
+ * @param l2  The ending row index of the submatrix.
+ * @param r2  The ending column index of the submatrix.
+ * @return The sum of elements in the submatrix from (l1, r1) to (l2, r2).
+ *
+ * Time Complexity: O(n * m), where n is the number of rows and m is the number of columns.
+ * Space Complexity: O(1), as the prefix sum is calculated in place.
+ */
+public static int sumOfRectangle(int[][] arr, int l1, int r1, int l2, int r2) {
+    findPrefixSumOf2DArray(arr);
+    print(arr);
+    int ans = 0, sum = 0, up = 0, left = 0, upleft = 0;
+    sum = arr[l2][r2];
+    if (r1 >= 1)
+        left = arr[l2][r1 - 1];
+    if (l1 >= 1)
+        up = arr[l1 - 1][r2];
+    if (l1 >= 1 && r1 >= 1)
+        upleft = arr[l1 - 1][r1 - 1];
+
+    ans = sum - up - left + upleft;
+    return ans;
+}
 }

@@ -1,0 +1,56 @@
+# Data Structures and Algorithms (DSA) - Arrays
+
+This folder contains solutions to various array-related problems, demonstrating the use of data structures and algorithms in Java. The code is organized into different files, each tackling specific problems and concepts related to arrays.
+
+## Contents
+
+### 1. [ArrayBasics.java](https://github.com/AnkushGitRepo/DSA/blob/main/src/main/java/org/example/Arrays/ArrayBasics.java)
+This file covers the fundamentals of arrays in Java, including:
+- **Array Initialization**
+- **Accessing and Modifying Elements**
+- **Traversing Arrays**
+- **Basic Operations** such as insertion, deletion, and searching
+
+The file serves as an introduction to the basics of arrays, providing examples to help beginners understand how arrays work and how to manipulate them.
+
+### 2. [TwoDArrayBasicsAndSomeQuestion.java](https://github.com/AnkushGitRepo/DSA/blob/main/src/main/java/org/example/Arrays/TwoDArrayBasicsAndSomeQuestion.java)
+This file focuses on two-dimensional arrays (2D arrays) and includes:
+- **Basics of 2D Arrays**: How to declare, initialize, and traverse 2D arrays in Java.
+- **Matrix Operations**: Examples of matrix manipulation, including row-wise and column-wise traversal.
+- **Questions and Solutions**:
+    - Matrix Sum
+    - Matrix Multiplication
+    - Transpose of a Matrix
+    - Matrix Rotation (90 degrees)
+    - Pascal Triangle
+    - Finding the sum of elements in a matrix
+    - Print Spiral Matrix
+    - Generate a n*n matrix filled with elements 1 to n^2 in spiral order.
+    - Prefix Sum 2D Array
+
+This file is useful for understanding multidimensional arrays and solving problems that involve matrix manipulation.
+
+### 3. [MiscProblems.java](https://github.com/AnkushGitRepo/DSA/blob/main/src/main/java/org/example/Arrays/MiscProblems.java)
+This file includes various miscellaneous array problems and their solutions, such as:
+- **Rearranging Arrays**: Sorting arrays and rearranging elements under certain conditions.
+- **Prefix Sum Problem**: Efficiently solving problems related to cumulative sums of array elements.
+- **Kadane's Algorithm**: Finding the maximum sum subarray (useful for solving dynamic programming problems).
+
+These problems are a bit more complex and provide a solid understanding of algorithmic problem-solving using arrays.
+
+### 4. [TwoSumAndThreeSum.java](https://github.com/AnkushGitRepo/DSA/blob/main/src/main/java/org/example/Arrays/TwoSumAndThreeSum.java)
+This file covers the classic array problems of finding pairs or triplets that sum up to a target value:
+- **Two Sum Problem**: Finding two numbers in an array that add up to a specific target.
+- **Three Sum Problem**: Finding three numbers in an array that add up to a specific target.
+
+Each problem is solved using different approaches, from brute force to optimized solutions using sorting techniques. These problems are common in coding interviews and provide great practice for improving algorithmic efficiency.
+
+## How to Use
+- Browse through each Java file to understand the code structure and problem-solving techniques.
+- Each file is well-commented to guide you through the thought process behind solving the problems.
+- Try modifying the code and solving the problems yourself to enhance your understanding.
+
+## Contribution
+If you'd like to contribute more array-related problems or solutions, feel free to  start a discussion and post your question and solution.
+
+Happy coding! 🚀
