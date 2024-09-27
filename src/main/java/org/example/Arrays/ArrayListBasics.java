@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Collections;
 
 class ArrayListBasics{
     public static void main(String[] args) {
@@ -72,6 +73,27 @@ class ArrayListBasics{
         names.add("Doe");
         System.out.println("\nArrayList of Strings: " + names);
         System.out.println("Index of Doe: " + names.indexOf("Doe"));
+
+        // Collections.sort() method can be used to sort the ArrayList
+        Collections.sort(names);
+        System.out.println("Sorted ArrayList: " + names);
+        // Collections.reverse() method can be used to reverse the ArrayList
+        Collections.reverse(names);
+        System.out.println("Reversed ArrayList: " + names);
+        // Collections.shuffle() method can be used to shuffle the ArrayList
+        Collections.shuffle(names);
+        System.out.println("Shuffled ArrayList: " + names);
+        // Collections.swap() method can be used to swap elements in the ArrayList
+        Collections.swap(names,0,1);
+        System.out.println("Swapped ArrayList: [0 indexed to 1 indexed]: " + names);
+        // Collections.rotate() method can be used to rotate the ArrayList
+        Collections.rotate(names,1);
+        System.out.println("Rotated ArrayList: " + names);
+        // Collections.frequency() method can be used to find the frequency of the specified element in the ArrayList
+        System.out.println("Frequency of Doe: " + Collections.frequency(names,"Doe"));
+        // Collections.replaceAll() method can be used to replace all occurrences of the specified element in the ArrayList with the specified element
+        Collections.replaceAll(names,"Doe","Smith");
+        System.out.println("Replaced All Doe with Smith: " + names);
 
     }
 }
