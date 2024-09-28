@@ -223,7 +223,7 @@ class TwoDArrayBasicsAndSomeQuestion{
 
 
     // Transpose Of Matrix In Place : Do not use extra space and create result array.
-    // Note: This method will only work for square matrix. If you
+    // Note: This method will only work for square matrix. If you want to use it for non-square matrix, you need to modify it.
     public static void transposeOfMatrixInPlace(int [][] arr){
         if(arr.length != arr[0].length){
             System.out.println("Transpose Of Matrix In Place Not Possible: Not A Square Matrix");
