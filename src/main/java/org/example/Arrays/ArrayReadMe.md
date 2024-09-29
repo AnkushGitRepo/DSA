@@ -50,6 +50,12 @@ This file demonstrates the use of `ArrayList` in Java, covering:
 - **ArrayList Methods**: Common methods used with ArrayLists.
 - **ArrayList vs. Arrays**: Comparing the features and use cases of ArrayLists and arrays.
 
+### 6. [QuestionByTUFChannel.java](https://github.com/AnkushGitRepo/DSA/blob/main/src/main/java/org/example/Arrays/QuestionByTUFChannel.java)
+This file contains solutions to array problems from the YouTube channel "Take U Forward" (TUF). The problems include:
+- **Find the Duplicate Number**: Given an array of integers, find the duplicate number in it.
+- **Move Zeroes**: Move all zeroes to the end of the array while maintaining the relative order of non-zero elements.
+- **Union and Intersection of Two Arrays**: Find the union and intersection of two arrays.
+
 Each problem is solved using different approaches, from brute force to optimized solutions using sorting techniques. These problems are common in coding interviews and provide great practice for improving algorithmic efficiency.
 
 ## How to Use

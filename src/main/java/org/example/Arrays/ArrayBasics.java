@@ -47,6 +47,11 @@ public class ArrayBasics {
         System.out.println("Smallest And Largest Element: ");
         print(smallestAndLargestElementInArray(arr));
 
+        System.out.println("Second Maximum Element: ");
+        System.out.println(secondMaximum(arr));
+        
+
+
     }
 
     public static void print(int[] arr) {
@@ -108,5 +113,31 @@ public class ArrayBasics {
     public static int[] smallestAndLargestElementInArray(int arr[]) {
         Arrays.sort(arr);
         return new int[]{arr[2], arr[arr.length - 1]};
+    }
+
+    public static int secondMaximum(int [] arr){
+        int largest = arr[0];
+        int secondLargest = -1;
+        for(int i = 0; i < arr.length; i++){
+            if(arr[i] > largest){
+                secondLargest = largest;
+                largest = arr[i];
+            }else if(arr[i] > secondLargest && arr[i] != largest){
+                secondLargest = arr[i];
+            }
+        }
+        return secondLargest;
+    }
+
+    // Remove Duplicates
+    public int removeDuplicates(int[] nums) {
+        int i = 0;
+        for(int j = 0; j < nums.length; j++){
+            if(nums[j] != nums[i]){
+                nums[i+1] = nums[j];
+                i++;
+            }
+        }
+        return i + 1;
     }
 }
