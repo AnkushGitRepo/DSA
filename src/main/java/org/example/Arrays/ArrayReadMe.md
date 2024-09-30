@@ -55,6 +55,10 @@ This file contains solutions to array problems from the YouTube channel "Take U 
 - **Find the Duplicate Number**: Given an array of integers, find the duplicate number in it.
 - **Move Zeroes**: Move all zeroes to the end of the array while maintaining the relative order of non-zero elements.
 - **Union and Intersection of Two Arrays**: Find the union and intersection of two arrays.
+- **Finds the missing number**: Finds the missing number in an array containing n distinct numbers taken from 0, 1, 2, ..., n.
+- **Finds the single number**: Finds the single number in an array where every element appears twice except for one.
+- **Maximum consecutive ones**: Finds the maximum number of consecutive 1s in an array with at most one 0 allowed to flip.
+- 
 
 Each problem is solved using different approaches, from brute force to optimized solutions using sorting techniques. These problems are common in coding interviews and provide great practice for improving algorithmic efficiency.
 
