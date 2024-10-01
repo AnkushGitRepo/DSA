@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 
@@ -49,6 +50,17 @@ class QuestionByTUFChannel {
         print(arr7);
         System.out.println("Maximum Consecutive Ones: " + findMaxConsecutiveOnes(arr7));
 
+        System.out.println("Basic Example: Subarray Sum Equals K");
+        int [] arr8 = {1, 1, 1};
+        int k = 2;
+        print(arr8);
+        System.out.println("Number of Subarrays with Sum Equal to K: " + subarraySum(arr8, k));
+
+        System.out.println("Complex Example: Subarray Sum Equals K");
+        int [] arr9 = {1, 2, 3, 4, 5};
+        int k1 = 10;
+        print(arr9);
+        System.out.println("Number of Subarrays with Sum Equal to K: " + subarraySum(arr9, k1));
 
     }
 
@@ -362,5 +374,45 @@ class QuestionByTUFChannel {
         }
         // Return the maximum count of consecutive 1s found
         return max;
+    }
+
+    // Date: 01/10/2024
+    /**
+     * Finds the number of subarrays with a sum equal to a given value k.
+     *
+     * @param nums the input array of integers
+     * @param k the target sum for the subarrays
+     * @return the number of subarrays with a sum equal to k
+     *
+     * Time Complexity: O(n)
+     * Space Complexity: O(n)
+     */
+    public static int subarraySum(int[] nums, int k) {
+        // Create a HashMap to store the cumulative sum and its frequency
+        HashMap<Integer, Integer> map = new HashMap<>();
+        // Initialize count to store the number of subarrays with sum equal to k
+        int count = 0;
+        // Initialize sum to store the cumulative sum of elements
+        int sum = 0;
+        // Add a base case to the map: sum 0 has one occurrence
+        map.put(0, 1);
+        // Iterate through each element in the array
+         for (int i = 0; i < nums.length; i++) {
+             // Add the current element to the cumulative sum
+             sum += nums[i];
+             // Check if there is a subarray (ending at the current index) whose sum is k
+             if (map.containsKey(sum - k)) {
+                 // If found, add the frequency of that sum to the count
+                 count += map.get(sum - k);
+             }
+             // Update the frequency of the current cumulative sum in the map
+             if (map.containsKey(sum)) {
+                 map.put(sum, map.get(sum) + 1);
+             } else {
+                 map.put(sum, 1);
+             }
+         }
+         // Return the total count of subarrays with sum equal to k
+         return count;
     }
 }
