@@ -1,7 +1,4 @@
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.List;
+import java.util.*;
 
 class QuestionByTUFChannel {
     public static void main(String[] args) {
@@ -61,6 +58,12 @@ class QuestionByTUFChannel {
         int k1 = 10;
         print(arr9);
         System.out.println("Number of Subarrays with Sum Equal to K: " + subarraySum(arr9, k1));
+
+        System.out.println("Two Sum Problem");
+        int [] arr10 = {2, 7, 11, 15};
+        int target = 9;
+        print(arr10);
+        System.out.println("Indices of Two Numbers that Sum to Target (9) : " + Arrays.toString(twoSum(arr10, target)));
 
     }
 
@@ -414,5 +417,24 @@ class QuestionByTUFChannel {
          }
          // Return the total count of subarrays with sum equal to k
          return count;
+    }
+
+    // Date: 02/10/2024
+    // Two Sum Problem
+    // Time Complexity: O(n)
+    // Space Complexity: O(n)
+    public static int[] twoSum(int[] nums, int target) {
+        Map<Integer, Integer> numMap = new HashMap<>();
+        int n = nums.length;
+
+        for (int i = 0; i < n; i++) {
+            int complement = target - nums[i];
+            if (numMap.containsKey(complement)) {
+                return new int[]{numMap.get(complement), i};
+            }
+            numMap.put(nums[i], i);
+        }
+
+        return new int[]{}; // No solution found
     }
 }
