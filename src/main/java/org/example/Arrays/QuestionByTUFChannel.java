@@ -65,6 +65,13 @@ class QuestionByTUFChannel {
         print(arr10);
         System.out.println("Indices of Two Numbers that Sum to Target (9) : " + Arrays.toString(twoSum(arr10, target)));
 
+        System.out.println("Sort an array of 0's 1's and 2's");
+        int [] arr11 = {2, 0, 2, 1, 1, 0};
+        print(arr11);
+        sortColors(arr11);
+        System.out.println("Sorted Array: ");
+        print(arr11);
+
     }
 
     // print function
@@ -436,5 +443,32 @@ class QuestionByTUFChannel {
         }
 
         return new int[]{}; // No solution found
+    }
+
+    // Date: 03/10/2024
+    // Sort an array of 0's 1's and 2's
+    // Time Complexity: O(n)
+    // Space Complexity: O(1)
+    public static void sortColors(int[] nums) {
+        int red = 0;
+        int white = 0;
+        int blue = nums.length - 1;
+
+        while (white <= blue) {
+            if (nums[white] == 0) {
+                int temp = nums[white];
+                nums[white] = nums[red];
+                nums[red] = temp;
+                red++;
+                white++;
+            } else if (nums[white] == 1) {
+                white++;
+            } else {
+                int temp = nums[white];
+                nums[white] = nums[blue];
+                nums[blue] = temp;
+                blue--;
+            }
+        }
     }
 }
