@@ -72,6 +72,12 @@ class QuestionByTUFChannel {
         System.out.println("Sorted Array: ");
         print(arr11);
 
+        System.out.println("Majority Element");
+        int [] arr12 = {2, 2, 1, 1, 1, 2, 2};
+        print(arr12);
+        System.out.println("Majority Element: " + majorityElement(arr12));
+
+
     }
 
     // print function
@@ -470,5 +476,34 @@ class QuestionByTUFChannel {
                 blue--;
             }
         }
+    }
+
+    // Date: 04/10/2024
+    // Find the Majority Element that occurs more than N/2 times
+    // Time Complexity: O(n)
+    // Space Complexity: O(1)
+    public static int majorityElement(int[] v) {
+        int n = v.length;
+        int cnt = 0; // count
+        int el = 0; // Element
+
+        //applying the algorithm:
+        for (int i = 0; i < n; i++) {
+            if (cnt == 0) {
+                cnt = 1;
+                el = v[i];
+            } else if (el == v[i]) cnt++;
+            else cnt--;
+        }
+
+        //checking if the stored element
+        // is the majority element:
+        int cnt1 = 0;
+        for (int i = 0; i < n; i++) {
+            if (v[i] == el) cnt1++;
+        }
+
+        if (cnt1 > (n / 2)) return el;
+        return -1;
     }
 }
