@@ -77,6 +77,10 @@ class QuestionByTUFChannel {
         print(arr12);
         System.out.println("Majority Element: " + majorityElement(arr12));
 
+        System.out.println("Maximum Subarray Sum");
+        int [] arr13 = {-2, 1, -3, 4, -1, 2, 1, -5, 4};
+        print(arr13);
+        System.out.println("Maximum Subarray Sum: " + maxSubArray(arr13));
 
     }
 
@@ -505,5 +509,25 @@ class QuestionByTUFChannel {
 
         if (cnt1 > (n / 2)) return el;
         return -1;
+    }
+
+    // Date: 05/10/2024
+    // Find the Maximum Subarray Sum
+    // Time Complexity: O(n)
+    // Space Complexity: O(1)
+    public static int maxSubArray(int[] nums) {
+        int res = nums[0];
+        int total = 0;
+
+        for (int n : nums) {
+            if (total < 0) {
+                total = 0;
+            }
+
+            total += n;
+            res = Math.max(res, total);
+        }
+
+        return res;
     }
 }

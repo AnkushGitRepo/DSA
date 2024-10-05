@@ -60,6 +60,7 @@ This file contains solutions to array problems from the YouTube channel "Take U 
 - **Maximum consecutive ones**: Finds the maximum number of consecutive 1s in an array with at most one 0 allowed to flip.
 - **Subarray with sum K**: Finds the subarray with a given sum K in an array.
 - **Majority Element**: Finds the majority element in an array (element that appears more than n/2 times).
+- **Maximum Subarray Sum**: Finds the maximum sum of a contiguous subarray within an array.
 
 Each problem is solved using different approaches, from brute force to optimized solutions using sorting techniques. These problems are common in coding interviews and provide great practice for improving algorithmic efficiency.
 
