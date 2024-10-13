@@ -9,3 +9,4 @@ This file covers the fundamentals of recursion in Java, including:
 - **Recursion Basics**: Understanding the concept of recursion and how it works.
 - **Print 1 to n using recursion**: Printing numbers from 1 to n using recursion.
 - **Print n to 1 using recursion**: Printing numbers from n to 1 using recursion.
+- **Factorial of a number using recursion**: Calculating the factorial of a number using recursion.
