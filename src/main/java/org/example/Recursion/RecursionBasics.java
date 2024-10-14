@@ -13,6 +13,13 @@ class RecursionBasics {
         System.out.println("Factorial of 'n' using recursion Example:");
         System.out.print("Factorial of 5 is : ");
         System.out.println(factorial(5));
+
+        // Fibonacci Series using recursion
+        System.out.println("Fibonacci Series using recursion Example:");
+        System.out.print("Fibonacci Series till 10 is : ");
+        for(int i = 0; i <= 10; i++){
+            System.out.print(fibonacci(i)+" ");
+        }
     }
 
     // Date: 12/10/2024
@@ -50,4 +57,16 @@ class RecursionBasics {
         int fact = n * factorial(n-1);
         return fact;
     }
+
+    // Date: 14/10/2024
+    // Fibonacci Series using recursion
+    public static int fibonacci(int n){
+        if(n == 0 || n == 1){
+            return n;
+        }
+
+        return fibonacci(n-1) + fibonacci(n-2);
+    }
+
+
 }
