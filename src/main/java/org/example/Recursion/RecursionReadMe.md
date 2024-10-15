@@ -10,3 +10,6 @@ This file covers the fundamentals of recursion in Java, including:
 - **Print 1 to n using recursion**: Printing numbers from 1 to n using recursion.
 - **Print n to 1 using recursion**: Printing numbers from n to 1 using recursion.
 - **Factorial of a number using recursion**: Calculating the factorial of a number using recursion.
+- **Fibonacci series using recursion**: Generating the Fibonacci series using recursion.
+- **Sum of digits of a number using recursion**: Calculating the sum of digits of a number using recursion.
+- **Count the number of digits in a number using recursion**: Counting the number of digits in a number using recursion.

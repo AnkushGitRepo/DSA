@@ -20,6 +20,16 @@ class RecursionBasics {
         for(int i = 0; i <= 10; i++){
             System.out.print(fibonacci(i)+" ");
         }
+
+        // Find the sum of digits using recursion
+        System.out.println("\nFind the sum of digits using recursion Example:");
+        System.out.print("Sum of digits of 123 is : ");
+        System.out.println(sumOfDigits(123));
+
+        // Count the number of digits in a number using recursion
+        System.out.println("Count the number of digits in a number using recursion Example:");
+        System.out.print("Number of digits in 123 is : ");
+        System.out.println(countNumberOfDigits(-123));
     }
 
     // Date: 12/10/2024
@@ -66,6 +76,25 @@ class RecursionBasics {
         }
 
         return fibonacci(n-1) + fibonacci(n-2);
+    }
+
+    // Date: 15/10/2024
+    // Find the sum of digits using recursion
+    public static int sumOfDigits(int n){
+        if(n >= 0 && n <= 9){
+            return n;
+        }
+
+        return n%10 + sumOfDigits(n/10);
+    }
+
+    // Date: 15/10/2024
+    // Count the number of digits in a number using recursion
+    public static int countNumberOfDigits(int n){
+        if(n >= 0 && n <= 9){
+            return 1;
+        }
+       return  1 + countNumberOfDigits(Math.abs(n)/10);
     }
 
 
