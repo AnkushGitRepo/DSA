@@ -13,3 +13,4 @@ This file covers the fundamentals of recursion in Java, including:
 - **Fibonacci series using recursion**: Generating the Fibonacci series using recursion.
 - **Sum of digits of a number using recursion**: Calculating the sum of digits of a number using recursion.
 - **Count the number of digits in a number using recursion**: Counting the number of digits in a number using recursion.
+- **Power of a number using recursion**: Calculating the power of a number using recursion.

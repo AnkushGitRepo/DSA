@@ -30,6 +30,11 @@ class RecursionBasics {
         System.out.println("Count the number of digits in a number using recursion Example:");
         System.out.print("Number of digits in 123 is : ");
         System.out.println(countNumberOfDigits(-123));
+
+        // Find the power of a number using recursion
+        System.out.println("Find the power of a number using recursion Example:");
+        System.out.print("2^3 is : ");
+        System.out.println(power(2,3));
     }
 
     // Date: 12/10/2024
@@ -95,6 +100,16 @@ class RecursionBasics {
             return 1;
         }
        return  1 + countNumberOfDigits(Math.abs(n)/10);
+    }
+
+    // Date: 16/10/2024
+    // Find the power of a number using recursion
+    public static int power(int n, int p){
+        if(p == 0){
+            return 1;
+        }
+
+        return n * power(n,p-1);
     }
 
 
