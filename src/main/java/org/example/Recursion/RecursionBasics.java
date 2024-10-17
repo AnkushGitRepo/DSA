@@ -35,6 +35,10 @@ class RecursionBasics {
         System.out.println("Find the power of a number using recursion Example:");
         System.out.print("2^3 is : ");
         System.out.println(power(2,3));
+
+        // Given a number num  and a value k, print k multiples of num.
+        System.out.println("Given a number num  and a value k, print k multiples of num Example:");
+        printMultiples(5, 5);
     }
 
     // Date: 12/10/2024
@@ -108,9 +112,17 @@ class RecursionBasics {
         if(p == 0){
             return 1;
         }
-
         return n * power(n,p-1);
     }
 
-
+    // Date: 17/10/2024
+    // Given a number num  and a value k, print k multiples of num.
+    public static void printMultiples(int num, int k){
+        if (k == 1){
+            System.out.println(num);
+            return;
+        }
+        printMultiples(num, k-1);
+        System.out.println(num * k);
+    }
 }
