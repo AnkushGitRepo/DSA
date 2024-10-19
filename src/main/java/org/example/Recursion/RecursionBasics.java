@@ -39,6 +39,11 @@ class RecursionBasics {
         // Given a number num  and a value k, print k multiples of num.
         System.out.println("Given a number num  and a value k, print k multiples of num Example:");
         printMultiples(5, 5);
+
+        // Given a number n, find the sum of natural numbers till n but with alternate signs
+        System.out.println("Given a number n, find the sum of natural numbers till n but with alternate signs Example:");
+        System.out.print("Sum of natural numbers till 5 with alternate signs is : ");
+        System.out.println(sumOfNaturalNumbers(5));
     }
 
     // Date: 12/10/2024
@@ -124,5 +129,18 @@ class RecursionBasics {
         }
         printMultiples(num, k-1);
         System.out.println(num * k);
+    }
+
+    // Date: 18/10/2024
+    // Given a number n, find the sum of natural numbers till n but with alternate signs
+    public static int sumOfNaturalNumbers(int n){
+        if(n == 0 ) return 0;
+
+        if(n % 2 ==0){
+            return sumOfNaturalNumbers(n-1) - n;
+        }
+        else{
+            return sumOfNaturalNumbers(n-1) + n;
+        }
     }
 }

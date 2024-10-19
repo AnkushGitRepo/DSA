@@ -15,3 +15,4 @@ This file covers the fundamentals of recursion in Java, including:
 - **Count the number of digits in a number using recursion**: Counting the number of digits in a number using recursion.
 - **Power of a number using recursion**: Calculating the power of a number using recursion.
 - **Print multiples of given number using recursion**: Printing multiples of a given number using recursion.
+- **Print sum of n natural numbers using recursion**: Given a number n, find the sum of natural numbers till n but with alternate signs.
