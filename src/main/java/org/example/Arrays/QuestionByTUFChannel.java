@@ -82,6 +82,14 @@ class QuestionByTUFChannel {
         print(arr13);
         System.out.println("Maximum Subarray Sum: " + maxSubArray(arr13));
 
+        System.out.println("Intersection of Two Arrays II");
+        int [] arr14 = {2, 0, 2, 1, 1, 0};
+        int [] arr15 = {2, 2, 1, 1, 1, 2, 2};
+        print(arr14);
+        print(arr15);
+        System.out.println("Intersection of both the arrays: ");
+        print(intersectionOf2Arrays(arr14,arr15));
+
     }
 
     // print function
@@ -529,5 +537,31 @@ class QuestionByTUFChannel {
         }
 
         return res;
+    }
+
+    // Date: 19/11/2024
+    // Intersection of Two Arrays II
+    // Time Complexity:
+    // Space Complexity:
+    public static int[] intersectionOf2Arrays(int [] arr1, int [] arr2){
+        int[]  frequencyArray = new int[1001];
+        for(int num : arr1){
+            frequencyArray[num]++;
+        }
+
+        ArrayList<Integer> list = new ArrayList<>();
+        for(int num : arr2){
+            if(frequencyArray[num] > 0){
+                list.add(num);
+                frequencyArray[num]--;
+            }
+        }
+
+        int[] result = new int[list.size()];
+        for(int i = 0; i < list.size(); i++){
+            result[i] = list.get(i);
+        }
+
+        return result;
     }
 }
