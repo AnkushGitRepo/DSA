@@ -90,6 +90,16 @@ class QuestionByTUFChannel {
         System.out.println("Intersection of both the arrays: ");
         print(intersectionOf2Arrays(arr14,arr15));
 
+        System.out.println("Single Number Example");
+        int [] arr16 = {1,2,2,1,4};
+        print(arr16);
+        System.out.println("Single Number In Array Is : "+singleNumberInArray(arr16));
+
+        System.out.println("Max Consecutive Ones III");
+        int [] arr17 = {0,0,1,1,0,0,1,1,1,0,1,1,0,0,0,1,1,1,1};
+        print(arr17);
+        System.out.println("Max Consecutive Ones With 3 Zero Flip Allowed: "+longestConsecutiveOnesWithKZerosFlip(arr17,3));
+
     }
 
     // print function
@@ -541,8 +551,8 @@ class QuestionByTUFChannel {
 
     // Date: 19/11/2024
     // Intersection of Two Arrays II
-    // Time Complexity:
-    // Space Complexity:
+    // Time Complexity: O(n + m)
+    // Space Complexity: O(min(n, m))
     public static int[] intersectionOf2Arrays(int [] arr1, int [] arr2){
         int[]  frequencyArray = new int[1001];
         for(int num : arr1){
@@ -563,5 +573,29 @@ class QuestionByTUFChannel {
         }
 
         return result;
+    }
+
+    // Date: 20/11/2024
+    // Max Consecutive Ones III
+    // Time Complexity:
+    // Space Complexity:
+    public static int longestConsecutiveOnesWithKZerosFlip(int[] arr, int k){
+        int maxOnes = 0;
+        int start = 0;
+        int zeroCount = 0;
+        for(int i = 0; i < arr.length; i++){
+            if(arr[i] == 0){
+                zeroCount++;
+            }
+
+            while(zeroCount > k){
+                if(arr[start] == 0){
+                    zeroCount--;
+                }
+                start++;
+            }
+            maxOnes = Math.max(maxOnes,i - start + 1);
+        }
+        return maxOnes;
     }
 }

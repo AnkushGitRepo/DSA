@@ -62,6 +62,7 @@ This file contains solutions to array problems from the YouTube channel "Take U 
 - **Majority Element**: Finds the majority element in an array (element that appears more than n/2 times).
 - **Maximum Subarray Sum**: Finds the maximum sum of a contiguous subarray within an array.
 - **Intersection of Two Arrays II**: Given two integer arrays nums1 and nums2, return an array of their intersection. Each element in the result must appear as many times as it shows in both arrays and you may return the result in any order.
+- **Max Consecutive Ones III**: Given a binary array nums and an integer k, return the maximum number of consecutive 1's in the array if you can flip at most k 0's.
 
 Each problem is solved using different approaches, from brute force to optimized solutions using sorting techniques. These problems are common in coding interviews and provide great practice for improving algorithmic efficiency.
 
