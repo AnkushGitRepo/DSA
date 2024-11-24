@@ -64,6 +64,10 @@ This file contains solutions to array problems from the YouTube channel "Take U 
 - **Intersection of Two Arrays II**: Given two integer arrays nums1 and nums2, return an array of their intersection. Each element in the result must appear as many times as it shows in both arrays and you may return the result in any order.
 - **Max Consecutive Ones III**: Given a binary array nums and an integer k, return the maximum number of consecutive 1's in the array if you can flip at most k 0's.
 
+### 7. [neetcodeArrays.java](https://github.com/AnkushGitRepo/DSA/blob/main/src/main/java/org/example/Arrays/neetcodeArrays.java)
+- **Contains Duplicate**: Given an integer array nums, return true if any value appears at least twice in the array, and return false if every element is distinct.
+- **Valid Anagram**: Given two strings s and t, return true if t is an anagram of s, and false otherwise.
+- **Concatenation of Array** : Given an integer array nums of length n, you want to create an array ans of length `2n` where `ans[i] == nums[i]` and `ans[i + n] == nums[i]` for `0 <= i < n` `(0-indexed)`.
 Each problem is solved using different approaches, from brute force to optimized solutions using sorting techniques. These problems are common in coding interviews and provide great practice for improving algorithmic efficiency.
 
 ## How to Use
