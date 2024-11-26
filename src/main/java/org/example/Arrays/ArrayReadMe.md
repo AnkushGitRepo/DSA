@@ -68,7 +68,7 @@ This file contains solutions to array problems from the YouTube channel "Take U 
 - **Contains Duplicate**: Given an integer array nums, return true if any value appears at least twice in the array, and return false if every element is distinct.
 - **Valid Anagram**: Given two strings s and t, return true if t is an anagram of s, and false otherwise.
 - **Concatenation of Array** : Given an integer array nums of length n, you want to create an array ans of length `2n` where `ans[i] == nums[i]` and `ans[i + n] == nums[i]` for `0 <= i < n` `(0-indexed)`.
-Each problem is solved using different approaches, from brute force to optimized solutions using sorting techniques. These problems are common in coding interviews and provide great practice for improving algorithmic efficiency.
+- **Replace Elements with Greatest Element on Right Side**: Given an array arr, replace every element in that array with the greatest element among the elements to its right, and replace the last element with -1.
 
 ## How to Use
 - Browse through each Java file to understand the code structure and problem-solving techniques.

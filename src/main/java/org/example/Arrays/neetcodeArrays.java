@@ -20,6 +20,13 @@ class neetcodeArrays{
         print(getConcatenation(arr2));
         System.out.println("\n\n");
 
+        // LeetCode : 1299. Replace Elements with Greatest Element on Right Side
+        int[] arr3 = {17,18,5,4,6,1};
+        print(arr3);
+        System.out.println("After Replacing Elements with Greatest Element on Right Side : ");
+        print(replaceElements(arr3));
+        System.out.println("\n\n");
+
     }
 
     // Helper Method. (print)
@@ -80,6 +87,21 @@ class neetcodeArrays{
             ans[n+i] = nums[i];
         }
         return ans;
+    }
+
+    // Date : 26/11/2024
+    // LeetCode : 1299. Replace Elements with Greatest Element on Right Side
+    // Time Complexity: O(N)
+    // Space Complexity: O(1)
+    public static int[] replaceElements(int[] arr) {
+        int n = arr.length;
+        int max = -1;
+        for(int i = n-1; i >= 0; i--){
+            int temp = arr[i];
+            arr[i] = max;
+            max = Math.max(max, temp);
+        }
+        return arr;
     }
 
 }
