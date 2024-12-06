@@ -27,6 +27,12 @@ class neetcodeArrays{
         print(replaceElements(arr3));
         System.out.println("\n\n");
 
+        // LeetCode : 392. Is Subsequence
+        System.out.println("Input: s = \"abc\", t = \"ahbgdc\" \nIs s subsequence of t ? : "+ new neetcodeArrays().isSubsequence("abc","ahbgdc"));
+        System.out.println("Input: s = \"axc\", t = \"ahbgdc\" \nIs s subsequence of t ? : "+ new neetcodeArrays().isSubsequence("axc","ahbgdc"));
+        System.out.println("\n\n");
+
+
     }
 
     // Helper Method. (print)
@@ -103,5 +109,26 @@ class neetcodeArrays{
         }
         return arr;
     }
+
+    // Date : 06/12/2024
+    // LeetCode : 392. Is Subsequence
+    // Time Complexity: O(N)
+    // Space Complexity: O(1)
+    // Approach: Two Pointer
+    public boolean isSubsequence(String s, String t) {
+        int i = 0;
+        int j = 0;
+        while(i < s.length() && j < t.length()){
+            if(s.charAt(i) == t.charAt(j)){
+                i++;
+                j++;
+            }
+            else {
+                j++;
+            }
+        }
+        return i == s.length();
+    }
+
 
 }
