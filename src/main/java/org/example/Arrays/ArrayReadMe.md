@@ -70,6 +70,7 @@ This file contains solutions to array problems from the YouTube channel "Take U 
 - **Concatenation of Array** : Given an integer array nums of length n, you want to create an array ans of length `2n` where `ans[i] == nums[i]` and `ans[i + n] == nums[i]` for `0 <= i < n` `(0-indexed)`.
 - **Replace Elements with Greatest Element on Right Side**: Given an array arr, replace every element in that array with the greatest element among the elements to its right, and replace the last element with -1.
 - **Is Subsequence**: Given two strings s and t, return true if s is a subsequence of t, or false otherwise.
+- **Length of Last Word**: Given a string s consisting of some words separated by some number of spaces, return the length of the last word in the string. A word is a maximal substring consisting of non-space characters only.
 ## How to Use
 - Browse through each Java file to understand the code structure and problem-solving techniques.
 - Each file is well-commented to guide you through the thought process behind solving the problems.

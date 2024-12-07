@@ -32,6 +32,11 @@ class neetcodeArrays{
         System.out.println("Input: s = \"axc\", t = \"ahbgdc\" \nIs s subsequence of t ? : "+ new neetcodeArrays().isSubsequence("axc","ahbgdc"));
         System.out.println("\n\n");
 
+        // LeetCode : 58. Length of Last Word
+        System.out.println("Input: s = \"Hello World\" \nLength of Last Word : "+ lengthOfLastWordInString("Hello World"));
+        System.out.println("Input: s = \" \" \nLength of Last Word : "+ lengthOfLastWordInString(" "));
+        System.out.println("Input: s = \"a \" \nLength of Last Word : "+ lengthOfLastWordInString("a "));
+        System.out.println("\n\n");
 
     }
 
@@ -129,6 +134,25 @@ class neetcodeArrays{
         }
         return i == s.length();
     }
+
+    // Date : 07/12/2024
+    // LeetCode : 58. Length of Last Word
+    // Time Complexity: O(N)
+    // Space Complexity: O(1)
+    public static int lengthOfLastWordInString(String s){
+        int count = 0;
+        int i = s.length() - 1;
+        while(i >= 0 && s.charAt(i) == ' '){
+            i--;
+        }
+
+        while(i >= 0 && s.charAt(i) != ' '){
+            count++;
+            i--;
+        }
+        return count;
+    }
+
 
 
 }
