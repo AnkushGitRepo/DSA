@@ -71,6 +71,8 @@ This file contains solutions to array problems from the YouTube channel "Take U 
 - **Replace Elements with Greatest Element on Right Side**: Given an array arr, replace every element in that array with the greatest element among the elements to its right, and replace the last element with -1.
 - **Is Subsequence**: Given two strings s and t, return true if s is a subsequence of t, or false otherwise.
 - **Length of Last Word**: Given a string s consisting of some words separated by some number of spaces, return the length of the last word in the string. A word is a maximal substring consisting of non-space characters only.
+- **Longest Common Prefix**: Write a function to find the longest common prefix string amongst an array of strings. If there is no common prefix, return an empty string `""`.
+- **Group Anagrams**: Given an array of strings `strs`, group the anagrams together. You can return the answer in any order.
 ## How to Use
 - Browse through each Java file to understand the code structure and problem-solving techniques.
 - Each file is well-commented to guide you through the thought process behind solving the problems.

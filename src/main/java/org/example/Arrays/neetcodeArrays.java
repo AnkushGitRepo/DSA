@@ -1,4 +1,4 @@
-import java.util.HashSet;
+import java.util.*;
 
 class neetcodeArrays{
     public static void main(String[] args) {
@@ -36,6 +36,19 @@ class neetcodeArrays{
         System.out.println("Input: s = \"Hello World\" \nLength of Last Word : "+ lengthOfLastWordInString("Hello World"));
         System.out.println("Input: s = \" \" \nLength of Last Word : "+ lengthOfLastWordInString(" "));
         System.out.println("Input: s = \"a \" \nLength of Last Word : "+ lengthOfLastWordInString("a "));
+        System.out.println("\n\n");
+
+        // LeetCode : 14. Longest Common Prefix
+        String[] strs = {"flower","flow","flight"};
+        System.out.println("Input: [\"flower\",\"flow\",\"flight\"] \nLongest Common Prefix : "+ longestCommonPrefix(strs));
+        System.out.println("Input: [\"dog\",\"racecar\",\"car\"] \nLongest Common Prefix : "+ longestCommonPrefix(new String[]{"dog","racecar","car"}));
+        System.out.println("\n\n");
+
+        // LeetCode : 49. Group Anagrams
+        String[] strs1 = {"eat","tea","tan","ate","nat","bat"};
+        System.out.println("Input: [\"eat\",\"tea\",\"tan\",\"ate\",\"nat\",\"bat\"] \nGroup Anagrams : "+ groupAnagrams(strs1));
+        String[] strs2 = {""};
+        System.out.println("Input: [\"\"] \nGroup Anagrams : "+ groupAnagrams(strs2));
         System.out.println("\n\n");
 
     }
@@ -153,6 +166,76 @@ class neetcodeArrays{
         return count;
     }
 
+    // Date : 08/12/2024
+    // LeetCode : 14. Longest Common Prefix
+    // Time Complexity: O(NlogN)
+    // Space Complexity: O(1)
+    public static String longestCommonPrefix(String[] strs){
+        StringBuilder result = new StringBuilder();
 
+        // Sort the array of strings
+        Arrays.sort(strs);
+
+        // Get the first and last string array
+        char[] first = strs[0].toCharArray();
+        char[] last = strs[strs.length - 1].toCharArray();
+
+        // Compare the first and last string array
+        for(int i = 0; i < first.length; i++){
+            if( first[i] != last[i]){
+                break;
+            }
+            result.append(first[i]);
+        }
+
+        return result.toString();
+    }
+
+    // Date : 08/12/2024
+    // LeetCode : 49. Group Anagrams
+    // Time Complexity: O(N * K)
+    // Space Complexity: O(N * K)
+    public static List<List<String>> groupAnagrams(String[] strs){
+        // Check for empty array or null array
+        if(strs == null || strs.length == 0){
+            return new ArrayList<>();
+        }
+
+        // Create a hashmap to store the sorted string as key and the list of anagrams as value
+        HashMap<String, List<String>> map = new HashMap<>();
+        // Iterate through the array of strings
+        for (String str : strs){
+            String frequencyString = getFrequencyString(str);
+            if(map.containsKey(frequencyString)){
+                map.get(frequencyString).add(str);
+            }
+            else{
+                List<String> list = new ArrayList<>();
+                list.add(str);
+                map.put(frequencyString,list);
+            }
+        }
+
+        return new ArrayList<>(map.values());
+    }
+
+    // Helper Method for groupAnagrams method to get the frequency of the string. [LeetCode : 49. Group Anagrams]
+    // Time Complexity: O(N)
+    // Space Complexity: O(1)
+    public static String getFrequencyString(String str){
+        int[] frequency = new int[26];
+        for(char ch : str.toCharArray()){
+            frequency[ch - 'a']++;
+        }
+
+        StringBuilder sb = new StringBuilder();
+        char ch = 'a';
+        for(int freq : frequency){
+            sb.append(ch);
+            sb.append(freq);
+            ch++;
+        }
+        return sb.toString();
+    }
 
 }
