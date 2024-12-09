@@ -73,6 +73,9 @@ This file contains solutions to array problems from the YouTube channel "Take U 
 - **Length of Last Word**: Given a string s consisting of some words separated by some number of spaces, return the length of the last word in the string. A word is a maximal substring consisting of non-space characters only.
 - **Longest Common Prefix**: Write a function to find the longest common prefix string amongst an array of strings. If there is no common prefix, return an empty string `""`.
 - **Group Anagrams**: Given an array of strings `strs`, group the anagrams together. You can return the answer in any order.
+- **Valid Parentheses**: Given a string s containing just the characters '(', ')', '{', '}', '[' and ']', determine if the input string is valid.
+- **Pascal's Triangle**: Given an integer `numRows`, return the first numRows of Pascal's triangle.
+
 ## How to Use
 - Browse through each Java file to understand the code structure and problem-solving techniques.
 - Each file is well-commented to guide you through the thought process behind solving the problems.

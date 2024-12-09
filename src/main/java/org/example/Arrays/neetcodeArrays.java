@@ -51,6 +51,19 @@ class neetcodeArrays{
         System.out.println("Input: [\"\"] \nGroup Anagrams : "+ groupAnagrams(strs2));
         System.out.println("\n\n");
 
+        // LeetCode : 20. Valid Parentheses
+        System.out.println("Input: s = \"()\" \nIs Parentheses Valid ? : "+ isValidParentheses("()"));
+        System.out.println("Input: s = \"()[]{}\" \nIs Parentheses Valid ? : "+ isValidParentheses("()[]{}"));
+        System.out.println("Input: s = \"(]\" \nIs Parentheses Valid ? : "+ isValidParentheses("(]"));
+        System.out.println("Input: s = \"([)]\" \nIs Parentheses Valid ? : "+ isValidParentheses("([)]"));
+        System.out.println("Input: s = \"{[]}\" \nIs Parentheses Valid ? : "+ isValidParentheses("{[]}"));
+        System.out.println("\n\n");
+
+        // LeetCode : 118. Pascal's Triangle
+        System.out.println("Input: numRows = 5 \nPascal's Triangle : "+ pascalTriangleList(5));
+        System.out.println("Input: numRows = 1 \nPascal's Triangle : "+ pascalTriangleList(1));
+        System.out.println("\n\n");
+
     }
 
     // Helper Method. (print)
@@ -236,6 +249,58 @@ class neetcodeArrays{
             ch++;
         }
         return sb.toString();
+    }
+
+    // Date : 09/12/2024
+    // LeetCode : 20. Valid Parentheses
+    // Time Complexity: O(N)
+    // Space Complexity: O(N)
+    public static boolean isValidParentheses(String s){
+        Stack<Character> stack = new Stack<>();
+        for(char c : s.toCharArray()){
+            if(c == '{'){
+                stack.push('}');
+            }
+            else if( c == '['){
+                stack.push(']');
+            }
+            else if (c == '('){
+                stack.push(')');
+            }
+            else if ( stack.isEmpty() || stack.pop() != c){
+                return false;
+            }
+        }
+        return stack.isEmpty();
+    }
+
+    // Date : 09/12/2024
+    // LeetCode : 118. Pascal's Triangle
+    // Time Complexity: O(N^2)
+    // Space Complexity: O(N^2)
+    public static List<List<Integer>> pascalTriangleList(int numRows){
+        List<List<Integer>> result = new ArrayList<>();
+        if (numRows == 0) return result;
+
+        // First row
+        List<Integer> firstRow = new ArrayList<>();
+        firstRow.add(1);
+        result.add(firstRow);
+
+        if (numRows == 1) return result;
+
+        // Other rows
+        for( int i = 1; i < numRows; i++){
+            List<Integer> prevRow = result.get(i-1);
+            ArrayList<Integer> row = new ArrayList<>();
+            row.add(1);
+            for(int j = 0; j < i - 1; j++){
+                row.add(prevRow.get(j+1) + prevRow.get(j));
+            }
+            row.add(1);
+            result.add(row);
+        }
+        return result;
     }
 
 }
