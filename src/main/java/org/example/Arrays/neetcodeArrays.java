@@ -64,11 +64,37 @@ class neetcodeArrays{
         System.out.println("Input: numRows = 1 \nPascal's Triangle : "+ pascalTriangleList(1));
         System.out.println("\n\n");
 
+        // LeetCode : 27. Remove Element
+        int[] arr4 = {3,2,2,3};
+        print(arr4);
+        System.out.println("After Removing Element 3 : "+ removeElement(arr4,3));
+        System.out.println("\n\n");
+
+        // LeetCode : 929. Unique Email Addresses
+        String[] emails = {"test.email+alex@leetcode.com","test.e.mail+bob.cathy@leetcode.com","testemail+david@lee.tcode.com"};
+        System.out.println("Input: ");
+        print(emails);
+        System.out.println("Number of Unique Email Addresses : "+ numUniqueEmails(emails));
+        System.out.println("\n\n");
+
+        // LeetCode : 205. Isomorphic Strings
+        System.out.println("Input: s = \"egg\", t = \"add\" \nAre they Isomorphic ? : "+ isIsomorphic("egg","add"));
+        System.out.println("Input: s = \"foo\", t = \"bar\" \nAre they Isomorphic ? : "+ isIsomorphic("foo","bar"));
+        System.out.println("Input: s = \"paper\", t = \"title\" \nAre they Isomorphic ? : "+ isIsomorphic("paper","title"));
+        System.out.println("\n\n");
     }
 
     // Helper Method. (print)
-    // print function
+    // print function [for integer array]
     public static void print(int [] arr){
+        for(int i = 0; i < arr.length; i++){
+            System.out.print(arr[i]+" ");
+        }
+        System.out.println();
+    }
+
+    // print function [for string array]
+    public static void print(String [] arr){
         for(int i = 0; i < arr.length; i++){
             System.out.print(arr[i]+" ");
         }
@@ -303,4 +329,79 @@ class neetcodeArrays{
         return result;
     }
 
+    // Date : 10/12/2024
+    // LeetCode : 27. Remove Element
+    // Time Complexity: O(N)
+    // Space Complexity: O(1)
+    public static int removeElement(int[] nums, int val){
+        int pointer = 0;
+        for(int i = 0; i < nums.length; i++){
+            if(nums[i] != val){
+                nums[pointer] = nums[i];
+                pointer++;
+            }
+        }
+        return pointer;
+    }
+
+    // Date : 10/12/2024
+    // LeetCode : 929. Unique Email Addresses
+    // Time Complexity: O(N*M)
+    // Space Complexity: O(N*M)
+    public static int numUniqueEmails(String[] emails){
+        // Creating HashSet to store unique email addresses
+        HashSet<String> uniqueEmails = new HashSet<>();
+
+        // Iterate through the emails array
+        for (String email : emails){
+            int split_position = email.indexOf("@");
+            String localName = email.substring(0,split_position);
+            String domainName = email.substring(split_position);
+
+            if (localName.contains("+")){
+                localName = localName.substring(0,localName.indexOf("+"));
+            }
+
+            // Remove the dots from the local name
+            localName = localName.replaceAll("\\.","");
+            uniqueEmails.add(localName + domainName);
+        }
+        return uniqueEmails.size();
+    }
+
+    // Date : 10/12/2024
+    // LeetCode : 205. Isomorphic Strings
+    // Time Complexity: O(N)
+    // Space Complexity: O(N)
+    public static boolean isIsomorphic(String s , String t){
+        // Check for the length of the strings
+        if(s.length() != t.length()){
+            return false;
+        }
+
+        // Creating HashMap to store the mapping of the characters
+        HashMap<Character,Character> map = new HashMap<>();
+
+        for (int i = 0; i < s.length(); i++){
+            char original = s.charAt(i);
+            char replacement = t.charAt(i);
+
+            // Check if the character is already mapped
+            if (!map.containsKey(original)){
+                if(!map.containsValue(replacement)){
+                    map.put(original,replacement);
+                }
+                else{
+                    return false;
+                }
+            }
+            else{
+                char mapped = map.get(original);
+                if(mapped != replacement){
+                    return false;
+                }
+            }
+        }
+        return true;
+    }
 }

@@ -75,6 +75,9 @@ This file contains solutions to array problems from the YouTube channel "Take U 
 - **Group Anagrams**: Given an array of strings `strs`, group the anagrams together. You can return the answer in any order.
 - **Valid Parentheses**: Given a string s containing just the characters '(', ')', '{', '}', '[' and ']', determine if the input string is valid.
 - **Pascal's Triangle**: Given an integer `numRows`, return the first numRows of Pascal's triangle.
+- **Remove Element**: Given an integer array `nums` and an integer `val`, remove all occurrences of `val` in `nums` in-place. The relative order of the elements may be changed.
+- **Unique Email Addresses**: Every valid email consists of a local name and a domain name, separated by the '@' sign. Besides lowercase letters, these emails may contain '.'s or '+'s.
+- **Isomorphic Strings**: Given two strings `s` and `t`, determine if they are isomorphic. Two strings are isomorphic if the characters in `s` can be replaced to get `t`.
 
 ## How to Use
 - Browse through each Java file to understand the code structure and problem-solving techniques.
