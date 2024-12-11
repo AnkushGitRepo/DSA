@@ -78,6 +78,7 @@ This file contains solutions to array problems from the YouTube channel "Take U 
 - **Remove Element**: Given an integer array `nums` and an integer `val`, remove all occurrences of `val` in `nums` in-place. The relative order of the elements may be changed.
 - **Unique Email Addresses**: Every valid email consists of a local name and a domain name, separated by the '@' sign. Besides lowercase letters, these emails may contain '.'s or '+'s.
 - **Isomorphic Strings**: Given two strings `s` and `t`, determine if they are isomorphic. Two strings are isomorphic if the characters in `s` can be replaced to get `t`.
+- **Majority Element**: Given an array `nums` of size `n`, return the majority element. The majority element is the element that appears more than `n / 2` times. You may assume that the majority element always exists in the array.
 
 ## How to Use
 - Browse through each Java file to understand the code structure and problem-solving techniques.

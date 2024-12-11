@@ -82,6 +82,13 @@ class neetcodeArrays{
         System.out.println("Input: s = \"foo\", t = \"bar\" \nAre they Isomorphic ? : "+ isIsomorphic("foo","bar"));
         System.out.println("Input: s = \"paper\", t = \"title\" \nAre they Isomorphic ? : "+ isIsomorphic("paper","title"));
         System.out.println("\n\n");
+
+        // LeetCode : 169. Majority Element
+        int[] arr5 = {3,2,3};
+        print(arr5);
+        System.out.println("Majority Element : "+ majorityElement(arr5));
+        System.out.println("\n\n");
+
     }
 
     // Helper Method. (print)
@@ -404,4 +411,27 @@ class neetcodeArrays{
         }
         return true;
     }
+
+    // Date : 11/12/2024
+    // LeetCode : 169. Majority Element
+    // Time Complexity: O(N)
+    // Space Complexity: O(1)
+    public static int majorityElement(int[] nums){
+        int majorityElement = nums[0];
+        int count = 1;
+        for (int i = 1; i < nums.length; i++){
+            if (count == 0){
+                majorityElement = nums[i];
+                count++;
+            }
+            else if ( majorityElement == nums[i]){
+                count++;
+            }
+            else{
+                count--;
+            }
+        }
+        return majorityElement;
+    }
+
 }
