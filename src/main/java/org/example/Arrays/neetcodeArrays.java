@@ -89,6 +89,23 @@ class neetcodeArrays{
         System.out.println("Majority Element : "+ majorityElement(arr5));
         System.out.println("\n\n");
 
+        // LeetCode : 605. Can Place Flowers
+        int[] flowerbed = {1,0,0,0,1};
+        int n = 1;
+        System.out.println("Input: flowerbed = [1,0,0,0,1], n = 1 \nCan Place Flowers ? : "+ canPlaceFlowers(flowerbed,n));
+        int[] flowerbed1 = {1,0,0,0,1};
+        int n1 = 2;
+        System.out.println("Input: flowerbed = [1,0,0,0,1], n = 2 \nCan Place Flowers ? : "+ canPlaceFlowers(flowerbed1,n1));
+        System.out.println("\n\n");
+
+        // LeetCode : 496. Next Greater Element I
+        int[] nums1 = {4,1,2};
+        int[] nums2 = {1,3,4,2};
+        System.out.println("Input: nums1 = [4,1,2], nums2 = [1,3,4,2] \nNext Greater Element : "+ Arrays.toString(nextGreaterElement(nums1,nums2)));
+        int[] nums3 = {2,4};
+        int[] nums4 = {1,2,3,4};
+        System.out.println("Input: nums1 = [2,4], nums2 = [1,2,3,4] \nNext Greater Element : "+ Arrays.toString(nextGreaterElement(nums3,nums4)));
+
     }
 
     // Helper Method. (print)
@@ -434,4 +451,52 @@ class neetcodeArrays{
         return majorityElement;
     }
 
+    // Date : 12/12/2024
+    // LeetCode : 605. Can Place Flowers
+    // Time Complexity: O(N)
+    // Space Complexity: O(1)
+    public static boolean canPlaceFlowers(int[] flowerbed, int n){
+        //  Check for the edge case
+        if (n == 0) return true;
+
+        // Check for the edge case
+        if (flowerbed.length == 1){
+            if (flowerbed[0] == 0) return true;
+            else return false;
+        }
+
+        // iterate through the flowerbed array
+        int count = 0;
+        for (int i = 0; i < flowerbed.length; i++){
+            if (flowerbed[i] == 0){
+                if((i == 0 || flowerbed[i-1] == 0) && (i == flowerbed.length - 1 || flowerbed[i+1] == 0)){
+                    count++;
+                    if (count == n) return true;
+                    i++;
+                }
+            }
+        }
+        return false;
+    }
+
+    // Date : 12/12/2024
+    // LeetCode : 496. Next Greater Element I
+    // Time Complexity: O(N)
+    // Space Complexity: O(N)
+    public static int[] nextGreaterElement(int[] nums1, int[] nums2){
+        // Stack to store the elements
+        Stack<Integer> stack = new Stack<>();
+        HashMap<Integer,Integer> map = new HashMap<>();
+        for(int num : nums2){
+            while(!stack.isEmpty() && stack.peek() < num){
+                map.put(stack.pop(),num);
+            }
+            stack.push(num);
+        }
+
+        for(int i = 0; i < nums1.length; i++){
+            nums1[i] = map.getOrDefault(nums1[i],-1);
+        }
+        return nums1;
+    }
 }

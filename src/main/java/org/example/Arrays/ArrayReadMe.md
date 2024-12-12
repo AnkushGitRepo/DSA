@@ -79,6 +79,8 @@ This file contains solutions to array problems from the YouTube channel "Take U 
 - **Unique Email Addresses**: Every valid email consists of a local name and a domain name, separated by the '@' sign. Besides lowercase letters, these emails may contain '.'s or '+'s.
 - **Isomorphic Strings**: Given two strings `s` and `t`, determine if they are isomorphic. Two strings are isomorphic if the characters in `s` can be replaced to get `t`.
 - **Majority Element**: Given an array `nums` of size `n`, return the majority element. The majority element is the element that appears more than `n / 2` times. You may assume that the majority element always exists in the array.
+- **Can Place Flowers**: You have a long flowerbed in which some of the plots are planted, and some are not. However, flowers cannot be planted in adjacent plots. Given an integer array `flowerbed` containing `0's` and `1's`, where `0` means empty and `1` means not empty, and an integer `n`, return if `n` new flowers can be planted in the `flowerbed` without violating the no-adjacent-flowers rule.
+- **Next Greater Element I**: The next greater element of some element `x` in an array is the first greater element that is to the right of `x` in the same array. You are given two distinct 0-indexed integer arrays `nums1` and `nums2`, where `nums1` is a subset of `nums2`. For each `0 <= i < nums1.length`, find the index `j` such that `nums1[i] == nums2[j]` and determine the next greater element of `nums2[j]` in `nums2`. If there is no next greater element, then the answer for this query is `-1`.
 
 ## How to Use
 - Browse through each Java file to understand the code structure and problem-solving techniques.
