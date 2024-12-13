@@ -105,6 +105,22 @@ class neetcodeArrays{
         int[] nums3 = {2,4};
         int[] nums4 = {1,2,3,4};
         System.out.println("Input: nums1 = [2,4], nums2 = [1,2,3,4] \nNext Greater Element : "+ Arrays.toString(nextGreaterElement(nums3,nums4)));
+        System.out.println("\n\n");
+
+        // LeetCode : 724. Find Pivot Index
+        int[] nums5 = {1,7,3,6,5,6};
+        System.out.println("Input: nums = [1,7,3,6,5,6] \nPivot Index : "+ pivotIndec(nums5));
+        int[] nums6 = {1,2,3};
+        System.out.println("Input: nums = [1,2,3] \nPivot Index : "+ pivotIndec(nums6));
+        System.out.println("\n\n");
+
+        // LeetCode : 303. Range Sum Query - Immutable
+        int[] nums7 = {-2, 0, 3, -5, 2, -1};
+        NumArray numArray = new neetcodeArrays().new NumArray(nums7);
+        System.out.println("Input: nums = [-2, 0, 3, -5, 2, -1] \nSum Range : "+ numArray.sumRange(0,2));
+        System.out.println("Input: nums = [-2, 0, 3, -5, 2, -1] \nSum Range : "+ numArray.sumRange(2,5));
+        System.out.println("Input: nums = [-2, 0, 3, -5, 2, -1] \nSum Range : "+ numArray.sumRange(0,5));
+        System.out.println("\n\n");
 
     }
 
@@ -498,5 +514,49 @@ class neetcodeArrays{
             nums1[i] = map.getOrDefault(nums1[i],-1);
         }
         return nums1;
+    }
+
+    // Date: 13/12/2024
+    // LeetCode: 724. Find Pivot Index
+    // Time Complexity: O(N)
+    // Space Complexity: O(1)
+    public static int pivotIndec(int[] nums){
+        int rightSum = 0;
+        for (int num : nums){
+            rightSum += num;
+        }
+
+        int leftSum = 0;
+        for (int i = 0; i < nums.length; i++){
+            // update the right sum
+            rightSum -= nums[i];
+
+            // check if the left sum is equal to the right sum
+            if (leftSum == rightSum){
+                return i;
+            }
+
+            // update the left sum
+            leftSum += nums[i];
+        }
+        return -1;
+    }
+
+    // Date: 13/12/2024
+    // LeetCode: 303. Range Sum Query - Immutable
+    // Time Complexity: O(1)
+    // Space Complexity: O(N)
+    class NumArray {
+        int[] prefixSum;
+        public NumArray(int[] nums) {
+            prefixSum = new int[nums.length + 1];
+            for (int i = 0; i < nums.length; i++){
+                prefixSum[i+1] = prefixSum[i] + nums[i];
+            }
+        }
+
+        public int sumRange(int left, int right) {
+            return prefixSum[right+1] - prefixSum[left];
+        }
     }
 }
