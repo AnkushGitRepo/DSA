@@ -109,9 +109,9 @@ class neetcodeArrays{
 
         // LeetCode : 724. Find Pivot Index
         int[] nums5 = {1,7,3,6,5,6};
-        System.out.println("Input: nums = [1,7,3,6,5,6] \nPivot Index : "+ pivotIndec(nums5));
+        System.out.println("Input: nums = [1,7,3,6,5,6] \nPivot Index : "+ pivotIndex(nums5));
         int[] nums6 = {1,2,3};
-        System.out.println("Input: nums = [1,2,3] \nPivot Index : "+ pivotIndec(nums6));
+        System.out.println("Input: nums = [1,2,3] \nPivot Index : "+ pivotIndex(nums6));
         System.out.println("\n\n");
 
         // LeetCode : 303. Range Sum Query - Immutable
@@ -122,9 +122,21 @@ class neetcodeArrays{
         System.out.println("Input: nums = [-2, 0, 3, -5, 2, -1] \nSum Range : "+ numArray.sumRange(0,5));
         System.out.println("\n\n");
 
+        // LeetCode : 448. Find All Numbers Disappeared in an Array
+        int[] nums8 = {4,3,2,7,8,2,3,1};
+        System.out.println("Input: nums = [4,3,2,7,8,2,3,1] \nDisappeared Numbers : "+ findDisappearedNumbers(nums8));
+        int[] nums9 = {1,1};
+        System.out.println("Input: nums = [1,1] \nDisappeared Numbers : "+ findDisappearedNumbers(nums9));
+        System.out.println("\n\n");
+
+        // LeetCode : 1189. Maximum Number of Balloons
+        System.out.println("Input: text = \"nlaebolko\" \nMaximum Number of Balloons : "+ maxNumberOBalloons("nlaebolko"));
+        System.out.println("Input: text = \"loonbalxballpoon\" \nMaximum Number of Balloons : "+ maxNumberOBalloons("loonbalxballpoon"));
+        System.out.println("\n\n");
+
     }
 
-    // Helper Method. (print)
+    // Helper Method. (print)M
     // print function [for integer array]
     public static void print(int [] arr){
         for(int i = 0; i < arr.length; i++){
@@ -520,7 +532,7 @@ class neetcodeArrays{
     // LeetCode: 724. Find Pivot Index
     // Time Complexity: O(N)
     // Space Complexity: O(1)
-    public static int pivotIndec(int[] nums){
+    public static int pivotIndex(int[] nums){
         int rightSum = 0;
         for (int num : nums){
             rightSum += num;
@@ -558,5 +570,46 @@ class neetcodeArrays{
         public int sumRange(int left, int right) {
             return prefixSum[right+1] - prefixSum[left];
         }
+    }
+
+    // Date: 14/12/2024
+    // LeetCode: 448. Find All Numbers Disappeared in an Array
+    // Time Complexity: O(N)
+    // Space Complexity: O(1)
+    public static List<Integer> findDisappearedNumbers(int[] nums){
+        List<Integer> result = new ArrayList<>();
+
+        for (int i = 0; i < nums.length; i++){
+            int index = Math.abs(nums[i]) - 1;
+            if (nums[index] < 0){
+                continue;
+            }
+            nums[index] *= -1;
+        }
+
+        for (int i = 0 ; i < nums.length; i++){
+            if (nums[i] > 0){
+                result.add(i+1);
+            }
+        }
+        return result;
+    }
+
+    // Date: 14/12/2024
+    // LeetCode: 1189. Maximum Number of Balloons
+    // Time Complexity: O(N)
+    // Space Complexity: O(1)
+    public static int maxNumberOBalloons(String text) {
+        Map<Character,Integer> map = new HashMap<>();
+        for (char ch : text.toCharArray()){
+            if (ch == 'b' || ch == 'a' || ch == 'l' || ch == 'o' || ch == 'n') {
+                map.put(ch,map.getOrDefault(ch,0) + 1);
+            }
+        }
+
+        // Check for the minimum frequency of the characters
+        int singleCharMin = Math.min(map.getOrDefault('b',0), Math.min(map.getOrDefault('a',0),map.getOrDefault('n',0)));
+        int doubleCharMin = Math.min(map.getOrDefault('l',0),map.getOrDefault('o',0));
+        return Math.min(singleCharMin,doubleCharMin/2);
     }
 }

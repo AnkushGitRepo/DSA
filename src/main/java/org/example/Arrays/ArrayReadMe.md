@@ -84,6 +84,8 @@ This file contains solutions to array problems from the YouTube channel "Take U 
 - **Find Pivot Index**: Given an array of integers `nums`, calculate the pivot index of this array. The pivot index is the index where the sum of all the numbers strictly to the left of the index is equal to the sum of all the numbers strictly to the index's right. If the index is on the left edge of the array, then the left sum is `0` because there are no elements to the left. This also applies to the right edge of the array.
 - **Range Sum Query - Immutable**: Given an integer array `nums`, handle multiple queries of the following type:
     - Calculate the sum of the elements of `nums` between indices `left` and `right` inclusive where `left <= right`.
+- **Find All Numbers Disappeared in an Array**: Given an array `nums` of `n` integers where `1 <= nums[i] <= n`, return an array of all the integers in the range `[1, n]` that do not appear in `nums`.
+- **Maximum Number of Balloons**: Given a string `text`, you want to use the characters of `text` to form as many instances of the word "balloon" as possible. You can use each character in `text` at most once. Return the maximum number of instances that can be formed.
 
 ## How to Use
 - Browse through each Java file to understand the code structure and problem-solving techniques.
