@@ -86,6 +86,11 @@ This file contains solutions to array problems from the YouTube channel "Take U 
     - Calculate the sum of the elements of `nums` between indices `left` and `right` inclusive where `left <= right`.
 - **Find All Numbers Disappeared in an Array**: Given an array `nums` of `n` integers where `1 <= nums[i] <= n`, return an array of all the integers in the range `[1, n]` that do not appear in `nums`.
 - **Maximum Number of Balloons**: Given a string `text`, you want to use the characters of `text` to form as many instances of the word "balloon" as possible. You can use each character in `text` at most once. Return the maximum number of instances that can be formed.
+- **Word Pattern**: Given a pattern and a string `s`, find if `s` follows the same pattern. Here, "follows" means a full match, such that there is a one-to-one correspondence between a letter in `pattern` and a non-empty word in `s`.
+- **Happy Number**: Write an algorithm to determine if a number `n` is happy. A happy number is a number defined by the following process:
+    - Starting with any positive integer, replace the number by the sum of the squares of its digits.
+    - Repeat the process until the number equals 1 (where it will stay), or it loops endlessly in a cycle that does not include 1.
+    - Those numbers for which this process ends in 1 are happy.
 
 ## How to Use
 - Browse through each Java file to understand the code structure and problem-solving techniques.

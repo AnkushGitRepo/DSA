@@ -134,9 +134,21 @@ class neetcodeArrays{
         System.out.println("Input: text = \"loonbalxballpoon\" \nMaximum Number of Balloons : "+ maxNumberOBalloons("loonbalxballpoon"));
         System.out.println("\n\n");
 
+        // LeetCode : 290. Word Pattern
+        System.out.println("Input: pattern = \"abba\", s = \"dog cat cat dog\" \nAre they Word Pattern ? : "+ wordPattern("abba","dog cat cat dog"));
+        System.out.println("Input: pattern = \"abba\", s = \"dog cat cat fish\" \nAre they Word Pattern ? : "+ wordPattern("abba","dog cat cat fish"));
+        System.out.println("Input: pattern = \"aaaa\", s = \"dog cat cat dog\" \nAre they Word Pattern ? : "+ wordPattern("aaaa","dog cat cat dog"));
+        System.out.println("Input: pattern = \"abba\", s = \"dog dog dog dog\" \nAre they Word Pattern ? : "+ wordPattern("abba","dog dog dog dog"));
+        System.out.println("\n\n");
+
+        // LeetCode : 202. Happy Number
+        System.out.println("Input: n = 19 \nIs n Happy Number ? : "+ isHappy(19));
+        System.out.println("Input: n = 2 \nIs n Happy Number ? : "+ isHappy(2));
+        System.out.println("\n\n");
+
     }
 
-    // Helper Method. (print)M
+    // Helper Method. (print)
     // print function [for integer array]
     public static void print(int [] arr){
         for(int i = 0; i < arr.length; i++){
@@ -612,4 +624,52 @@ class neetcodeArrays{
         int doubleCharMin = Math.min(map.getOrDefault('l',0),map.getOrDefault('o',0));
         return Math.min(singleCharMin,doubleCharMin/2);
     }
+
+    // Date: 15/12/2024
+    // LeetCode: 290. Word Pattern
+    // Time Complexity: O(N)
+    // Space Complexity: O(N)
+    public static boolean wordPattern(String pattern, String s){
+        String[] words = s.split(" ");
+
+        // Check for the length of the pattern and words
+        if (pattern.length() != words.length){
+            return false;
+        }
+
+        Map<Character,String> map = new HashMap<>();
+        for( int i = 0 ; i < pattern.length() ; i++){
+            char ch = pattern.charAt(i);
+            String word = words[i];
+
+            if ((map.containsKey(ch) && !map.get(ch).equals(word)) || (!map.containsKey(ch) && map.containsValue(word))){
+                return false;
+            }
+            map.put(ch,word);
+        }
+        return true;
+    }
+
+    // Date: 15/12/2024
+    // LeetCode: 202. Happy Number
+    // Time Complexity: O(N)
+    // Space Complexity: O(1)
+    public static boolean isHappy(int n){
+        Set<Integer> set = new HashSet<>();
+
+        while ( true ) {
+            int sum = 0;
+            while (n != 0){
+                sum += Math.pow(n % 10, 2.0);
+                n /= 10;
+            }
+
+            if (sum == 1) return true;
+
+            n = sum;
+            if (set.contains(n)) return false;
+            set.add(n);
+        }
+    }
+
 }
