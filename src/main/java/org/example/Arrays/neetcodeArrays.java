@@ -146,6 +146,17 @@ class neetcodeArrays{
         System.out.println("Input: n = 2 \nIs n Happy Number ? : "+ isHappy(2));
         System.out.println("\n\n");
 
+        // LeetCode : 896. Monotonic Array
+        int[] nums10 = {1,2,2,3};
+        System.out.println("Input: nums = [1,2,2,3] \nIs Monotonic Array ? : "+ isMonotonicArray(nums10));
+        int[] nums11 = {6,5,4,4};
+        System.out.println("Input: nums = [6,5,4,4] \nIs Monotonic Array ? : "+ isMonotonicArray(nums11));
+        int[] nums12 = {1,3,2};
+        System.out.println("Input: nums = [1,3,2] \nIs Monotonic Array ? : "+ isMonotonicArray(nums12));
+        int[] nums13 = {1,2,4,5};
+        System.out.println("Input: nums = [1,2,4,5] \nIs Monotonic Array ? : "+ isMonotonicArray(nums13));
+        System.out.println("\n\n");
+
     }
 
     // Helper Method. (print)
@@ -670,6 +681,25 @@ class neetcodeArrays{
             if (set.contains(n)) return false;
             set.add(n);
         }
+    }
+
+    // Date: 16/12/2024
+    // LeetCode: 896. Monotonic Array
+    // Time Complexity: O(N)
+    // Space Complexity: O(1)
+    public static boolean isMonotonicArray(int[] nums){
+        boolean increasing = true;
+        boolean decreasing = true;
+
+        for (int i = 1; i < nums.length; i++){
+            if (nums[i] > nums[i-1]){
+                decreasing = false;
+            }
+            if (nums[i] < nums[i-1]){
+                increasing = false;
+            }
+        }
+        return increasing || decreasing;
     }
 
 }

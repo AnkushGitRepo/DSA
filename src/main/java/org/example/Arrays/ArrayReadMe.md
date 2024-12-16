@@ -91,6 +91,7 @@ This file contains solutions to array problems from the YouTube channel "Take U 
     - Starting with any positive integer, replace the number by the sum of the squares of its digits.
     - Repeat the process until the number equals 1 (where it will stay), or it loops endlessly in a cycle that does not include 1.
     - Those numbers for which this process ends in 1 are happy.
+- **Monotonic Array**: An array is monotonic if it is either monotone increasing or monotone decreasing. An array `nums` is monotone increasing if for all `i <= j`, `nums[i] <= nums[j]`. An array `nums` is monotone decreasing if for all `i <= j`, `nums[i] >= nums[j]`. Return `true` if and only if the given array `nums` is monotonic.
 
 ## How to Use
 - Browse through each Java file to understand the code structure and problem-solving techniques.
