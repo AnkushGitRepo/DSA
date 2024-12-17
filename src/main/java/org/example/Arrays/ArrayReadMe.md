@@ -92,6 +92,15 @@ This file contains solutions to array problems from the YouTube channel "Take U 
     - Repeat the process until the number equals 1 (where it will stay), or it loops endlessly in a cycle that does not include 1.
     - Those numbers for which this process ends in 1 are happy.
 - **Monotonic Array**: An array is monotonic if it is either monotone increasing or monotone decreasing. An array `nums` is monotone increasing if for all `i <= j`, `nums[i] <= nums[j]`. An array `nums` is monotone decreasing if for all `i <= j`, `nums[i] >= nums[j]`. Return `true` if and only if the given array `nums` is monotonic.
+- **Design HashSet**: Design a HashSet without using any built-in hash table libraries. Implement `MyHashSet` class:
+    - `void add(key)`: Insert a key into the HashSet.
+    - `void remove(key)`: Remove a key in the HashSet. If the key does not exist in the HashSet, do nothing.
+    - `boolean contains(key)`: Return whether the key exists in the HashSet.
+- **Design HashMap**: Design a HashMap without using any built-in hash table libraries. Implement the `MyHashMap` class:
+    - `MyHashMap()`: Initializes the object with an empty map.
+    - `void put(int key, int value)`: Inserts a `(key, value)` pair into the HashMap. If the `key` already exists in the map, update the corresponding `value`.
+    - `int get(int key)`: Returns the `value` to which the specified `key` is mapped, or `-1` if this map contains no mapping for the `key`.
+    - `void remove(key)`: Removes the `key` and its corresponding `value` if the map contains the mapping for the `key`.
 
 ## How to Use
 - Browse through each Java file to understand the code structure and problem-solving techniques.

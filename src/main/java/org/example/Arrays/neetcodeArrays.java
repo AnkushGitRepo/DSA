@@ -157,6 +157,30 @@ class neetcodeArrays{
         System.out.println("Input: nums = [1,2,4,5] \nIs Monotonic Array ? : "+ isMonotonicArray(nums13));
         System.out.println("\n\n");
 
+        // LeetCode : 705. Design HashSet
+        MyHashSet myHashSet = new neetcodeArrays().new MyHashSet();
+        myHashSet.add(1);
+        myHashSet.add(2);
+        System.out.println("Is 1 Present in HashSet ? : "+ myHashSet.contains(1));
+        System.out.println("Is 3 Present in HashSet ? : "+ myHashSet.contains(3));
+        myHashSet.add(2);
+        System.out.println("Is 2 Present in HashSet ? : "+ myHashSet.contains(2));
+        myHashSet.remove(2);
+        System.out.println("Is 2 Present in HashSet ? : "+ myHashSet.contains(2));
+        System.out.println("\n\n");
+
+        // LeetCode : 706. Design HashMap
+        MyHashMap myHashMap = new neetcodeArrays().new MyHashMap();
+        myHashMap.put(1,1);
+        myHashMap.put(2,2);
+        System.out.println("Value of Key 1 : "+ myHashMap.get(1));
+        System.out.println("Value of Key 3 : "+ myHashMap.get(3));
+        myHashMap.put(2,1);
+        System.out.println("Value of Key 2 : "+ myHashMap.get(2));
+        myHashMap.remove(2);
+        System.out.println("Value of Key 2 : "+ myHashMap.get(2));
+        System.out.println("\n\n");
+
     }
 
     // Helper Method. (print)
@@ -702,4 +726,50 @@ class neetcodeArrays{
         return increasing || decreasing;
     }
 
+    // Date: 17/12/2024
+    // LeetCode: 705. Design HashSet
+    // Time Complexity: O(1)
+    // Space Complexity: O(1)
+    class MyHashSet {
+        boolean[] hashSet;
+        public MyHashSet() {
+            hashSet = new boolean[101]; // Assuming the size of the hashSet is 101
+        }
+
+        public void add(int key) {
+            hashSet[key] = true;
+        }
+
+        public void remove(int key) {
+            hashSet[key] = false;
+        }
+
+        public boolean contains(int key) {
+            return hashSet[key];
+        }
+    }
+
+    // Date: 17/12/2024
+    // LeetCode: 706. Design HashMap
+    // Time Complexity: O(1)
+    // Space Complexity: O(1)
+    class MyHashMap {
+        int[] map;
+        public MyHashMap() {
+            map = new int[10]; // Assuming the size of the map is 10
+            Arrays.fill(map,-1);
+        }
+
+        public void put(int key, int value) {
+            map[key] = value;
+        }
+
+        public int get(int key) {
+            return map[key];
+        }
+
+        public void remove(int key) {
+            map[key] = -1;
+        }
+    }
 }
