@@ -181,6 +181,19 @@ class neetcodeArrays{
         System.out.println("Value of Key 2 : "+ myHashMap.get(2));
         System.out.println("\n\n");
 
+        // LeetCode : 1512. Number of Good Pairs
+        int[] nums14 = {1,2,3,1,1,3};
+        System.out.println("Input: nums = [1,2,3,1,1,3] \nNumber of Good Pairs : "+ numIdenticalPairs(nums14));
+        int[] nums15 = {1,1,1,1};
+        System.out.println("Input: nums = [1,1,1,1] \nNumber of Good Pairs : "+ numIdenticalPairs(nums15));
+        System.out.println("\n\n");
+
+        // LeetCode : 119. Pascal's Triangle II
+        System.out.println("Input: rowIndex = 3 \nPascal's Triangle : "+ getRow(3));
+        System.out.println("Input: rowIndex = 0 \nPascal's Triangle : "+ getRow(0));
+        System.out.println("\n\n");
+
+
     }
 
     // Helper Method. (print)
@@ -771,5 +784,37 @@ class neetcodeArrays{
         public void remove(int key) {
             map[key] = -1;
         }
+    }
+
+    // Date: 18/12/2024
+    // LeetCode: 1512. Number of Good Pairs
+    // Time Complexity: O(N)
+    // Space Complexity: O(N)
+    public static int numIdenticalPairs(int[] nums) {
+        int[] count = new int[101];
+
+        for (int num : nums){
+            count[num]++;
+        }
+
+        int totalPairs = 0;
+        // Logic: nC2 = n*(n-1)/2 => Total Pairs = (n*(n-1))/2 => Total Pairs = (count[num] * (count[num] - 1)) / 2
+        for (int num : count){
+            totalPairs += (num * (num - 1)) / 2;
+        }
+        return totalPairs;
+    }
+
+    // Date: 18/12/2024
+    // LeetCode: 119. Pascal's Triangle II
+    // Time Complexity: O(N)
+    // Space Complexity: O(N)
+    public static List<Integer> getRow(int rowIndex) {
+        List<Integer> result = new ArrayList<>();
+        result.add(1);
+        for (int i = 1; i <= rowIndex; i++){
+            result.add((int) ((long) result.get(i-1) * (rowIndex - i + 1) / i));
+        }
+        return result;
     }
 }

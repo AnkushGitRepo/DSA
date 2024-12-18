@@ -101,6 +101,8 @@ This file contains solutions to array problems from the YouTube channel "Take U 
     - `void put(int key, int value)`: Inserts a `(key, value)` pair into the HashMap. If the `key` already exists in the map, update the corresponding `value`.
     - `int get(int key)`: Returns the `value` to which the specified `key` is mapped, or `-1` if this map contains no mapping for the `key`.
     - `void remove(key)`: Removes the `key` and its corresponding `value` if the map contains the mapping for the `key`.
+- **Number of Good Pairs**: Given an array of integers `nums`, a pair `(i, j)` is called good if `nums[i] == nums[j]` and `i < j`. Return the number of good pairs.
+- **Pascal's Triangle II**: Given an integer `rowIndex`, return the `rowIndexth` (0-indexed) row of the Pascal's triangle.
 
 ## How to Use
 - Browse through each Java file to understand the code structure and problem-solving techniques.
