@@ -193,7 +193,19 @@ class neetcodeArrays{
         System.out.println("Input: rowIndex = 0 \nPascal's Triangle : "+ getRow(0));
         System.out.println("\n\n");
 
+        // LeetCode : 1160. Find Words That Can Be Formed by Characters
+        String[] words = {"cat","bt","hat","tree"};
+        String chars = "atach";
+        System.out.println("Input: words = [\"cat\",\"bt\",\"hat\",\"tree\"], chars = \"atach\" \nNumber of Words That Can Be Formed : "+ countCharacters(words,chars));
+        String[] words1 = {"hello","world","leetcode"};
+        String chars1 = "welldonehoneyr";
+        System.out.println("Input: words = [\"hello\",\"world\",\"leetcode\"], chars = \"welldonehoneyr\" \nNumber of Words That Can Be Formed : "+ countCharacters(words1,chars1));
+        System.out.println("\n\n");
 
+        // LeetCode : 2264. Largest 3-Same-Digit Number in String
+        System.out.println("Input: s = \"334111\" \nLargest 3-Same-Digit Number : "+ largestGoodInteger("334111"));
+        System.out.println("Input: s = \"3341111\" \nLargest 3-Same-Digit Number : "+ largestGoodInteger("3341111"));
+        System.out.println("\n\n");
     }
 
     // Helper Method. (print)
@@ -817,4 +829,54 @@ class neetcodeArrays{
         }
         return result;
     }
+
+    // Date: 19/12/2024
+    // LeetCode: 1160. Find Words That Can Be Formed by Characters
+    // Time Complexity: O(L+n⋅k)
+    // Space Complexity: O(1)
+    public static int countCharacters(String[] words, String chars){
+        int[] charCount = new int[26];
+        for (char ch : chars.toCharArray()){
+            charCount[ch - 'a']++;
+        }
+
+        int totalLength = 0;
+
+        for (String word : words){
+            int[] wordCount = new int[26];
+            boolean isPossible = true;
+            for (char ch : word.toCharArray()){
+                wordCount[ch - 'a']++;
+                if (wordCount[ch - 'a'] > charCount[ch - 'a']){
+                    isPossible = false;
+                    break;
+                }
+            }
+            if (isPossible){
+                totalLength += word.length();
+            }
+        }
+        return totalLength;
+    }
+
+    // Date: 19/12/2024
+    // LeetCode: 2264. Largest 3-Same-Digit Number in String
+    // Time Complexity: O(N)
+    // Space Complexity: O(1)
+    public static String largestGoodInteger(String num) {
+        int result = -1;
+        // Iterate through the string
+        for (int i = 0; i + 2 < num.length(); i++) {
+            if (num.charAt(i) == num.charAt(i + 1) && num.charAt(i) == num.charAt(i + 2)) {
+                result = Math.max(result, num.charAt(i) - '0');
+            }
+        }
+
+        StringBuilder builder = new StringBuilder();
+        for (int i = 0; i < 3; i++) {
+            builder.append((char)(48 + result));
+        }
+        return result == -1 ? "" : builder.toString();
+    }
+
 }

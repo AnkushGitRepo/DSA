@@ -103,6 +103,8 @@ This file contains solutions to array problems from the YouTube channel "Take U 
     - `void remove(key)`: Removes the `key` and its corresponding `value` if the map contains the mapping for the `key`.
 - **Number of Good Pairs**: Given an array of integers `nums`, a pair `(i, j)` is called good if `nums[i] == nums[j]` and `i < j`. Return the number of good pairs.
 - **Pascal's Triangle II**: Given an integer `rowIndex`, return the `rowIndexth` (0-indexed) row of the Pascal's triangle.
+- **Find Words That Can Be Formed by Characters**: You are given an array of strings `words` and a string `chars`. A string is good if it can be formed by characters from `chars` (each character can only be used once). Return the sum of lengths of all good strings in `words`.
+- **Largest 3-Same-Digit Number in String**: Given a string `s`, return the size of the largest substring containing the same character that contains at most three characters.
 
 ## How to Use
 - Browse through each Java file to understand the code structure and problem-solving techniques.
