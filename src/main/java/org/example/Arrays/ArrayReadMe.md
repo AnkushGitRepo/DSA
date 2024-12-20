@@ -105,6 +105,8 @@ This file contains solutions to array problems from the YouTube channel "Take U 
 - **Pascal's Triangle II**: Given an integer `rowIndex`, return the `rowIndexth` (0-indexed) row of the Pascal's triangle.
 - **Find Words That Can Be Formed by Characters**: You are given an array of strings `words` and a string `chars`. A string is good if it can be formed by characters from `chars` (each character can only be used once). Return the sum of lengths of all good strings in `words`.
 - **Largest 3-Same-Digit Number in String**: Given a string `s`, return the size of the largest substring containing the same character that contains at most three characters.
+- **Destination City**: You are given an array of strings `paths`, where `paths[i] = [cityAi, cityBi]` means there exists a direct path going from `cityAi` to `cityBi`. Return the destination city, that is, the city without any path outgoing to another city.
+- **Maximum Product Difference Between Two Pairs**: The product difference between two pairs `(a, b)` and `(c, d)` is defined as `(a * b) - (c * d)`. Given an integer array `nums`, choose four distinct indices `w`, `x`, `y`, and `z` such that the product difference between pairs `(nums[w], nums[x])` and `(nums[y], nums[z])` is maximized. Return the maximum such product difference.
 
 ## How to Use
 - Browse through each Java file to understand the code structure and problem-solving techniques.

@@ -206,6 +206,27 @@ class neetcodeArrays{
         System.out.println("Input: s = \"334111\" \nLargest 3-Same-Digit Number : "+ largestGoodInteger("334111"));
         System.out.println("Input: s = \"3341111\" \nLargest 3-Same-Digit Number : "+ largestGoodInteger("3341111"));
         System.out.println("\n\n");
+
+        // LeetCode : LeetCode: 1436. Destination City
+        List<List<String>> paths = new ArrayList<>();
+        paths.add(Arrays.asList("London","New York"));
+        paths.add(Arrays.asList("New York","Lima"));
+        paths.add(Arrays.asList("Lima","Sao Paulo"));
+        System.out.println("Input: paths = [[\"London\",\"New York\"],[\"New York\",\"Lima\"],[\"Lima\",\"Sao Paulo\"]] \nDestination City : "+ destCity(paths));
+        List<List<String>> paths1 = new ArrayList<>();
+        paths1.add(Arrays.asList("B","C"));
+        paths1.add(Arrays.asList("D","B"));
+        paths1.add(Arrays.asList("C","A"));
+        System.out.println("Input: paths = [[\"B\",\"C\"],[\"D\",\"B\"],[\"C\",\"A\"]] \nDestination City : "+ destCity(paths1));
+        System.out.println("\n\n");
+
+        // LeetCode: 1913. Maximum Product Difference Between Two Pairs
+        int[] nums16 = {5,6,2,7,4};
+        System.out.println("Input: nums = [5,6,2,7,4] \nMaximum Product Difference : "+ maxProductDifference(nums16));
+        int[] nums17 = {4,2,5,9,7,4,8};
+        System.out.println("Input: nums = [4,2,5,9,7,4,8] \nMaximum Product Difference : "+ maxProductDifference(nums17));
+        System.out.println("\n\n");
+
     }
 
     // Helper Method. (print)
@@ -877,6 +898,57 @@ class neetcodeArrays{
             builder.append((char)(48 + result));
         }
         return result == -1 ? "" : builder.toString();
+    }
+
+    // Date: 20/12/2024
+    // LeetCode: 1436. Destination City
+    // Time Complexity: O(N)
+    // Space Complexity: O(N)
+    public static String destCity(List<List<String>> paths){
+        Set<String> set = new HashSet<>();
+        for (List<String> path : paths){
+            set.add(path.get(0));
+        }
+
+        for (List<String> path : paths){
+            if(!set.contains(path.get(1))){
+                return path.get(1);
+            }
+        }
+        return null;
+    }
+
+    // Date: 20/12/2024
+    // LeetCode: 1913. Maximum Product Difference Between Two Pairs
+    // Time Complexity: O(N)
+    // Space Complexity: O(1)
+    public static int maxProductDifference(int[] nums){
+        int largest = Integer.MIN_VALUE;
+        int secondLargest = Integer.MIN_VALUE;
+
+        int smallest = Integer.MAX_VALUE;
+        int secondSmallest = Integer.MAX_VALUE;
+
+        for (int num : nums){
+            // Logic to find the largest and second largest
+            if (num > largest){
+                secondLargest = largest;
+                largest = num;
+            }
+            else{
+                secondLargest = Math.max(secondLargest,num);
+            }
+
+            // Logic to find the smallest and second smallest
+            if (num < smallest){
+                secondLargest = smallest;
+                smallest = num;
+            }
+            else{
+                secondSmallest = Math.min(secondSmallest,num);
+            }
+        }
+        return (largest * secondLargest) - (smallest * secondSmallest);
     }
 
 }
