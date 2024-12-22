@@ -227,6 +227,12 @@ class neetcodeArrays{
         System.out.println("Input: nums = [4,2,5,9,7,4,8] \nMaximum Product Difference : "+ maxProductDifference(nums17));
         System.out.println("\n\n");
 
+        // LeetCode: 1422. Maximum Score After Splitting a String
+        String s = "011101";
+        System.out.println("Input: s = \"011101\" \nMaximum Score After Splitting : "+ maxScore(s));
+        String s1 = "00111";
+        System.out.println("Input: s = \"00111\" \nMaximum Score After Splitting : "+ maxScore(s1));
+        System.out.println("\n\n");
     }
 
     // Helper Method. (print)
@@ -951,4 +957,26 @@ class neetcodeArrays{
         return (largest * secondLargest) - (smallest * secondSmallest);
     }
 
+    // Date: 22/12/2024
+    // LeetCode: 1422. Maximum Score After Splitting a String
+    // Time Complexity: O(N)
+    // Space Complexity: O(1)
+    public static int maxScore(String s){
+        int result = Integer.MIN_VALUE;
+        int n = s.length();
+        int zeros = 0;
+        int ones = 0;
+        for (int i = 0; i <= n - 2; i++){
+            if (s.charAt(i) == '1'){
+                ones++;
+            }
+            else{
+                zeros++;
+            }
+            result = Math.max(result, zeros - ones);
+        }
+
+        if (s.charAt(n-1) == '1') ones++;
+        return result + ones;
+    }
 }
