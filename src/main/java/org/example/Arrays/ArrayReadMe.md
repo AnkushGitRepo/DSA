@@ -108,6 +108,7 @@ This file contains solutions to array problems from the YouTube channel "Take U 
 - **Destination City**: You are given an array of strings `paths`, where `paths[i] = [cityAi, cityBi]` means there exists a direct path going from `cityAi` to `cityBi`. Return the destination city, that is, the city without any path outgoing to another city.
 - **Maximum Product Difference Between Two Pairs**: The product difference between two pairs `(a, b)` and `(c, d)` is defined as `(a * b) - (c * d)`. Given an integer array `nums`, choose four distinct indices `w`, `x`, `y`, and `z` such that the product difference between pairs `(nums[w], nums[x])` and `(nums[y], nums[z])` is maximized. Return the maximum such product difference.
 - **Maximum Score After Splitting a String**: You are given a string `s` of zeros and ones. You can choose any two adjacent indices and swap their values. Return the maximum score after splitting the string into two non-empty substrings (i.e., left substring and right substring).
+- **Path Crossing**: Given a string `path`, where `path[i]` is the `ith` character of the path, you need to determine if your path crosses itself, resulting in a cycle. For example, if `path = "NES"`, then `path[0] = 'N'`, `path[1] = 'E'`, and `path[2] = 'S'`. Then `path` crosses itself because the path will go back to the starting point.
 
 ## How to Use
 - Browse through each Java file to understand the code structure and problem-solving techniques.

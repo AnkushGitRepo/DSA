@@ -233,6 +233,13 @@ class neetcodeArrays{
         String s1 = "00111";
         System.out.println("Input: s = \"00111\" \nMaximum Score After Splitting : "+ maxScore(s1));
         System.out.println("\n\n");
+
+        // LeetCode: 1496. Path Crossing
+        String path = "NES";
+        System.out.println("Input: path = \"NES\" \nIs Path Crossing ? : "+ isPathCrossing(path));
+        String path1 = "NESWW";
+        System.out.println("Input: path = \"NESWW\" \nIs Path Crossing ? : "+ isPathCrossing(path1));
+        System.out.println("\n\n");
     }
 
     // Helper Method. (print)
@@ -978,5 +985,37 @@ class neetcodeArrays{
 
         if (s.charAt(n-1) == '1') ones++;
         return result + ones;
+    }
+
+    // Date: 23/12/2024
+    // LeetCode: 1496. Path Crossing
+    // Time Complexity: O(N)
+    // Space Complexity: O(N)
+    public static boolean isPathCrossing(String path){
+        Set<String> set = new HashSet<>();
+        int x = 0;
+        int y = 0;
+        set.add(0 + "," + 0);
+        for(char c : path.toCharArray()){
+            if (c == 'N'){
+                y++;
+            }
+            else if (c == 'W') {
+                x--;
+            }
+            else if (c == 'S'){
+                y--;
+            }
+            else if (c == 'E'){
+                x++;
+            }
+
+            String coordinates = x + "," + y;
+            if (set.contains(coordinates)){
+                return true;
+            }
+            set.add(coordinates);
+        }
+        return false;
     }
 }
