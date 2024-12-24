@@ -240,6 +240,13 @@ class neetcodeArrays{
         String path1 = "NESWW";
         System.out.println("Input: path = \"NESWW\" \nIs Path Crossing ? : "+ isPathCrossing(path1));
         System.out.println("\n\n");
+
+        // LeetCode: 1758. Minimum Changes To Make Alternating Binary String
+        String s2 = "010";
+        System.out.println("Input: s = \"010\" \nMinimum Changes To Make Alternating Binary String : "+ minOperations(s2));
+        String s3 = "10010001";
+        System.out.println("Input: s = \"10010001\" \nMinimum Changes To Make Alternating Binary String : "+ minOperations(s3));
+        System.out.println("\n\n");
     }
 
     // Helper Method. (print)
@@ -1017,5 +1024,36 @@ class neetcodeArrays{
             set.add(coordinates);
         }
         return false;
+    }
+
+    // Date: 24/12/2024
+    // LeetCode: 1758. Minimum Changes To Make Alternating Binary String
+    // Time Complexity: O(N)
+    // Space Complexity: O(1)
+    public static int minOperations(String s){
+        int n = s.length();
+
+        int startWithZero = 0;
+        int startWithOne = 0;
+
+        for (int i = 0 ; i < n; i++){
+            if (i % 2 == 0){
+                if (s.charAt(i) == '0'){
+                    startWithOne++;
+                }
+                else{
+                    startWithZero++;
+                }
+            }
+            else{
+                if (s.charAt(i) == '0'){
+                    startWithZero++;
+                }
+                else{
+                    startWithOne++;
+                }
+            }
+        }
+        return Math.min(startWithZero,startWithOne);
     }
 }
