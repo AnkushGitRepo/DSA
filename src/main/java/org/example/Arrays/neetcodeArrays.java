@@ -247,6 +247,14 @@ class neetcodeArrays{
         String s3 = "10010001";
         System.out.println("Input: s = \"10010001\" \nMinimum Changes To Make Alternating Binary String : "+ minOperations(s3));
         System.out.println("\n\n");
+
+        // LeetCode: 1897. Redistribute Characters to Make All Strings Equal
+        String[] words2 = {"abc","aabc","bc"};
+        System.out.println("Input: words = [\"abc\",\"aabc\",\"bc\"] \nCan Redistribute Characters to Make All Strings Equal ? : "+ makeEqual(words2));
+        String[] words3 = {"ab","a"};
+        System.out.println("Input: words = [\"ab\",\"a\"] \nCan Redistribute Characters to Make All Strings Equal ? : "+ makeEqual(words3));
+        System.out.println("\n\n");
+
     }
 
     // Helper Method. (print)
@@ -1056,4 +1064,26 @@ class neetcodeArrays{
         }
         return Math.min(startWithZero,startWithOne);
     }
+
+    // Date: 25/12/2024
+    // LeetCode: 1897. Redistribute Characters to Make All Strings Equal
+    // Time Complexity: O(N * W)
+    // Space Complexity: O(1)
+    public static boolean makeEqual(String[] words){
+        int[] freq = new int[26];
+        for (String word : words){
+            for (char ch : word.toCharArray()){
+                freq[ch - 'a']++;
+            }
+        }
+
+        for (int f : freq){
+            if (f % words.length != 0){
+                return false;
+            }
+        }
+
+        return true;
+    }
+
 }
