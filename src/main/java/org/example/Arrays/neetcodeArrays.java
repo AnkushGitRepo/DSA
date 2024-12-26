@@ -255,6 +255,13 @@ class neetcodeArrays{
         System.out.println("Input: words = [\"ab\",\"a\"] \nCan Redistribute Characters to Make All Strings Equal ? : "+ makeEqual(words3));
         System.out.println("\n\n");
 
+        // LeetCode: 1624. Largest Substring Between Two Equal Characters
+        String s4 = "aa";
+        System.out.println("Input: s = \"aa\" \nLargest Substring Between Two Equal Characters : "+ maxLengthBetweenEqualCharacters(s4));
+        String s5 = "abca";
+        System.out.println("Input: s = \"abca\" \nLargest Substring Between Two Equal Characters : "+ maxLengthBetweenEqualCharacters(s5));
+        System.out.println("\n\n");
+
     }
 
     // Helper Method. (print)
@@ -1086,4 +1093,25 @@ class neetcodeArrays{
         return true;
     }
 
+    // Date: 26/12/2024
+    // LeetCode: 1624. Largest Substring Between Two Equal Characters
+    // Time Complexity: O(N)
+    // Space Complexity: O(1)
+    public static int maxLengthBetweenEqualCharacters(String s){
+        int n = s.length();
+        int[] firstIndex = new int[26];
+        Arrays.fill(firstIndex,-1);
+        int result = -1;
+
+        for (int i = 0; i < n; i++){
+            char ch = s.charAt(i);
+            if (firstIndex[ch - 'a'] == -1){
+                firstIndex[ch - 'a'] = i;
+            }
+            else{
+                result = Math.max(result, i - firstIndex[ch - 'a'] - 1);
+            }
+        }
+        return result;
+    }
 }
