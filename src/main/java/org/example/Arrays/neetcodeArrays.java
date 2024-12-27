@@ -262,6 +262,13 @@ class neetcodeArrays{
         System.out.println("Input: s = \"abca\" \nLargest Substring Between Two Equal Characters : "+ maxLengthBetweenEqualCharacters(s5));
         System.out.println("\n\n");
 
+        // LeetCode: 645. Set Mismatch
+        int[] nums18 = {1,2,2,4};
+        System.out.println("Input: nums = [1,2,2,4] \nSet Mismatch : "+ Arrays.toString(findErrorNums(nums18)));
+        int[] nums19 = {1,1};
+        System.out.println("Input: nums = [1,1] \nSet Mismatch : "+ Arrays.toString(findErrorNums(nums19)));
+        System.out.println("\n\n");
+
     }
 
     // Helper Method. (print)
@@ -1113,5 +1120,33 @@ class neetcodeArrays{
             }
         }
         return result;
+    }
+
+    // Date: 27/12/2024
+    // LeetCode: 645. Set Mismatch
+    // Time Complexity: O(N)
+    // Space Complexity: O(1)
+    public static int[] findErrorNums(int[] nums){
+        int n = nums.length;
+        int duplicate = -1;
+        int missing = -1;
+
+        for (int i = 0; i < n; i++){
+            if (nums[Math.abs(nums[i] - 1)] < 0){
+                duplicate = Math.abs(nums[i]);
+            }
+            else{
+                nums[Math.abs(nums[i]) - 1] *= -1;
+            }
+        }
+
+        for (int i = 0; i < n; i++){
+            if (nums[i] > 0){
+                missing = i + 1;
+                break;
+            }
+        }
+
+        return new int[]{duplicate,missing};
     }
 }
