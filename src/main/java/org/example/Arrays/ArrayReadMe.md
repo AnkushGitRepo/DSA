@@ -113,6 +113,7 @@ This file contains solutions to array problems from the YouTube channel "Take U 
 - **Redistribute Characters to Make All Strings Equal**: You are given an array of strings `words` and a string `s`. A string is good if it can be formed by characters from `s` (each character can only be used once). Return `true` if all the strings in the array `words` are good, otherwise, return `false`.
 - **Largest Substring Between Two Equal Characters**: Given a string `s`, return the length of the longest substring between two equal characters, excluding the two characters. If there is no such substring return `-1`.
 - **Set Mismatch**: You have a set of integers `s`, which originally contains all the numbers from `1` to `n`. Unfortunately, due to some error, one of the numbers in `s` got duplicated to another number in the set, which results in repetition of one number and loss of another number. You are given an integer array `nums` representing the data status of this set after the error. Find the number that occurs twice and the number that is missing and return them in the form of an array.
+- **First Unique Character in a String**: Given a string `s`, return the first non-repeating character in it and return its index. If it does not exist, return `-1`.
 
 ## How to Use
 - Browse through each Java file to understand the code structure and problem-solving techniques.

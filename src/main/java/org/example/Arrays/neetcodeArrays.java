@@ -269,6 +269,13 @@ class neetcodeArrays{
         System.out.println("Input: nums = [1,1] \nSet Mismatch : "+ Arrays.toString(findErrorNums(nums19)));
         System.out.println("\n\n");
 
+        // LeetCode: 387. First Unique Character in a String
+        String s6 = "leetcode";
+        System.out.println("Input: s = \"leetcode\" \nFirst Unique Character in a String : "+ firstUniqueCharacter(s6));
+        String s7 = "loveleetcode";
+        System.out.println("Input: s = \"loveleetcode\" \nFirst Unique Character in a String : "+ firstUniqueCharacter(s7));
+        System.out.println("\n\n");
+
     }
 
     // Helper Method. (print)
@@ -1148,5 +1155,24 @@ class neetcodeArrays{
         }
 
         return new int[]{duplicate,missing};
+    }
+
+    // Date: 28/12/2024
+    // LeetCode: 387. First Unique Character in a String
+    // Time Complexity: O(N)
+    // Space Complexity: O(1)
+    public static int firstUniqueCharacter(String s){
+        int[] frequency = new int[26];
+
+        for (char ch : s.toCharArray()){
+            frequency[ch - 'a']++;
+        }
+
+        for (int i = 0; i < s.length(); i++){
+            if (frequency[s.charAt(i) - 'a'] == 1){
+                return i;
+            }
+        }
+        return -1;
     }
 }
