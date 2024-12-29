@@ -3,17 +3,20 @@ import java.util.*;
 class neetcodeArrays{
     public static void main(String[] args) {
         // LeetCode : 217. Contains Duplicate Test Case.
+        System.out.println("LeetCode : 217. Contains Duplicate");
         int[] arr1 = {1,1,1,3,3,4,3,2,4,2};
         print(arr1);
         System.out.println("Does arr1 Contain Duplicate ? : "+ containsDuplicate(arr1));
         System.out.println("\n\n");
 
         // LeetCode : 242. Valid Anagram
+        System.out.println("LeetCode : 242. Valid Anagram");
         System.out.println("Input: s = \"anagram\", t = \"nagaram\" \nAre they valid anagram ? : "+ isAnagram("anagram","nagaram"));
         System.out.println("Input s = \"rat\", t = \"car\" \nAre they valid anagram ? : "+ isAnagram("rat","car"));
         System.out.println("\n\n");
 
         // LeetCode : 1929. Concatenation of Array
+        System.out.println("LeetCode : 1929. Concatenation of Array");
         int[] arr2 = {1,2,3,4,5};
         print(arr2);
         System.out.println("Concatenation Of Given Array With Itself :  ");
@@ -21,6 +24,7 @@ class neetcodeArrays{
         System.out.println("\n\n");
 
         // LeetCode : 1299. Replace Elements with Greatest Element on Right Side
+        System.out.println("LeetCode : 1299. Replace Elements with Greatest Element on Right Side");
         int[] arr3 = {17,18,5,4,6,1};
         print(arr3);
         System.out.println("After Replacing Elements with Greatest Element on Right Side : ");
@@ -28,23 +32,27 @@ class neetcodeArrays{
         System.out.println("\n\n");
 
         // LeetCode : 392. Is Subsequence
+        System.out.println("LeetCode : 392. Is Subsequence");
         System.out.println("Input: s = \"abc\", t = \"ahbgdc\" \nIs s subsequence of t ? : "+ new neetcodeArrays().isSubsequence("abc","ahbgdc"));
         System.out.println("Input: s = \"axc\", t = \"ahbgdc\" \nIs s subsequence of t ? : "+ new neetcodeArrays().isSubsequence("axc","ahbgdc"));
         System.out.println("\n\n");
 
         // LeetCode : 58. Length of Last Word
+        System.out.println("LeetCode : 58. Length of Last Word");
         System.out.println("Input: s = \"Hello World\" \nLength of Last Word : "+ lengthOfLastWordInString("Hello World"));
         System.out.println("Input: s = \" \" \nLength of Last Word : "+ lengthOfLastWordInString(" "));
         System.out.println("Input: s = \"a \" \nLength of Last Word : "+ lengthOfLastWordInString("a "));
         System.out.println("\n\n");
 
         // LeetCode : 14. Longest Common Prefix
+        System.out.println("LeetCode : 14. Longest Common Prefix");
         String[] strs = {"flower","flow","flight"};
         System.out.println("Input: [\"flower\",\"flow\",\"flight\"] \nLongest Common Prefix : "+ longestCommonPrefix(strs));
         System.out.println("Input: [\"dog\",\"racecar\",\"car\"] \nLongest Common Prefix : "+ longestCommonPrefix(new String[]{"dog","racecar","car"}));
         System.out.println("\n\n");
 
         // LeetCode : 49. Group Anagrams
+        System.out.println("LeetCode : 49. Group Anagrams");
         String[] strs1 = {"eat","tea","tan","ate","nat","bat"};
         System.out.println("Input: [\"eat\",\"tea\",\"tan\",\"ate\",\"nat\",\"bat\"] \nGroup Anagrams : "+ groupAnagrams(strs1));
         String[] strs2 = {""};
@@ -52,6 +60,7 @@ class neetcodeArrays{
         System.out.println("\n\n");
 
         // LeetCode : 20. Valid Parentheses
+        System.out.println("LeetCode : 20. Valid Parentheses");
         System.out.println("Input: s = \"()\" \nIs Parentheses Valid ? : "+ isValidParentheses("()"));
         System.out.println("Input: s = \"()[]{}\" \nIs Parentheses Valid ? : "+ isValidParentheses("()[]{}"));
         System.out.println("Input: s = \"(]\" \nIs Parentheses Valid ? : "+ isValidParentheses("(]"));
@@ -60,17 +69,20 @@ class neetcodeArrays{
         System.out.println("\n\n");
 
         // LeetCode : 118. Pascal's Triangle
+        System.out.println("LeetCode : 118. Pascal's Triangle");
         System.out.println("Input: numRows = 5 \nPascal's Triangle : "+ pascalTriangleList(5));
         System.out.println("Input: numRows = 1 \nPascal's Triangle : "+ pascalTriangleList(1));
         System.out.println("\n\n");
 
         // LeetCode : 27. Remove Element
+        System.out.println("LeetCode : 27. Remove Element");
         int[] arr4 = {3,2,2,3};
         print(arr4);
         System.out.println("After Removing Element 3 : "+ removeElement(arr4,3));
         System.out.println("\n\n");
 
         // LeetCode : 929. Unique Email Addresses
+        System.out.println("LeetCode : 929. Unique Email Addresses");
         String[] emails = {"test.email+alex@leetcode.com","test.e.mail+bob.cathy@leetcode.com","testemail+david@lee.tcode.com"};
         System.out.println("Input: ");
         print(emails);
@@ -78,18 +90,21 @@ class neetcodeArrays{
         System.out.println("\n\n");
 
         // LeetCode : 205. Isomorphic Strings
+        System.out.println("LeetCode : 205. Isomorphic Strings");
         System.out.println("Input: s = \"egg\", t = \"add\" \nAre they Isomorphic ? : "+ isIsomorphic("egg","add"));
         System.out.println("Input: s = \"foo\", t = \"bar\" \nAre they Isomorphic ? : "+ isIsomorphic("foo","bar"));
         System.out.println("Input: s = \"paper\", t = \"title\" \nAre they Isomorphic ? : "+ isIsomorphic("paper","title"));
         System.out.println("\n\n");
 
         // LeetCode : 169. Majority Element
+        System.out.println("LeetCode : 169. Majority Element");
         int[] arr5 = {3,2,3};
         print(arr5);
         System.out.println("Majority Element : "+ majorityElement(arr5));
         System.out.println("\n\n");
 
         // LeetCode : 605. Can Place Flowers
+        System.out.println("LeetCode : 605. Can Place Flowers");
         int[] flowerbed = {1,0,0,0,1};
         int n = 1;
         System.out.println("Input: flowerbed = [1,0,0,0,1], n = 1 \nCan Place Flowers ? : "+ canPlaceFlowers(flowerbed,n));
@@ -99,6 +114,7 @@ class neetcodeArrays{
         System.out.println("\n\n");
 
         // LeetCode : 496. Next Greater Element I
+        System.out.println("LeetCode : 496. Next Greater Element I");
         int[] nums1 = {4,1,2};
         int[] nums2 = {1,3,4,2};
         System.out.println("Input: nums1 = [4,1,2], nums2 = [1,3,4,2] \nNext Greater Element : "+ Arrays.toString(nextGreaterElement(nums1,nums2)));
@@ -108,6 +124,7 @@ class neetcodeArrays{
         System.out.println("\n\n");
 
         // LeetCode : 724. Find Pivot Index
+        System.out.println("LeetCode : 724. Find Pivot Index");
         int[] nums5 = {1,7,3,6,5,6};
         System.out.println("Input: nums = [1,7,3,6,5,6] \nPivot Index : "+ pivotIndex(nums5));
         int[] nums6 = {1,2,3};
@@ -115,6 +132,7 @@ class neetcodeArrays{
         System.out.println("\n\n");
 
         // LeetCode : 303. Range Sum Query - Immutable
+        System.out.println("LeetCode : 303. Range Sum Query - Immutable");
         int[] nums7 = {-2, 0, 3, -5, 2, -1};
         NumArray numArray = new neetcodeArrays().new NumArray(nums7);
         System.out.println("Input: nums = [-2, 0, 3, -5, 2, -1] \nSum Range : "+ numArray.sumRange(0,2));
@@ -123,6 +141,7 @@ class neetcodeArrays{
         System.out.println("\n\n");
 
         // LeetCode : 448. Find All Numbers Disappeared in an Array
+        System.out.println("LeetCode : 448. Find All Numbers Disappeared in an Array");
         int[] nums8 = {4,3,2,7,8,2,3,1};
         System.out.println("Input: nums = [4,3,2,7,8,2,3,1] \nDisappeared Numbers : "+ findDisappearedNumbers(nums8));
         int[] nums9 = {1,1};
@@ -130,11 +149,13 @@ class neetcodeArrays{
         System.out.println("\n\n");
 
         // LeetCode : 1189. Maximum Number of Balloons
+        System.out.println("LeetCode : 1189. Maximum Number of Balloons");
         System.out.println("Input: text = \"nlaebolko\" \nMaximum Number of Balloons : "+ maxNumberOBalloons("nlaebolko"));
         System.out.println("Input: text = \"loonbalxballpoon\" \nMaximum Number of Balloons : "+ maxNumberOBalloons("loonbalxballpoon"));
         System.out.println("\n\n");
 
         // LeetCode : 290. Word Pattern
+        System.out.println("LeetCode : 290. Word Pattern");
         System.out.println("Input: pattern = \"abba\", s = \"dog cat cat dog\" \nAre they Word Pattern ? : "+ wordPattern("abba","dog cat cat dog"));
         System.out.println("Input: pattern = \"abba\", s = \"dog cat cat fish\" \nAre they Word Pattern ? : "+ wordPattern("abba","dog cat cat fish"));
         System.out.println("Input: pattern = \"aaaa\", s = \"dog cat cat dog\" \nAre they Word Pattern ? : "+ wordPattern("aaaa","dog cat cat dog"));
@@ -142,11 +163,13 @@ class neetcodeArrays{
         System.out.println("\n\n");
 
         // LeetCode : 202. Happy Number
+        System.out.println("LeetCode : 202. Happy Number");
         System.out.println("Input: n = 19 \nIs n Happy Number ? : "+ isHappy(19));
         System.out.println("Input: n = 2 \nIs n Happy Number ? : "+ isHappy(2));
         System.out.println("\n\n");
 
         // LeetCode : 896. Monotonic Array
+        System.out.println("LeetCode : 896. Monotonic Array");
         int[] nums10 = {1,2,2,3};
         System.out.println("Input: nums = [1,2,2,3] \nIs Monotonic Array ? : "+ isMonotonicArray(nums10));
         int[] nums11 = {6,5,4,4};
@@ -158,6 +181,7 @@ class neetcodeArrays{
         System.out.println("\n\n");
 
         // LeetCode : 705. Design HashSet
+        System.out.println("LeetCode : 705. Design HashSet");
         MyHashSet myHashSet = new neetcodeArrays().new MyHashSet();
         myHashSet.add(1);
         myHashSet.add(2);
@@ -170,6 +194,7 @@ class neetcodeArrays{
         System.out.println("\n\n");
 
         // LeetCode : 706. Design HashMap
+        System.out.println("LeetCode : 706. Design HashMap");
         MyHashMap myHashMap = new neetcodeArrays().new MyHashMap();
         myHashMap.put(1,1);
         myHashMap.put(2,2);
@@ -182,6 +207,7 @@ class neetcodeArrays{
         System.out.println("\n\n");
 
         // LeetCode : 1512. Number of Good Pairs
+        System.out.println("LeetCode : 1512. Number of Good Pairs");
         int[] nums14 = {1,2,3,1,1,3};
         System.out.println("Input: nums = [1,2,3,1,1,3] \nNumber of Good Pairs : "+ numIdenticalPairs(nums14));
         int[] nums15 = {1,1,1,1};
@@ -189,11 +215,13 @@ class neetcodeArrays{
         System.out.println("\n\n");
 
         // LeetCode : 119. Pascal's Triangle II
+        System.out.println("LeetCode : 119. Pascal's Triangle II");
         System.out.println("Input: rowIndex = 3 \nPascal's Triangle : "+ getRow(3));
         System.out.println("Input: rowIndex = 0 \nPascal's Triangle : "+ getRow(0));
         System.out.println("\n\n");
 
         // LeetCode : 1160. Find Words That Can Be Formed by Characters
+        System.out.println("LeetCode : 1160. Find Words That Can Be Formed by Characters");
         String[] words = {"cat","bt","hat","tree"};
         String chars = "atach";
         System.out.println("Input: words = [\"cat\",\"bt\",\"hat\",\"tree\"], chars = \"atach\" \nNumber of Words That Can Be Formed : "+ countCharacters(words,chars));
@@ -203,11 +231,13 @@ class neetcodeArrays{
         System.out.println("\n\n");
 
         // LeetCode : 2264. Largest 3-Same-Digit Number in String
+        System.out.println("LeetCode : 2264. Largest 3-Same-Digit Number in String");
         System.out.println("Input: s = \"334111\" \nLargest 3-Same-Digit Number : "+ largestGoodInteger("334111"));
         System.out.println("Input: s = \"3341111\" \nLargest 3-Same-Digit Number : "+ largestGoodInteger("3341111"));
         System.out.println("\n\n");
 
         // LeetCode : LeetCode: 1436. Destination City
+        System.out.println("LeetCode: 1436. Destination City");
         List<List<String>> paths = new ArrayList<>();
         paths.add(Arrays.asList("London","New York"));
         paths.add(Arrays.asList("New York","Lima"));
@@ -221,6 +251,7 @@ class neetcodeArrays{
         System.out.println("\n\n");
 
         // LeetCode: 1913. Maximum Product Difference Between Two Pairs
+        System.out.println("LeetCode: 1913. Maximum Product Difference Between Two Pairs");
         int[] nums16 = {5,6,2,7,4};
         System.out.println("Input: nums = [5,6,2,7,4] \nMaximum Product Difference : "+ maxProductDifference(nums16));
         int[] nums17 = {4,2,5,9,7,4,8};
@@ -228,6 +259,7 @@ class neetcodeArrays{
         System.out.println("\n\n");
 
         // LeetCode: 1422. Maximum Score After Splitting a String
+        System.out.println("LeetCode: 1422. Maximum Score After Splitting a String");
         String s = "011101";
         System.out.println("Input: s = \"011101\" \nMaximum Score After Splitting : "+ maxScore(s));
         String s1 = "00111";
@@ -235,6 +267,7 @@ class neetcodeArrays{
         System.out.println("\n\n");
 
         // LeetCode: 1496. Path Crossing
+        System.out.println("LeetCode: 1496. Path Crossing");
         String path = "NES";
         System.out.println("Input: path = \"NES\" \nIs Path Crossing ? : "+ isPathCrossing(path));
         String path1 = "NESWW";
@@ -242,6 +275,7 @@ class neetcodeArrays{
         System.out.println("\n\n");
 
         // LeetCode: 1758. Minimum Changes To Make Alternating Binary String
+        System.out.println("LeetCode: 1758. Minimum Changes To Make Alternating Binary String");
         String s2 = "010";
         System.out.println("Input: s = \"010\" \nMinimum Changes To Make Alternating Binary String : "+ minOperations(s2));
         String s3 = "10010001";
@@ -249,6 +283,7 @@ class neetcodeArrays{
         System.out.println("\n\n");
 
         // LeetCode: 1897. Redistribute Characters to Make All Strings Equal
+        System.out.println("LeetCode: 1897. Redistribute Characters to Make All Strings Equal");
         String[] words2 = {"abc","aabc","bc"};
         System.out.println("Input: words = [\"abc\",\"aabc\",\"bc\"] \nCan Redistribute Characters to Make All Strings Equal ? : "+ makeEqual(words2));
         String[] words3 = {"ab","a"};
@@ -256,6 +291,7 @@ class neetcodeArrays{
         System.out.println("\n\n");
 
         // LeetCode: 1624. Largest Substring Between Two Equal Characters
+        System.out.println("LeetCode: 1624. Largest Substring Between Two Equal Characters");
         String s4 = "aa";
         System.out.println("Input: s = \"aa\" \nLargest Substring Between Two Equal Characters : "+ maxLengthBetweenEqualCharacters(s4));
         String s5 = "abca";
@@ -263,6 +299,7 @@ class neetcodeArrays{
         System.out.println("\n\n");
 
         // LeetCode: 645. Set Mismatch
+        System.out.println("LeetCode: 645. Set Mismatch");
         int[] nums18 = {1,2,2,4};
         System.out.println("Input: nums = [1,2,2,4] \nSet Mismatch : "+ Arrays.toString(findErrorNums(nums18)));
         int[] nums19 = {1,1};
@@ -270,10 +307,21 @@ class neetcodeArrays{
         System.out.println("\n\n");
 
         // LeetCode: 387. First Unique Character in a String
+        System.out.println("LeetCode: 387. First Unique Character in a String");
         String s6 = "leetcode";
         System.out.println("Input: s = \"leetcode\" \nFirst Unique Character in a String : "+ firstUniqueCharacter(s6));
         String s7 = "loveleetcode";
         System.out.println("Input: s = \"loveleetcode\" \nFirst Unique Character in a String : "+ firstUniqueCharacter(s7));
+        System.out.println("\n\n");
+
+        // LeetCode: 1700. Number of Students Unable to Eat Lunch
+        System.out.println("LeetCode: 1700. Number of Students Unable to Eat Lunch");
+        int[] students = {1,1,0,0};
+        int[] sandwiches = {0,1,0,1};
+        System.out.println("Input: students = [1,1,0,0], sandwiches = [0,1,0,1] \nNumber of Students Unable to Eat Lunch : "+ countStudents(students,sandwiches));
+        int[] students1 = {1,1,1,0,0,1};
+        int[] sandwiches1 = {1,0,0,0,1,1};
+        System.out.println("Input: students = [1,1,1,0,0,1], sandwiches = [1,0,0,0,1,1] \nNumber of Students Unable to Eat Lunch : "+ countStudents(students1,sandwiches1));
         System.out.println("\n\n");
 
     }
@@ -1174,5 +1222,40 @@ class neetcodeArrays{
             }
         }
         return -1;
+    }
+
+    // Date: 29/12/2024
+    // LeetCode: 1700. Number of Students Unable to Eat Lunch
+    // Time Complexity: O(N)
+    // Space Complexity: O(1)
+    public static int countStudents(int[] students, int[] sandwiches){
+        int studentLikes1 = 0;
+        int studentLikes0 = 0;
+
+        for (int student : students){
+            if (student == 1){
+                studentLikes1++;
+            }
+            else{
+                studentLikes0++;
+            }
+        }
+
+        for (int sandwich : sandwiches){
+            if (sandwich == 1){
+                if (studentLikes1 == 0){
+                    break;
+                }
+                studentLikes1--;
+            }
+            else{
+                if (studentLikes0 == 0){
+                    break;
+                }
+                studentLikes0--;
+            }
+        }
+
+        return studentLikes0 + studentLikes1;
     }
 }

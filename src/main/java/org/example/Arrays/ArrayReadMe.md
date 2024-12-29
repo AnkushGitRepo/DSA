@@ -114,6 +114,10 @@ This file contains solutions to array problems from the YouTube channel "Take U 
 - **Largest Substring Between Two Equal Characters**: Given a string `s`, return the length of the longest substring between two equal characters, excluding the two characters. If there is no such substring return `-1`.
 - **Set Mismatch**: You have a set of integers `s`, which originally contains all the numbers from `1` to `n`. Unfortunately, due to some error, one of the numbers in `s` got duplicated to another number in the set, which results in repetition of one number and loss of another number. You are given an integer array `nums` representing the data status of this set after the error. Find the number that occurs twice and the number that is missing and return them in the form of an array.
 - **First Unique Character in a String**: Given a string `s`, return the first non-repeating character in it and return its index. If it does not exist, return `-1`.
+- **Number of Students Unable to Eat Lunch**: The school cafeteria offers circular and square sandwiches at lunchtime, referred to by numbers `0` and `1` respectively. The number of sandwiches in the cafeteria is equal to the number of students. The sandwiches are placed in a stack. At each step:
+    - If the students are eating sandwich `0`, they will eat the top sandwich on the stack.
+    - If the students are eating sandwich `1`, they will remove the top sandwich from the stack and move it to the bottom of the stack.
+    - This process will continue until there are no sandwiches in the stack. Return the number of students that are unable to eat.
 
 ## How to Use
 - Browse through each Java file to understand the code structure and problem-solving techniques.
