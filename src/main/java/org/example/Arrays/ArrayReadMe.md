@@ -118,6 +118,7 @@ This file contains solutions to array problems from the YouTube channel "Take U 
     - If the students are eating sandwich `0`, they will eat the top sandwich on the stack.
     - If the students are eating sandwich `1`, they will remove the top sandwich from the stack and move it to the bottom of the stack.
     - This process will continue until there are no sandwiches in the stack. Return the number of students that are unable to eat.
+- **Time Needed to Buy Tickets**: There are `n` people standing in line to buy movie tickets. Due to social distancing rules, the cinema only sells tickets every other seat starting from the first seat in the row. Return the number of seconds needed to buy the tickets.
 
 ## How to Use
 - Browse through each Java file to understand the code structure and problem-solving techniques.

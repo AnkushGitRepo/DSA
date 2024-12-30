@@ -324,6 +324,16 @@ class neetcodeArrays{
         System.out.println("Input: students = [1,1,1,0,0,1], sandwiches = [1,0,0,0,1,1] \nNumber of Students Unable to Eat Lunch : "+ countStudents(students1,sandwiches1));
         System.out.println("\n\n");
 
+        // LeetCode 2073. Time Needed to Buy Tickets
+        System.out.println("LeetCode 2073. Time Needed to Buy Tickets");
+        int[] tickets = {2,6,3,4,5};
+        int k = 2;
+        System.out.println("Input: tickets = [2,6,3,4,5], k = 2 \nTime Needed to Buy Tickets : "+ minTimeToBuyTickets(tickets,k));
+        int[] tickets1 = {2,6,3,4,5};
+        int k1 = 3;
+        System.out.println("Input: tickets = [2,6,3,4,5], k = 3 \nTime Needed to Buy Tickets : "+ minTimeToBuyTickets(tickets1,k1));
+        System.out.println("\n\n");
+
     }
 
     // Helper Method. (print)
@@ -1257,5 +1267,23 @@ class neetcodeArrays{
         }
 
         return studentLikes0 + studentLikes1;
+    }
+
+    // Date: 30/12/2024
+    // LeetCode 2073. Time Needed to Buy Tickets
+    // Time Complexity: O(N)
+    // Space Complexity: O(1)
+    public static int minTimeToBuyTickets(int[] tickets, int k){
+        int time = 0;
+        for (int i = 0 ; i < tickets.length; i++){
+            if (i <= k){
+                time = time + Math.min(tickets[i],tickets[k]);
+            }
+            else{
+                time = time + Math.min(tickets[i],tickets[k] - 1);
+            }
+        }
+
+        return time;
     }
 }
