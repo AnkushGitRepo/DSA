@@ -334,6 +334,14 @@ class neetcodeArrays{
         System.out.println("Input: tickets = [2,6,3,4,5], k = 3 \nTime Needed to Buy Tickets : "+ minTimeToBuyTickets(tickets1,k1));
         System.out.println("\n\n");
 
+        // LeetCode: 1608. Special Array With X Elements Greater Than or Equal X
+        System.out.println("LeetCode: 1608. Special Array With X Elements Greater Than or Equal X");
+        int[] nums20 = {3,5};
+        System.out.println("Input: nums = [3,5] \nSpecial Array With X Elements Greater Than or Equal X : "+ specialArrayWithXElementsGreaterThanX(nums20));
+        int[] nums21 = {0,0};
+        System.out.println("Input: nums = [0,0] \nSpecial Array With X Elements Greater Than or Equal X : "+ specialArrayWithXElementsGreaterThanX(nums21));
+        System.out.println("\n\n");
+
     }
 
     // Helper Method. (print)
@@ -1285,5 +1293,28 @@ class neetcodeArrays{
         }
 
         return time;
+    }
+
+    // Date: 31/12/2024
+    // LeetCode: 1608. Special Array With X Elements Greater Than or Equal X
+    // Time Complexity: O(N)
+    // Space Complexity: O(1)
+    public static int specialArrayWithXElementsGreaterThanX(int[] nums){
+        int n = nums.length;
+
+        int[] frequency = new int[n+1];
+        for (int num : nums){
+            frequency[Math.min(num,n)]++;
+        }
+
+        int cumulativeSum = 0;
+        for (int x = n; x >= 0; x--){
+            cumulativeSum += frequency[x];
+            if (cumulativeSum == x){
+                return x;
+            }
+        }
+
+        return -1;
     }
 }
