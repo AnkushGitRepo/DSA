@@ -121,6 +121,11 @@ This file contains solutions to array problems from the YouTube channel "Take U 
 - **Time Needed to Buy Tickets**: There are `n` people standing in line to buy movie tickets. Due to social distancing rules, the cinema only sells tickets every other seat starting from the first seat in the row. Return the number of seconds needed to buy the tickets.
 - **Special Array With X Elements Greater Than or Equal X**: You are given an array `nums` of non-negative integers. A special array is an array where the number of elements (values) that are greater than or equal to the array is equal to the array's length. Return the number of special arrays.
 
+### 8. [neetcodeArraysAndHashingMedium.java](https://github.com/AnkushGitRepo/DSA/blob/main/src/main/java/org/example/Arrays/neetcodeArraysAndHashingMedium.java)
+This file contains solutions to medium-level array and hashing problems from the YouTube channel "neetcode":
+- **Sort an Array**: Given an array of integers `nums`, sort the array in ascending order.
+
+
 ## How to Use
 - Browse through each Java file to understand the code structure and problem-solving techniques.
 - Each file is well-commented to guide you through the thought process behind solving the problems.
