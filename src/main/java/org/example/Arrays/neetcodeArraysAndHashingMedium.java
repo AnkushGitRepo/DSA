@@ -1,3 +1,5 @@
+import java.util.*;
+
 class neetcodeArraysAndHashingMedium{
     public static void main(String[] args) {
         System.out.println("Neetcode Arrays and Hashing Medium");
@@ -5,11 +7,34 @@ class neetcodeArraysAndHashingMedium{
         // LeetCode 912. Sort an Array
         System.out.println("LeetCode 912. Sort an Array");
         int[] nums = {5, 2, 3, 1};
+        System.out.println("Input Array: ");
+        printArray(nums);
         int[] sortedArray = sortArray(nums);
         printArray(sortedArray);
         int[] nums1 = {5, 1, 1, 2, 0, 0};
+        System.out.println("Input Array: ");
+        printArray(nums1);
         int[] sortedArray1 = sortArray(nums1);
         printArray(sortedArray1);
+        System.out.println("\n\n");
+
+        // LeetCode 347. Top K Frequent Elements
+        System.out.println("LeetCode 347. Top K Frequent Elements");
+        int[] nums2 = {1, 1, 1, 2, 2, 3};
+        int k = 2;
+        System.out.println("Top " + k + " Frequent Elements");
+        System.out.println("Input Array: ");
+        printArray(nums2);
+        int[] topK = topKFrequent(nums2, k);
+        printArray(topK);
+        int[] nums3 = {1};
+        int k1 = 1;
+        System.out.println("Top " + k1 + " Frequent Elements");
+        System.out.println("Input Array: ");
+        printArray(nums3);
+        int[] topK1 = topKFrequent(nums3, k1);
+        printArray(topK1);
+        System.out.println("\n\n");
 
     }
 
@@ -81,4 +106,37 @@ class neetcodeArraysAndHashingMedium{
             k++;
         }
     }
+
+    // Date : 02/01/2025
+    // LeetCode : 347. Top K Frequent Elements
+    // Time Complexity: O(n)
+    // Space Complexity: O(n)
+    public static int[] topKFrequent(int[] nums, int k) {
+
+        List<Integer>[] bucket = new List[nums.length + 1];
+        Map<Integer, Integer> frequencyMap = new HashMap<>();
+
+        for (int n : nums) {
+            frequencyMap.put(n, frequencyMap.getOrDefault(n, 0) + 1);
+        }
+
+        for (int key : frequencyMap.keySet()) {
+            int frequency = frequencyMap.get(key);
+            if (bucket[frequency] == null) {
+                bucket[frequency] = new ArrayList<>();
+            }
+            bucket[frequency].add(key);
+        }
+
+        List<Integer> topK = new ArrayList<>();
+        for (int pos = bucket.length - 1;pos >= 0 && topK.size() < k; pos--) {
+            if (bucket[pos] != null) {
+                topK.addAll(bucket[pos]);
+            }
+        }
+
+        return topK.stream().mapToInt(i -> i).toArray();
+
+    }
+
 }

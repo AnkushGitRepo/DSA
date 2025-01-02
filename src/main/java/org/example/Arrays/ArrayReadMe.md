@@ -124,6 +124,7 @@ This file contains solutions to array problems from the YouTube channel "Take U 
 ### 8. [neetcodeArraysAndHashingMedium.java](https://github.com/AnkushGitRepo/DSA/blob/main/src/main/java/org/example/Arrays/neetcodeArraysAndHashingMedium.java)
 This file contains solutions to medium-level array and hashing problems from the YouTube channel "neetcode":
 - **Sort an Array**: Given an array of integers `nums`, sort the array in ascending order.
+- **Top K Frequent Elements**: Given an integer array `nums` and an integer `k`, return the `k` most frequent elements. You may return the answer in any order.
 
 
 ## How to Use
