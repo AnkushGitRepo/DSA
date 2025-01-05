@@ -125,6 +125,7 @@ This file contains solutions to array problems from the YouTube channel "Take U 
 This file contains solutions to medium-level array and hashing problems from the YouTube channel "neetcode":
 - **Sort an Array**: Given an array of integers `nums`, sort the array in ascending order.
 - **Top K Frequent Elements**: Given an integer array `nums` and an integer `k`, return the `k` most frequent elements. You may return the answer in any order.
+- **Product of Array Except Self**: Given an integer array `nums`, return an array `answer` such that `answer[i]` is equal to the product of all the elements of `nums` except `nums[i]`.
 
 
 ## How to Use

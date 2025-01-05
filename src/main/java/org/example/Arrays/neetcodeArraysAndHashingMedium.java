@@ -36,6 +36,20 @@ class neetcodeArraysAndHashingMedium{
         printArray(topK1);
         System.out.println("\n\n");
 
+        // LeetCode 238. Product of Array Except Self
+        System.out.println("LeetCode 238. Product of Array Except Self");
+        int[] nums4 = {1, 2, 3, 4};
+        System.out.println("Input Array: ");
+        printArray(nums4);
+        int[] result = productExceptSelf(nums4);
+        printArray(result);
+        int[] nums5 = {-1, 1, 0, -3, 3};
+        System.out.println("Input Array: ");
+        printArray(nums5);
+        int[] result1 = productExceptSelf(nums5);
+        printArray(result1);
+        System.out.println("\n\n");
+
     }
 
     // Helper Method for printing array
@@ -139,4 +153,29 @@ class neetcodeArraysAndHashingMedium{
 
     }
 
+    // Date: 05/01/2025
+    // LeetCode: 238. Product of Array Except Self
+    // Time Complexity: O(n)
+    // Space Complexity: O(n)
+    public static int[] productExceptSelf(int[] nums) {
+        int[] left = new int[nums.length];
+        int[] right = new int[nums.length];
+        int[] result = new int[nums.length];
+
+        left[0] = 1;
+        for (int i = 1; i < nums.length; i++){
+            left[i] = left[i - 1] * nums[i - 1];
+        }
+
+        right[nums.length - 1] = 1;
+        for (int i = nums.length - 2; i > -1; i--){
+            right[i] = right[i + 1] * nums[i + 1];
+        }
+
+        for (int i = 0; i < nums.length; i++){
+            result[i] = left[i] * right[i];
+        }
+
+        return result;
+    }
 }
