@@ -126,6 +126,10 @@ This file contains solutions to medium-level array and hashing problems from the
 - **Sort an Array**: Given an array of integers `nums`, sort the array in ascending order.
 - **Top K Frequent Elements**: Given an integer array `nums` and an integer `k`, return the `k` most frequent elements. You may return the answer in any order.
 - **Product of Array Except Self**: Given an integer array `nums`, return an array `answer` such that `answer[i]` is equal to the product of all the elements of `nums` except `nums[i]`.
+- **Valid Sudoku**: Determine if a `9 x 9` Sudoku board is valid. Only the filled cells need to be validated according to the following rules:
+    - Each row must contain the digits `1-9` without repetition.
+    - Each column must contain the digits `1-9` without repetition.
+    - Each of the nine `3 x 3` sub-boxes of the grid must contain the digits `1-9` without repetition.
 
 
 ## How to Use
