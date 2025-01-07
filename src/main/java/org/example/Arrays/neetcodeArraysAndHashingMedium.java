@@ -227,4 +227,41 @@ class neetcodeArraysAndHashingMedium{
         }
         return true;
     }
+
+    // Date: 07/01/2025
+    // LeetCode: 128. Longest Consecutive Sequence
+    // Time Complexity: O(n)
+    // Space Complexity: O(n)
+    public static int longestConsecutive(int[] nums) {
+        int longestStreak = 0;
+        Map<Integer, Boolean> numMap = new HashMap<>();
+
+        for (int num : nums){
+            numMap.put(num, Boolean.FALSE);
+        }
+
+        for (int num : nums){
+            int currentLength = 1;
+
+            // Checking for next numbers
+            int nextNum = num + 1;
+            while(numMap.containsKey(nextNum) && numMap.get(nextNum) == Boolean.FALSE){
+                currentLength++;
+                numMap.put(nextNum, Boolean.TRUE);        // Marking the number as visited
+                nextNum++;                                // Moving to next number
+
+            }
+
+            // Checking for previous numbers
+            int prevNum = num - 1;
+            while(numMap.containsKey(prevNum) && numMap.get(prevNum) == Boolean.FALSE){
+                currentLength++;
+                numMap.put(prevNum, Boolean.TRUE);        // Marking the number as visited
+                prevNum--;                                // Moving to previous number
+            }
+
+            longestStreak = Math.max(longestStreak, currentLength);     // Updating the longest streak
+        }
+        return longestStreak;
+    }
 }
