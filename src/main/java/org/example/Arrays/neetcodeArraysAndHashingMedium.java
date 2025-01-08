@@ -78,6 +78,30 @@ class neetcodeArraysAndHashingMedium{
         System.out.println("Is Valid Sudoku: " + isValidSudoku(board1));
         System.out.println("\n\n");
 
+        // LeetCode 128. Longest Consecutive Sequence
+        System.out.println("LeetCode 128. Longest Consecutive Sequence");
+        int[] nums6 = {100, 4, 200, 1, 3, 2};
+        System.out.println("Input Array: ");
+        printArray(nums6);
+        System.out.println("Longest Consecutive Sequence: " + longestConsecutive(nums6));
+        int[] nums7 = {0, 3, 7, 2, 5, 8, 4, 6, 0, 1};
+        System.out.println("Input Array: ");
+        printArray(nums7);
+        System.out.println("Longest Consecutive Sequence: " + longestConsecutive(nums7));
+        System.out.println("\n\n");
+
+        // LeetCode 122. Best Time to Buy and Sell Stock II
+        System.out.println("LeetCode 122. Best Time to Buy and Sell Stock II");
+        int[] prices = {7, 1, 5, 3, 6, 4};
+        System.out.println("Input Array: ");
+        printArray(prices);
+        System.out.println("Max Profit: " + maxProfit(prices));
+        int[] prices1 = {1, 2, 3, 4, 5};
+        System.out.println("Input Array: ");
+        printArray(prices1);
+        System.out.println("Max Profit: " + maxProfit(prices1));
+        System.out.println("\n\n");
+
     }
 
     // Helper Method for printing array
@@ -263,5 +287,19 @@ class neetcodeArraysAndHashingMedium{
             longestStreak = Math.max(longestStreak, currentLength);     // Updating the longest streak
         }
         return longestStreak;
+    }
+
+    // Date: 08/01/2025
+    // LeetCode: 122. Best Time to Buy and Sell Stock II
+    // Time Complexity: O(n)
+    // Space Complexity: O(1)
+    public static int maxProfit(int[] prices) {
+        int maxProfit = 0;
+        for (int i = 1; i < prices.length; i++){
+            if (prices[i] > prices[i - 1]){
+                maxProfit += prices[i] - prices[i - 1];
+            }
+        }
+        return maxProfit;
     }
 }
