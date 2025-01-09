@@ -102,6 +102,28 @@ class neetcodeArraysAndHashingMedium{
         System.out.println("Max Profit: " + maxProfit(prices1));
         System.out.println("\n\n");
 
+        // LeetCode 229. Majority Element II
+        System.out.println("LeetCode 229. Majority Element II");
+        int[] nums8 = {3, 2, 3};
+        System.out.println("Input Array: ");
+        printArray(nums8);
+        List<Integer> result2 = majorityElement(nums8);
+        System.out.println("Majority Elements: ");
+        for (int num : result2){
+            System.out.print(num + " ");
+        }
+        System.out.println();
+        int[] nums9 = {1};
+        System.out.println("Input Array: ");
+        printArray(nums9);
+        List<Integer> result3 = majorityElement(nums9);
+        System.out.println("Majority Elements: ");
+        for (int num : result3){
+            System.out.print(num + " ");
+        }
+        System.out.println();
+        System.out.println("\n\n");
+
     }
 
     // Helper Method for printing array
@@ -302,4 +324,28 @@ class neetcodeArraysAndHashingMedium{
         }
         return maxProfit;
     }
+
+    // Date: 09/01/2025
+    // LeetCode: 229. Majority Element II
+    // Time Complexity: O(n)
+    // Space Complexity: O(n)
+    public static List<Integer> majorityElement(int[] nums) {
+        List<Integer> result = new ArrayList<>();
+        HashMap<Integer, Integer> mpp = new HashMap<>();
+        int n = nums.length;
+        for (int i = 0; i < n; i++) {
+            if (mpp.containsKey(nums[i])) {
+                mpp.put(nums[i], mpp.get(nums[i]) + 1);
+            } else {
+                mpp.put(nums[i], 1);
+            }
+        }
+        for (Map.Entry<Integer, Integer> entry : mpp.entrySet()) {
+            if (entry.getValue() > n / 3) {
+                result.add(entry.getKey());
+            }
+        }
+        return result;
+    }
+
 }

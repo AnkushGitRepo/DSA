@@ -131,6 +131,7 @@ This file contains solutions to medium-level array and hashing problems from the
     - Each column must contain the digits `1-9` without repetition.
     - Each of the nine `3 x 3` sub-boxes of the grid must contain the digits `1-9` without repetition.
 - **Longest Consecutive Sequence**: Given an unsorted array of integers `nums`, return the length of the longest consecutive elements sequence.
+- **Majority Element II**: Given an integer array `nums`, return all elements that appear more than `⌊n / 3⌋` times. You may return the answer in any order.
 
 
 ## How to Use
