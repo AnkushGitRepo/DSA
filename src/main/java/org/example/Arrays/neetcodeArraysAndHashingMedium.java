@@ -124,6 +124,16 @@ class neetcodeArraysAndHashingMedium{
         System.out.println();
         System.out.println("\n\n");
 
+        // LeetCode 7. Reverse Integer
+        System.out.println("LeetCode 7. Reverse Integer");
+        int x = 123;
+        System.out.println("Input: " + x);
+        System.out.println("Reverse: " + reverse(x));
+        int x1 = -123;
+        System.out.println("Input: " + x1);
+        System.out.println("Reverse: " + reverse(x1));
+        System.out.println("\n\n");
+
     }
 
     // Helper Method for printing array
@@ -347,5 +357,21 @@ class neetcodeArraysAndHashingMedium{
         }
         return result;
     }
+
+    // Date: 10/01/2025
+    // LeetCode: 7. Reverse Integer
+    // Time Complexity: O(log(x))
+    // Space Complexity: O(1)
+    public static int reverse(int x) {
+        int rev = 0;
+        while (x != 0) {
+            int pop = x % 10;
+            x /= 10;
+            if (rev > Integer.MAX_VALUE / 10 || rev < Integer.MIN_VALUE / 10) return 0;
+            rev = rev * 10 + pop;
+        }
+        return rev;
+    }
+
 
 }

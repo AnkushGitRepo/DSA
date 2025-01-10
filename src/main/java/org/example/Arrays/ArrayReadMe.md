@@ -132,6 +132,7 @@ This file contains solutions to medium-level array and hashing problems from the
     - Each of the nine `3 x 3` sub-boxes of the grid must contain the digits `1-9` without repetition.
 - **Longest Consecutive Sequence**: Given an unsorted array of integers `nums`, return the length of the longest consecutive elements sequence.
 - **Majority Element II**: Given an integer array `nums`, return all elements that appear more than `⌊n / 3⌋` times. You may return the answer in any order.
+- **Reverse Integer**: Given a signed 32-bit integer `x`, return `x` with its digits reversed. If reversing `x` causes the value to go outside the signed 32-bit integer range `[-2^31, 2^31 - 1]`, then return `0`.
 
 
 ## How to Use
