@@ -134,6 +134,16 @@ class neetcodeArraysAndHashingMedium{
         System.out.println("Reverse: " + reverse(x1));
         System.out.println("\n\n");
 
+        // LeetCode 8. String to Integer atoi
+        System.out.println("LeetCode 8. String to Integer atoi");
+        String s = "42";
+        System.out.println("Input: " + s);
+        System.out.println("Output: " + myAtoi(s));
+        String s1 = "   -425332";
+        System.out.println("Input: " + s1);
+        System.out.println("Output: " + myAtoi(s1));
+        System.out.println("\n\n");
+
     }
 
     // Helper Method for printing array
@@ -373,5 +383,29 @@ class neetcodeArraysAndHashingMedium{
         return rev;
     }
 
+    // Date: 11/01/2025
+    // LeetCode: 8. String to Integer atoi
+    // Time Complexity: O(N)
+    // Space Complexity: O(1)
+    public static int myAtoi(String s) {
+        int index = 0, total = 0, sign = 1;
+        if (s.length() == 0) return 0;
+        while (index < s.length() && s.charAt(index) == ' ') index++;
+        if (index == s.length()) return 0;
+        if (s.charAt(index) == '+' || s.charAt(index) == '-'){
+            sign = s.charAt(index) == '+' ? 1 : -1;
+            index++;
+        }
 
+        while (index < s.length()){
+            int digit = s.charAt(index) - '0';
+            if (digit < 0 || digit > 9) break;
+            if (Integer.MAX_VALUE / 10 < total || Integer.MAX_VALUE / 10 == total && Integer.MAX_VALUE % 10 < digit){
+                return sign == 1 ? Integer.MAX_VALUE : Integer.MIN_VALUE;
+            }
+            total = 10 * total + digit;
+            index++;
+        }
+        return total * sign;
+    }
 }
