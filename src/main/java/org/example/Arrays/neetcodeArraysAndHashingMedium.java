@@ -144,6 +144,15 @@ class neetcodeArraysAndHashingMedium{
         System.out.println("Output: " + myAtoi(s1));
         System.out.println("\n\n");
 
+        // LeetCode 13. Roman to Integer
+        System.out.println("LeetCode 13. Roman to Integer");
+        String s2 = "III";
+        System.out.println("Input: " + s2);
+        System.out.println("Output: " + romanToInt(s2));
+        String s3 = "IV";
+        System.out.println("Input: " + s3);
+        System.out.println("Output: " + romanToInt(s3));
+        System.out.println("\n\n");
     }
 
     // Helper Method for printing array
@@ -407,5 +416,35 @@ class neetcodeArraysAndHashingMedium{
             index++;
         }
         return total * sign;
+    }
+
+    // Date: 12/01/2025
+    // LeetCode: 13. Roman to Integer
+    // Time Complexity: O(N)
+    // Space Complexity: O(1)
+    public static int romanToInt(String s) {
+        int result = 0;
+        for (int i = 0; i < s.length(); i++){
+            if (i > 0 && romanToInt(s.charAt(i)) > romanToInt(s.charAt(i - 1))){
+                result += romanToInt(s.charAt(i)) - 2 * romanToInt(s.charAt(i - 1));
+            } else {
+                result += romanToInt(s.charAt(i));
+            }
+        }
+        return result;
+    }
+
+    // Helper Method for roman to integer
+    public static int romanToInt(char c){
+        switch (c){
+            case 'I': return 1;
+            case 'V': return 5;
+            case 'X': return 10;
+            case 'L': return 50;
+            case 'C': return 100;
+            case 'D': return 500;
+            case 'M': return 1000;
+        }
+        return 0;
     }
 }
