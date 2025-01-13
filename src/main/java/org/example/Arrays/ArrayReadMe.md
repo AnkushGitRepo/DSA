@@ -135,6 +135,7 @@ This file contains solutions to medium-level array and hashing problems from the
 - **Reverse Integer**: Given a signed 32-bit integer `x`, return `x` with its digits reversed. If reversing `x` causes the value to go outside the signed 32-bit integer range `[-2^31, 2^31 - 1]`, then return `0`.
 - **String to Integer atoi**: Implement the `myAtoi(string s)` function, which converts a string to a 32-bit signed integer (similar to C/C++'s `atoi` function).
 - **Roman to Integer**: Given a string `s` representing a Roman numeral, return the integer value of the Roman numeral.
+- **Integer to Roman**: Given an integer `num`, convert it to a Roman numeral.
 
 
 ## How to Use

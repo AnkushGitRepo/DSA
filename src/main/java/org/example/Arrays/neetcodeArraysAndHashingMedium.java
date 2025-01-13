@@ -153,6 +153,17 @@ class neetcodeArraysAndHashingMedium{
         System.out.println("Input: " + s3);
         System.out.println("Output: " + romanToInt(s3));
         System.out.println("\n\n");
+
+        // LeetCode 12. Integer to Roman
+        System.out.println("LeetCode 12. Integer to Roman");
+        int num = 3;
+        System.out.println("Input: " + num);
+        System.out.println("Output: " + intToRoman(num));
+        int num1 = 4;
+        System.out.println("Input: " + num1);
+        System.out.println("Output: " + intToRoman(num1));
+        System.out.println("\n\n");
+
     }
 
     // Helper Method for printing array
@@ -446,5 +457,23 @@ class neetcodeArraysAndHashingMedium{
             case 'M': return 1000;
         }
         return 0;
+    }
+
+    // Date: 13/01/2025
+    // LeetCode: 12. Integer to Roman
+    // Time Complexity: O(N)
+    // Space Complexity: O(1)
+    public static String intToRoman(int num) {
+        int[] values = {1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1};
+        String[] symbols = {"M", "CM", "D", "CD", "C", "XC", "L", "XL", "X", "IX", "V", "IV", "I"};
+
+        StringBuilder result = new StringBuilder();
+        for (int i = 0; i < values.length; i++){
+            while (num >= values[i]){
+                num -= values[i];
+                result.append(symbols[i]);
+            }
+        }
+        return result.toString();
     }
 }
