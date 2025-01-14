@@ -136,6 +136,7 @@ This file contains solutions to medium-level array and hashing problems from the
 - **String to Integer atoi**: Implement the `myAtoi(string s)` function, which converts a string to a 32-bit signed integer (similar to C/C++'s `atoi` function).
 - **Roman to Integer**: Given a string `s` representing a Roman numeral, return the integer value of the Roman numeral.
 - **Integer to Roman**: Given an integer `num`, convert it to a Roman numeral.
+- **Merge Two Sorted Lists**: Merge two sorted linked lists and return it as a sorted list. The list should be made by splicing together the nodes of the first two lists.
 
 
 ## How to Use
