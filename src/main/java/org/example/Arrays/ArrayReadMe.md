@@ -137,6 +137,7 @@ This file contains solutions to medium-level array and hashing problems from the
 - **Roman to Integer**: Given a string `s` representing a Roman numeral, return the integer value of the Roman numeral.
 - **Integer to Roman**: Given an integer `num`, convert it to a Roman numeral.
 - **Merge Two Sorted Lists**: Merge two sorted linked lists and return it as a sorted list. The list should be made by splicing together the nodes of the first two lists.
+- **Search Insert Position**: Given a sorted array of distinct integers and a target value, return the index if the target is found. If not, return the index where it would be if it were inserted in order.
 
 
 ## How to Use

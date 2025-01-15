@@ -164,6 +164,34 @@ class neetcodeArraysAndHashingMedium{
         System.out.println("Output: " + intToRoman(num1));
         System.out.println("\n\n");
 
+        // LeetCode 21. Merge Two Sorted Lists
+        System.out.println("LeetCode 21. Merge Two Sorted Lists");
+        // ListNode l1 = new ListNode(1, new ListNode(2, new ListNode(4)));
+        // ListNode l2 = new ListNode(1, new ListNode(3, new ListNode(4)));
+        // ListNode result4 = mergeTwoLists(l1, l2);
+        // System.out.println("Merged List: ");
+        // while (result4 != null){
+        //     System.out.print(result4.val + " ");
+        //     result4 = result4.next;
+        // }
+        System.out.println("\n\n");
+
+        // LeetCode 35. Search Insert Position
+        System.out.println("LeetCode 35. Search Insert Position");
+        int[] nums10 = {1, 3, 5, 6};
+        int target = 5;
+        System.out.println("Input Array: ");
+        printArray(nums10);
+        System.out.println("Target: " + target);
+        System.out.println("Insert Position: " + searchInsert(nums10, target));
+        int[] nums11 = {1, 3, 5, 6};
+        int target1 = 2;
+        System.out.println("Input Array: ");
+        printArray(nums11);
+        System.out.println("Target: " + target1);
+        System.out.println("Insert Position: " + searchInsert(nums11, target1));
+        System.out.println("\n\n");
+
     }
 
     // Helper Method for printing array
@@ -492,4 +520,19 @@ class neetcodeArraysAndHashingMedium{
 //            return l2;
 //        }
 //    }
+
+    // Date: 15/01/2025
+    // LeetCode: 35. Search Insert Position
+    // Time Complexity: O(logn)
+    // Space Complexity: O(1)
+    public static int searchInsert(int[] nums, int target) {
+        int low = 0, high = nums.length - 1;
+        while (low <= high){
+            int mid = low + (high - low) / 2;
+            if (nums[mid] == target) return mid;
+            if (nums[mid] < target) low = mid + 1;
+            else high = mid - 1;
+        }
+        return low;
+    }
 }
