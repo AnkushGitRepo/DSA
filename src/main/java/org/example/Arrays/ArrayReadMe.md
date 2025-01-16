@@ -138,6 +138,7 @@ This file contains solutions to medium-level array and hashing problems from the
 - **Integer to Roman**: Given an integer `num`, convert it to a Roman numeral.
 - **Merge Two Sorted Lists**: Merge two sorted linked lists and return it as a sorted list. The list should be made by splicing together the nodes of the first two lists.
 - **Search Insert Position**: Given a sorted array of distinct integers and a target value, return the index if the target is found. If not, return the index where it would be if it were inserted in order.
+- **Find the Index of the First Occurrence in a String**: Given a string `s` and a character `c`, return the index of the first occurrence of `c` in `s`. If there is no occurrence of `c` in `s`, return `-1`.
 
 
 ## How to Use

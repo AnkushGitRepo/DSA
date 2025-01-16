@@ -192,6 +192,16 @@ class neetcodeArraysAndHashingMedium{
         System.out.println("Insert Position: " + searchInsert(nums11, target1));
         System.out.println("\n\n");
 
+        // LeetCode 28. Find the Index of the First Occurrence in a String
+        System.out.println("LeetCode 28. Find the Index of the First Occurrence in a String");
+        String haystack = "hello";
+        String needle = "ll";
+        System.out.println("Input: " + haystack + " " + needle);
+        System.out.println("Index: " + strStr(haystack, needle));
+        String haystack1 = "aaaaa";
+        String needle1 = "bba";
+        System.out.println("Input: " + haystack1 + " " + needle1);
+        System.out.println("Index: " + strStr(haystack1, needle1));
     }
 
     // Helper Method for printing array
@@ -535,4 +545,21 @@ class neetcodeArraysAndHashingMedium{
         }
         return low;
     }
+
+    // Date: 16/01/2025
+    // LeetCode: 28. Find the Index of the First Occurrence in a String
+    // Time Complexity: O(n)
+    // Space Complexity: O(1)
+    public static int strStr(String haystack, String needle) {
+        if (needle.length() == 0) return 0;
+        for (int i = 0; i < haystack.length(); i++){
+            if (i + needle.length() > haystack.length()) return -1;
+            for (int j = 0; j < needle.length(); j++){
+                if (haystack.charAt(i + j) != needle.charAt(j)) break;
+                if (j == needle.length() - 1) return i;
+            }
+        }
+        return -1;
+    }
+
 }
