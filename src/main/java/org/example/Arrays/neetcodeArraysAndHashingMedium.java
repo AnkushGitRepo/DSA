@@ -202,6 +202,22 @@ class neetcodeArraysAndHashingMedium{
         String needle1 = "bba";
         System.out.println("Input: " + haystack1 + " " + needle1);
         System.out.println("Index: " + strStr(haystack1, needle1));
+
+        // LeetCode 66. Plus One
+        System.out.println("LeetCode 66. Plus One");
+        int[] digits = {1, 2, 3};
+        System.out.println("Input Array: ");
+        printArray(digits);
+        int[] result5 = plusOne(digits);
+        System.out.println("Output Array: ");
+        printArray(result5);
+        int[] digits1 = {4, 3, 2, 1};
+        System.out.println("Input Array: ");
+        printArray(digits1);
+        int[] result6 = plusOne(digits1);
+        System.out.println("Output Array: ");
+        printArray(result6);
+        System.out.println("\n\n");
     }
 
     // Helper Method for printing array
@@ -560,6 +576,24 @@ class neetcodeArraysAndHashingMedium{
             }
         }
         return -1;
+    }
+
+    // Date: 17/01/2025
+    // LeetCode: 66. Plus One
+    // Time Complexity: O(n)
+    // Space Complexity: O(1)
+    public static int[] plusOne(int[] digits) {
+        int n = digits.length;
+        for (int i = n - 1; i > -1; i--){
+            if (digits[i] < 9){
+                digits[i]++;
+                return digits;
+            }
+            digits[i] = 0;
+        }
+        int[] result = new int[n + 1];
+        result[0] = 1;
+        return result;
     }
 
 }
