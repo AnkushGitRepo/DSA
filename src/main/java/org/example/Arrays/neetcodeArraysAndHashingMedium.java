@@ -218,6 +218,17 @@ class neetcodeArraysAndHashingMedium{
         System.out.println("Output Array: ");
         printArray(result6);
         System.out.println("\n\n");
+
+        // LeetCode 69. Sqrt(x)
+        System.out.println("LeetCode 69. Sqrt(x)");
+        int x2 = 4;
+        System.out.println("Input: " + x2);
+        System.out.println("Output: " + mySqrt(x2));
+        int x3 = 8;
+        System.out.println("Input: " + x3);
+        System.out.println("Output: " + mySqrt(x3));
+        System.out.println("\n\n");
+
     }
 
     // Helper Method for printing array
@@ -594,6 +605,22 @@ class neetcodeArraysAndHashingMedium{
         int[] result = new int[n + 1];
         result[0] = 1;
         return result;
+    }
+
+    // Date: 18/01/2025
+    // LeetCode: 69. Sqrt(x)
+    // Time Complexity: O(logn)
+    // Space Complexity: O(1)
+    public static int mySqrt(int x) {
+        if (x == 0) return 0;
+        int low = 1, high = x;
+        while (low < high){
+            int mid = low + (high - low) / 2;
+            if (mid <= x / mid && (mid + 1) > x / (mid + 1)) return mid;
+            if (mid > x / mid) high = mid;
+            else low = mid + 1;
+        }
+        return low;
     }
 
 }
