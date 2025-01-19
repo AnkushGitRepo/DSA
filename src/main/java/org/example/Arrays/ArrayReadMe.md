@@ -141,6 +141,7 @@ This file contains solutions to medium-level array and hashing problems from the
 - **Find the Index of the First Occurrence in a String**: Given a string `s` and a character `c`, return the index of the first occurrence of `c` in `s`. If there is no occurrence of `c` in `s`, return `-1`.
 - **Plus One**: Given a non-empty array of decimal digits representing a non-negative integer, increment one to the integer.
 - **Sqrt(x)**: Given a non-negative integer `x`, compute and return the square root of `x`.
+- **Binary Tree Inorder Traversal**: Given the `root` of a binary tree, return the inorder traversal of its nodes' values.
 
 
 ## How to Use
