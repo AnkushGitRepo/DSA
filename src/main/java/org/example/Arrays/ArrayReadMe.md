@@ -142,6 +142,7 @@ This file contains solutions to medium-level array and hashing problems from the
 - **Plus One**: Given a non-empty array of decimal digits representing a non-negative integer, increment one to the integer.
 - **Sqrt(x)**: Given a non-negative integer `x`, compute and return the square root of `x`.
 - **Binary Tree Inorder Traversal**: Given the `root` of a binary tree, return the inorder traversal of its nodes' values.
+- **Valid Palindrome**: Given a string `s`, determine if it is a palindrome, considering only alphanumeric characters and ignoring cases.
 
 
 ## How to Use

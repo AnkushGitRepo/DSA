@@ -229,6 +229,26 @@ class neetcodeArraysAndHashingMedium{
         System.out.println("Output: " + mySqrt(x3));
         System.out.println("\n\n");
 
+        // LeetCode 94. Binary Tree Inorder Traversal
+        System.out.println("LeetCode 94. Binary Tree Inorder Traversal");
+        // TreeNode root = new TreeNode(1, null, new TreeNode(2, new TreeNode(3), null));
+        // List<Integer> result7 = inorderTraversal(root);
+        // System.out.println("Inorder Traversal: ");
+        // for (int num : result7){
+        //     System.out.print(num + " ");
+        // }
+        System.out.println("\n\n");
+
+        // LeetCode 125. Valid Palindrome
+        System.out.println("LeetCode 125. Valid Palindrome");
+        String p1 = "A man, a plan, a canal: Panama";
+        System.out.println("Input: " + p1);
+        System.out.println("Is Palindrome: " + isPalindrome(p1));
+        String p2 = "race a car";
+        System.out.println("Input: " + p2);
+        System.out.println("Is Palindrome: " + isPalindrome(p2));
+        System.out.println("\n\n");
+
     }
 
     // Helper Method for printing array
@@ -642,6 +662,37 @@ class neetcodeArraysAndHashingMedium{
 //        }
 //        return result;
 //    }
+
+    // Date: 20/01/2025
+    // LeetCode: 125. Valid Palindrome
+    // Time Complexity: O(n)
+    // Space Complexity: O(1)
+    public static boolean isPalindrome(String s){
+        int p1 = 0, p2 = s.length() - 1;
+        s = s.toLowerCase();
+
+        while (p1 < p2){
+            char ch1 = s.charAt(p1);
+            char ch2 = s.charAt(p2);
+
+            if (!(ch1 >= 'a' && ch1 <= 'z' || ch1 >= '0' && ch1 <= '9')){
+                p1++;
+                continue;
+            }
+            if (!(ch2 >= 'a' && ch2 <= 'z' || ch2 >= '0' && ch2 <= '9')){
+                p2--;
+                continue;
+            }
+
+            if (ch1 != ch2){
+                return false;
+            }
+            p1++;
+            p2--;
+        }
+        return true;
+    }
+
 
 
 }
