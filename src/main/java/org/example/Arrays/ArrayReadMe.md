@@ -143,6 +143,7 @@ This file contains solutions to medium-level array and hashing problems from the
 - **Sqrt(x)**: Given a non-negative integer `x`, compute and return the square root of `x`.
 - **Binary Tree Inorder Traversal**: Given the `root` of a binary tree, return the inorder traversal of its nodes' values.
 - **Valid Palindrome**: Given a string `s`, determine if it is a palindrome, considering only alphanumeric characters and ignoring cases.
+- **Implement Stack using Queues**: Implement a last-in-first-out (LIFO) stack using only two queues. The implemented stack should support all the functions of a normal stack (push, top, pop, and empty).
 
 
 ## How to Use

@@ -249,6 +249,16 @@ class neetcodeArraysAndHashingMedium{
         System.out.println("Is Palindrome: " + isPalindrome(p2));
         System.out.println("\n\n");
 
+        // LeetCode 225. Implement Stack using Queues
+        System.out.println("LeetCode 225. Implement Stack using Queues");
+        MyStack stack = new neetcodeArraysAndHashingMedium().new MyStack();
+        stack.push(1);
+        stack.push(2);
+        System.out.println("Top: " + stack.top());
+        System.out.println("Pop: " + stack.pop());
+        System.out.println("Empty: " + stack.empty());
+        System.out.println("\n\n");
+
     }
 
     // Helper Method for printing array
@@ -693,6 +703,36 @@ class neetcodeArraysAndHashingMedium{
         return true;
     }
 
+    // Date: 21/01/2025
+    // LeetCode: 225. Implement Stack using Queues
+    // Time Complexity: O(1)
+    // Space Complexity: O(N)
+    class MyStack{
+        Queue<Integer> queue;
+        public MyStack() {
+            queue = new LinkedList();
+        }
+
+        public void push(int x) {
+            int size = queue.size();
+            queue.add(x);
+            while(size --> 0){
+                queue.add(queue.poll());
+            }
+        }
+
+        public int pop() {
+            return queue.poll();
+        }
+
+        public int top() {
+            return queue.peek();
+        }
+
+        public boolean empty() {
+            return queue.isEmpty();
+        }
+    }
 
 
 }
