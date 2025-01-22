@@ -259,6 +259,13 @@ class neetcodeArraysAndHashingMedium{
         System.out.println("Empty: " + stack.empty());
         System.out.println("\n\n");
 
+        // LeetCode 222. Count Complete Tree Nodes
+        System.out.println("LeetCode 222. Count Complete Tree Nodes");
+        // TreeNode root1 = new TreeNode(1, new TreeNode(2, new TreeNode(4), new TreeNode(5)), new TreeNode(3, new TreeNode(6), null));
+        // System.out.println("Count: " + countNodes(root1));
+        System.out.println("\n\n");
+
+
     }
 
     // Helper Method for printing array
@@ -734,5 +741,23 @@ class neetcodeArraysAndHashingMedium{
         }
     }
 
-
+    // Date: 22/01/2025
+    // LeetCode: 222. Count Complete Tree Nodes
+    // Time Complexity: O(log(n)^2)
+    // Space Complexity: O(1)
+//    public int countNodes(TreeNode root) {
+//        if (root == null) return 0;
+//        int leftHeight = 0, rightHeight = 0;
+//        TreeNode left = root, right = root;
+//        while (left != null){
+//            leftHeight++;
+//            left = left.left;
+//        }
+//        while (right != null){
+//            rightHeight++;
+//            right = right.right;
+//        }
+//        if (leftHeight == rightHeight) return (int)Math.pow(2, leftHeight) - 1;
+//        return 1 + countNodes(root.left) + countNodes(root.right);
+//    }
 }
