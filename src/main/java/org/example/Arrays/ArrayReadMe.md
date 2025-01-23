@@ -145,6 +145,7 @@ This file contains solutions to medium-level array and hashing problems from the
 - **Valid Palindrome**: Given a string `s`, determine if it is a palindrome, considering only alphanumeric characters and ignoring cases.
 - **Implement Stack using Queues**: Implement a last-in-first-out (LIFO) stack using only two queues. The implemented stack should support all the functions of a normal stack (push, top, pop, and empty).
 - **Count Complete Tree Nodes**: Given the `root` of a complete binary tree, return the number of the nodes in the tree.
+- **Reverse Linked List**: Given the `head` of a singly linked list, reverse the list, and return its head.
 
 
 ## How to Use

@@ -265,6 +265,16 @@ class neetcodeArraysAndHashingMedium{
         // System.out.println("Count: " + countNodes(root1));
         System.out.println("\n\n");
 
+        // LeetCode 206. Reverse Linked List
+        System.out.println("LeetCode 206. Reverse Linked List");
+        // ListNode head = new ListNode(1, new ListNode(2, new ListNode(3, new ListNode(4, new ListNode(5)))));
+        // ListNode result8 = reverseList(head);
+        // System.out.println("Reversed List: ");
+        // while (result8 != null){
+        //     System.out.print(result8.val + " ");
+        //     result8 = result8.next;
+        // }
+        System.out.println("\n\n");
 
     }
 
@@ -759,5 +769,20 @@ class neetcodeArraysAndHashingMedium{
 //        }
 //        if (leftHeight == rightHeight) return (int)Math.pow(2, leftHeight) - 1;
 //        return 1 + countNodes(root.left) + countNodes(root.right);
+//    }
+
+    // Date: 23/01/2025
+    // LeetCode: 206. Reverse Linked List
+    // Time Complexity: O(n)
+    // Space Complexity: O(n)
+//    public ListNode reverseList(ListNode head) {
+//        if (head == null || head.next == null ){
+//            return head;
+//        }
+//
+//        ListNode a = reverseList(head.next);
+//        head.next.next = head;
+//        head.next = null;
+//        return a;
 //    }
 }
