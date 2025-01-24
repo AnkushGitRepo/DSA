@@ -276,6 +276,18 @@ class neetcodeArraysAndHashingMedium{
         // }
         System.out.println("\n\n");
 
+        // LeetCode 203. Remove Linked List Elements
+        System.out.println("LeetCode 203. Remove Linked List Elements");
+        // ListNode head1 = new ListNode(1, new ListNode(2, new ListNode(6, new ListNode(3, new ListNode(4, new ListNode(5, new ListNode(6)))))));
+        // int val = 6;
+        // ListNode result9 = removeElements(head1, val);
+        // System.out.println("Removed List: ");
+        // while (result9 != null){
+        //     System.out.print(result9.val + " ");
+        //     result9 = result9.next;
+        // }
+        System.out.println("\n\n");
+
     }
 
     // Helper Method for printing array
@@ -784,5 +796,27 @@ class neetcodeArraysAndHashingMedium{
 //        head.next.next = head;
 //        head.next = null;
 //        return a;
+//    }
+
+    // Date: 24/01/2025
+    // LeetCode: 203. Remove Linked List Elements
+    // Time Complexity: O(n)
+    // Space Complexity: O(1)
+//    public ListNode removeElements(ListNode head, int val) {
+//        ListNode dummy = new ListNode(-1);
+//        dummy.next = head;
+//
+//        ListNode curr = dummy;
+//        while( curr.next != null){
+//            if (curr.next.val == val){
+//                curr.next = curr.next.next;
+//            }
+//            else{
+//                curr = curr.next;
+//            }
+//
+//
+//        }
+//        return dummy.next;
 //    }
 }
