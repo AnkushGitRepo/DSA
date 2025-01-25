@@ -288,6 +288,16 @@ class neetcodeArraysAndHashingMedium{
         // }
         System.out.println("\n\n");
 
+        // LeetCode 100. Same Tree
+        System.out.println("LeetCode 100. Same Tree");
+        TreeNode a = new TreeNode(1, new TreeNode(2), new TreeNode(3));
+        TreeNode b = new TreeNode(1, new TreeNode(2), new TreeNode(3));
+        System.out.println("Is Same Tree: " + new neetcodeArraysAndHashingMedium().isSameTree(a, b));
+        TreeNode a1 = new TreeNode(1, new TreeNode(2), null);
+        TreeNode b1 = new TreeNode(1, null, new TreeNode(2));
+        System.out.println("Is Same Tree: " + new neetcodeArraysAndHashingMedium().isSameTree(a1, b1));
+        System.out.println("\n\n");
+
     }
 
     // Helper Method for printing array
@@ -819,4 +829,34 @@ class neetcodeArraysAndHashingMedium{
 //        }
 //        return dummy.next;
 //    }
+
+    // Date: 25/01/2025
+    // LeetCode: 100. Same Tree
+    // Time Complexity: O(n)
+    // Space Complexity: O(n)
+    public boolean isSameTree(TreeNode a, TreeNode b) {
+        if ( a == null && b == null ) return true;
+        if ( a == null || b == null ) return false;
+        if ( a.val != b.val ) return false;
+
+        boolean leftAnswer = isSameTree(a.left,b.left);
+        boolean rightAnswer = isSameTree(a.right,b.right);
+
+        return leftAnswer && rightAnswer;
+    }
+
+
+
+}
+class TreeNode {
+    int val;
+    TreeNode left;
+    TreeNode right;
+    TreeNode() {}
+    TreeNode(int val) { this.val = val; }
+    TreeNode(int val, TreeNode left, TreeNode right) {
+        this.val = val;
+        this.left = left;
+        this.right = right;
+    }
 }
