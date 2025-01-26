@@ -148,6 +148,7 @@ This file contains solutions to medium-level array and hashing problems from the
 - **Reverse Linked List**: Given the `head` of a singly linked list, reverse the list, and return its head.
 - **Remove Linked List Elements**: Given the `head` of a linked list and an integer `val`, remove all the nodes of the linked list that has `Node.val == val`, and return the new head.
 - **Same Tree**: Given the roots of two binary trees `p` and `q`, write a function to check if they are the same or not. Two binary trees are considered the same if they are structurally identical, and the nodes have the same value.
+- **Intersection of Two Linked Lists**: Given the heads of two singly linked-lists `headA` and `headB`, return the node at which the two lists intersect. If the two linked lists have no intersection at all, return `null`.
 
 
 ## How to Use

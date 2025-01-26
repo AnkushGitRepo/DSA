@@ -298,6 +298,16 @@ class neetcodeArraysAndHashingMedium{
         System.out.println("Is Same Tree: " + new neetcodeArraysAndHashingMedium().isSameTree(a1, b1));
         System.out.println("\n\n");
 
+        // LeetCode 160. Intersection of Two Linked Lists
+//        System.out.println("LeetCode 160. Intersection of Two Linked Lists");
+//        ListNode headA = new ListNode(4, new ListNode(1, new ListNode(8, new ListNode(4, new ListNode(5)))));
+//        ListNode headB = new ListNode(5, new ListNode(0, new ListNode(1, new ListNode(8, new ListNode(4, new ListNode(5))))));
+//        System.out.println("Intersection Node: " + getIntersectionNode(headA, headB).val);
+//        ListNode headA1 = new ListNode(2, new ListNode(6, new ListNode(4)));
+//        ListNode headB1 = new ListNode(1, new ListNode(5));
+//        System.out.println("Intersection Node: " + getIntersectionNode(headA1, headB1));
+//        System.out.println("\n\n");
+
     }
 
     // Helper Method for printing array
@@ -845,9 +855,22 @@ class neetcodeArraysAndHashingMedium{
         return leftAnswer && rightAnswer;
     }
 
-
-
+    // Date: 26/01/2025
+    // LeetCode: 160. Intersection of Two Linked Lists
+    // Time Complexity: O(n)
+    // Space Complexity: O(1)
+//    public static ListNode getIntersectionNode(ListNode headA, ListNode headB) {
+//        ListNode tempA = headA;
+//        ListNode tempB = headB;
+//        while(tempA != tempB) {
+//            tempA = tempA != null ? tempA.next : headB;
+//            tempB = tempB != null ? tempB.next : headA;
+//        }
+//        return tempA;
+//    }
 }
+
+// Definition for a binary tree node.
 class TreeNode {
     int val;
     TreeNode left;
@@ -860,3 +883,12 @@ class TreeNode {
         this.right = right;
     }
 }
+
+// Definition for singly-linked list.
+//class ListNode {
+//    int val;
+//    ListNode next;
+//    ListNode() {}
+//    ListNode(int val) { this.val = val; }
+//    ListNode(int val, ListNode next) { this.val = val; this.next = next; }
+//}
