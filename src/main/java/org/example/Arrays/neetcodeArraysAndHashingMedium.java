@@ -308,6 +308,16 @@ class neetcodeArraysAndHashingMedium{
 //        System.out.println("Intersection Node: " + getIntersectionNode(headA1, headB1));
 //        System.out.println("\n\n");
 
+        // LeetCode 141. Linked List Cycle
+        System.out.println("LeetCode 141. Linked List Cycle");
+        // ListNode head2 = new ListNode(3, new ListNode(2, new ListNode(0, new ListNode(-4)));
+        // head2.next.next.next.next = head2.next;
+        // System.out.println("Has Cycle: " + hasCycle(head2));
+        // ListNode head3 = new ListNode(1, new ListNode(2));
+        // head3.next.next = head3;
+        // System.out.println("Has Cycle: " + hasCycle(head3));
+        System.out.println("\n\n");
+
     }
 
     // Helper Method for printing array
@@ -867,6 +877,24 @@ class neetcodeArraysAndHashingMedium{
 //            tempB = tempB != null ? tempB.next : headA;
 //        }
 //        return tempA;
+//    }
+
+    // Date: 27/01/2025
+    // LeetCode: 141. Linked List Cycle
+    // Time Complexity: O(n)
+    // Space Complexity: O(1)
+//    public static boolean hasCycle(ListNode head) {
+//        ListNode slow = head;
+//        ListNode fast = head;
+//
+//        while (fast != null && fast.next != null){
+//            slow = slow.next;
+//            fast = fast.next.next;
+//            if ( slow == fast ){
+//                return true;
+//            }
+//        }
+//        return false;
 //    }
 }
 
