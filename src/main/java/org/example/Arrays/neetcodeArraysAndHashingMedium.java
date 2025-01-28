@@ -318,6 +318,20 @@ class neetcodeArraysAndHashingMedium{
         // System.out.println("Has Cycle: " + hasCycle(head3));
         System.out.println("\n\n");
 
+        // LeetCode 219. Contains Duplicate II
+        System.out.println("LeetCode 219. Contains Duplicate II");
+        int[] nums12 = {1, 2, 3, 1};
+        int k2 = 3;
+        System.out.println("Input Array: ");
+        printArray(nums12);
+        System.out.println("Contains Duplicate: " + containsNearbyDuplicate(nums12, k2));
+        int[] nums13 = {1, 0, 1, 1};
+        int k3 = 1;
+        System.out.println("Input Array: ");
+        printArray(nums13);
+        System.out.println("Contains Duplicate: " + containsNearbyDuplicate(nums13, k3));
+        System.out.println("\n\n");
+
     }
 
     // Helper Method for printing array
@@ -896,6 +910,21 @@ class neetcodeArraysAndHashingMedium{
 //        }
 //        return false;
 //    }
+
+    // Date: 28/01/2025
+    // LeetCode: 219. Contains Duplicate II
+    // Time Complexity: O(n)
+    // Space Complexity: O(n)
+    public static boolean containsNearbyDuplicate(int[] nums, int k) {
+        Map<Integer, Integer> map = new HashMap<>();
+        for (int i = 0; i < nums.length; i++){
+            if (map.containsKey(nums[i]) && i - map.get(nums[i]) <= k){
+                return true;
+            }
+            map.put(nums[i], i);
+        }
+        return false;
+    }
 }
 
 // Definition for a binary tree node.
