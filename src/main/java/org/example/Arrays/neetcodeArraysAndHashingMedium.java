@@ -332,6 +332,16 @@ class neetcodeArraysAndHashingMedium{
         System.out.println("Contains Duplicate: " + containsNearbyDuplicate(nums13, k3));
         System.out.println("\n\n");
 
+        // LeetCode 144. Binary Tree Preorder Traversal
+        System.out.println("LeetCode 144. Binary Tree Preorder Traversal");
+        TreeNode root2 = new TreeNode(1, null, new TreeNode(2, new TreeNode(3), null));
+        List<Integer> result10 = preorderTraversal(root2);
+        System.out.println("Preorder Traversal: ");
+        for (int temp1 : result10){
+            System.out.print(temp1 + " ");
+        }
+        System.out.println("\n\n");
+
     }
 
     // Helper Method for printing array
@@ -924,6 +934,26 @@ class neetcodeArraysAndHashingMedium{
             map.put(nums[i], i);
         }
         return false;
+    }
+
+    // Date: 29/01/2025
+    // LeetCode: 144. Binary Tree Preorder Traversal
+    // Time Complexity: O(n)
+    // Space Complexity: O(n)
+    public  static List<Integer> preorderTraversal(TreeNode root) {
+        List<Integer> res = new ArrayList();
+        helper(res,root);
+        return res;
+    }
+
+    // Helper Method for preorder traversal
+    private static void helper(List<Integer> res, TreeNode root){
+        if ( root == null ){
+            return;
+        }
+        res.add(root.val);
+        helper(res,root.left);
+        helper(res,root.right);
     }
 }
 
