@@ -152,6 +152,7 @@ This file contains solutions to medium-level array and hashing problems from the
 - **Linked List Cycle**: Given `head`, the head of a linked list, determine if the linked list has a cycle in it. There is a cycle in a linked list if there is some node in the list that can be reached again by continuously following the `next` pointer.
 - **Contains Duplicate II**: Given an integer array `nums` and an integer `k`, return `true` if there are two distinct indices `i` and `j` in the array such that `nums[i] == nums[j]` and `abs(i - j) <= k`.
 - **Binary Tree Preorder Traversal**: Given the `root` of a binary tree, return the preorder traversal of its nodes' values.
+- **Binary Tree Postorder Traversal**: Given the `root` of a binary tree, return the postorder traversal of its nodes' values.
 
 
 ## How to Use

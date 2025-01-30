@@ -342,6 +342,16 @@ class neetcodeArraysAndHashingMedium{
         }
         System.out.println("\n\n");
 
+        // LeetCode 145. Binary Tree Postorder Traversal
+        System.out.println("LeetCode 145. Binary Tree Postorder Traversal");
+        TreeNode root3 = new TreeNode(1, null, new TreeNode(2, new TreeNode(3), null));
+        List<Integer> result11 = postorderTraversal(root3);
+        System.out.println("Postorder Traversal: ");
+        for (int temp2 : result11){
+            System.out.print(temp2 + " ");
+        }
+        System.out.println("\n\n");
+
     }
 
     // Helper Method for printing array
@@ -954,6 +964,23 @@ class neetcodeArraysAndHashingMedium{
         res.add(root.val);
         helper(res,root.left);
         helper(res,root.right);
+    }
+
+    // Date: 30/01/2025
+    // LeetCode: 145. Binary Tree Postorder Traversal
+    // Time Complexity: O(n)
+    // Space Complexity: O(n)
+    public static List<Integer> postorderTraversal(TreeNode root) {
+        List<Integer> res = new ArrayList<>();
+        traverse(res,root);
+        return res;
+    }
+
+    public static void traverse(List<Integer> res, TreeNode node){
+        if ( node == null ) return;
+        traverse(res,node.left);
+        traverse(res,node.right);
+        res.add(node.val);
     }
 }
 
