@@ -352,6 +352,16 @@ class neetcodeArraysAndHashingMedium{
         }
         System.out.println("\n\n");
 
+        // LeetCode 191. Number of 1 Bits
+        System.out.println("LeetCode 191. Number of 1 Bits");
+        int n = 00000000000000000000000000001011;
+        System.out.println("Input: " + n);
+        System.out.println("Number of 1 Bits: " + hammingWeight(n));
+        int n1 = 00000000000000000000000010000000;
+        System.out.println("Input: " + n1);
+        System.out.println("Number of 1 Bits: " + hammingWeight(n1));
+        System.out.println("\n\n");
+
     }
 
     // Helper Method for printing array
@@ -981,6 +991,22 @@ class neetcodeArraysAndHashingMedium{
         traverse(res,node.left);
         traverse(res,node.right);
         res.add(node.val);
+    }
+
+    // Date: 31/01/2025
+    // LeetCode: 191. Number of 1 Bits
+    // Time Complexity: O(1)
+    // Space Complexity: O(1)
+    public static int hammingWeight(int n) {
+        int result = 0;
+        int helper = 1;
+        for (int i = 1; i <= 32; i++){
+            if (( helper & n) != 0 ){
+                result++;
+            }
+            helper = helper << 1;
+        }
+        return result;
     }
 }
 

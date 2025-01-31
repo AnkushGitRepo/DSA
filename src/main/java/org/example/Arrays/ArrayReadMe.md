@@ -153,6 +153,7 @@ This file contains solutions to medium-level array and hashing problems from the
 - **Contains Duplicate II**: Given an integer array `nums` and an integer `k`, return `true` if there are two distinct indices `i` and `j` in the array such that `nums[i] == nums[j]` and `abs(i - j) <= k`.
 - **Binary Tree Preorder Traversal**: Given the `root` of a binary tree, return the preorder traversal of its nodes' values.
 - **Binary Tree Postorder Traversal**: Given the `root` of a binary tree, return the postorder traversal of its nodes' values.
+- **Number of 1 Bits**: Write a function that takes an unsigned integer and returns the number of '1' bits it has (also known as the Hamming weight).
 
 
 ## How to Use
