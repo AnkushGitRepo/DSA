@@ -362,6 +362,17 @@ class neetcodeArraysAndHashingMedium{
         System.out.println("Number of 1 Bits: " + hammingWeight(n1));
         System.out.println("\n\n");
 
+        // LeetCode 3151. Special Array I
+        System.out.println("LeetCode 3151. Special Array I");
+        int[] nums14 = {3, 5};
+        System.out.println("Input Array: ");
+        printArray(nums14);
+        System.out.println("Special Array: " + isArraySpecial(nums14));
+        int[] nums15 = {0, 0};
+        System.out.println("Input Array: ");
+        printArray(nums15);
+        System.out.println("Special Array: " + isArraySpecial(nums15));
+        System.out.println("\n\n");
     }
 
     // Helper Method for printing array
@@ -1008,6 +1019,21 @@ class neetcodeArraysAndHashingMedium{
         }
         return result;
     }
+
+    // Date: 01/02/2025
+    // LeetCode: 3151. Special Array I
+    // Time Complexity: O(n)
+    // Space Complexity: O(1)
+    public  static boolean isArraySpecial(int[] nums) {
+        int n = nums.length;
+        for (int i = 1; i < n; ++i){
+            if ((nums[i] % 2) == (nums[i - 1] % 2)){
+                return false;
+            }
+        }
+        return true;
+    }
+
 }
 
 // Definition for a binary tree node.
