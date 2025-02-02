@@ -373,6 +373,32 @@ class neetcodeArraysAndHashingMedium{
         printArray(nums15);
         System.out.println("Special Array: " + isArraySpecial(nums15));
         System.out.println("\n\n");
+
+        // LeetCode 83. Remove Duplicates from Sorted List
+        System.out.println("LeetCode 83. Remove Duplicates from Sorted List");
+        ListNode head4 = new ListNode(1, new ListNode(1, new ListNode(2, new ListNode(3, new ListNode(3)))));
+        System.out.println("Input List: ");
+        printList(head4);
+        ListNode result12 = deleteDuplicates(head4);
+        System.out.println("Output List: ");
+        printList(result12);
+        ListNode head5 = new ListNode(1, new ListNode(1, new ListNode(2)));
+        System.out.println("Input List: ");
+        printList(head5);
+        ListNode result13 = deleteDuplicates(head5);
+        System.out.println("Output List: ");
+        printList(result13);
+        System.out.println("\n\n");
+
+    }
+
+    // Helper Method for printing list
+    private static void printList(ListNode result13) {
+        while (result13 != null){
+            System.out.print(result13.val + " ");
+            result13 = result13.next;
+        }
+        System.out.println();
     }
 
     // Helper Method for printing array
@@ -1034,6 +1060,27 @@ class neetcodeArraysAndHashingMedium{
         return true;
     }
 
+    // Date: 02/02/2025
+    // LeetCode: 83. Remove Duplicates from Sorted List
+    // Time Complexity: O(n)
+    // Space Complexity: O(1)
+    public static ListNode deleteDuplicates(ListNode head) {
+        if (head == null){
+            return head;
+        }
+
+        ListNode curr = head;
+        while (curr.next != null){
+            if(curr.val == curr.next.val){
+                curr.next = curr.next.next;
+            }
+            else{
+                curr = curr.next;
+            }
+        }
+        return head;
+    }
+
 }
 
 // Definition for a binary tree node.
@@ -1051,10 +1098,10 @@ class TreeNode {
 }
 
 // Definition for singly-linked list.
-//class ListNode {
-//    int val;
-//    ListNode next;
-//    ListNode() {}
-//    ListNode(int val) { this.val = val; }
-//    ListNode(int val, ListNode next) { this.val = val; this.next = next; }
-//}
+class ListNode {
+    int val;
+    ListNode next;
+    ListNode() {}
+    ListNode(int val) { this.val = val; }
+    ListNode(int val, ListNode next) { this.val = val; this.next = next; }
+}

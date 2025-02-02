@@ -155,6 +155,7 @@ This file contains solutions to medium-level array and hashing problems from the
 - **Binary Tree Postorder Traversal**: Given the `root` of a binary tree, return the postorder traversal of its nodes' values.
 - **Number of 1 Bits**: Write a function that takes an unsigned integer and returns the number of '1' bits it has (also known as the Hamming weight).
 - **Special Array I**: You are given an array `nums` of non-negative integers. A special array is an array where the number of elements (values) that are greater than or equal to the array is equal to the array's length. Return the number of special arrays.
+- **Remove Duplicates from Sorted List**: Given the `head` of a sorted linked list, delete all duplicates such that each element appears only once. Return the linked list sorted as well.
 
 
 ## How to Use
