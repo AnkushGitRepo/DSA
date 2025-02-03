@@ -390,6 +390,17 @@ class neetcodeArraysAndHashingMedium{
         printList(result13);
         System.out.println("\n\n");
 
+        // LeetCode 3105. Longest Strictly Increasing or Strictly Decreasing Subarray.
+        System.out.println("LeetCode 3105. Longest Strictly Increasing or Strictly Decreasing Subarray");
+        int[] nums16 = {1, 2, 2, 3};
+        System.out.println("Input Array: ");
+        printArray(nums16);
+        System.out.println("Length of Longest Strictly Increasing or Strictly Decreasing Subarray: " + longestMonotonicSubarray(nums16));
+        int[] nums17 = {1, 2, 3, 4};
+        System.out.println("Input Array: ");
+        printArray(nums17);
+        System.out.println("Length of Longest Strictly Increasing or Strictly Decreasing Subarray: " + longestMonotonicSubarray(nums17));
+        System.out.println("\n\n");
     }
 
     // Helper Method for printing list
@@ -1079,6 +1090,33 @@ class neetcodeArraysAndHashingMedium{
             }
         }
         return head;
+    }
+
+    // Date: 03/02/2025
+    // LeetCode: 3105. Longest Strictly Increasing or Strictly Decreasing Subarray
+    // Time Complexity: O(n)
+    // Space Complexity: O(1)
+    public static int longestMonotonicSubarray(int[] nums) {
+        int inc = 1;
+        int dec = 1;
+        int maxLen = 1;
+
+        for ( int i = 1; i < nums.length; i++ ){
+            if (nums[i] > nums[i - 1]){
+                inc++;
+                dec = 1;
+            }
+            else if (nums[i] < nums[i - 1]){
+                dec++;
+                inc = 1;
+            }
+            else{
+                inc = 1;
+                dec = 1;
+            }
+            maxLen = Math.max(maxLen,Math.max(inc,dec));
+        }
+        return maxLen;
     }
 
 }
