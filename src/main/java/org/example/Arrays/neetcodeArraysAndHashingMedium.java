@@ -401,6 +401,19 @@ class neetcodeArraysAndHashingMedium{
         printArray(nums17);
         System.out.println("Length of Longest Strictly Increasing or Strictly Decreasing Subarray: " + longestMonotonicSubarray(nums17));
         System.out.println("\n\n");
+
+        // LeetCode 1800. Maximum Ascending Subarray Sum
+        System.out.println("LeetCode 1800. Maximum Ascending Subarray Sum");
+        int[] nums18 = {10, 20, 30, 5, 10, 50};
+        System.out.println("Input Array: ");
+        printArray(nums18);
+        System.out.println("Maximum Ascending Subarray Sum: " + maxAscendingSum(nums18));
+        int[] nums19 = {10, 20, 30, 40, 50};
+        System.out.println("Input Array: ");
+        printArray(nums19);
+        System.out.println("Maximum Ascending Subarray Sum: " + maxAscendingSum(nums19));
+        System.out.println("\n\n");
+
     }
 
     // Helper Method for printing list
@@ -1117,6 +1130,27 @@ class neetcodeArraysAndHashingMedium{
             maxLen = Math.max(maxLen,Math.max(inc,dec));
         }
         return maxLen;
+    }
+
+    // Date: 04/02/2025
+    // LeetCode: 1800. Maximum Ascending Subarray Sum
+    // Time Complexity: O(n)
+    // Space Complexity: O(1)
+    public static int maxAscendingSum(int[] nums){
+        int n = nums.length;
+        int maxSum = nums[0];
+        int sum = 0;
+
+        for (int i = 1; i < n; i++ ){
+            if (nums[i] > nums[i - 1]){
+                sum += nums[i];
+            }
+            else{
+                maxSum = Math.max(maxSum,sum);
+                sum = nums[i];
+            }
+        }
+        return Math.max(maxSum,sum);
     }
 
 }
