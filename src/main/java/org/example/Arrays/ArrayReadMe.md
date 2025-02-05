@@ -158,6 +158,7 @@ This file contains solutions to medium-level array and hashing problems from the
 - **Remove Duplicates from Sorted List**: Given the `head` of a sorted linked list, delete all duplicates such that each element appears only once. Return the linked list sorted as well.
 - **Longest Strictly Increasing or Strictly Decreasing Subarray**: Given an array `nums`, return the length of the longest subarray that is either strictly increasing or strictly decreasing.
 - **Maximum Ascending Subarray Sum**: Given an array of positive integers `nums`, return the maximum possible sum of an ascending subarray in `nums`.
+- **Check if One String Swap Can Make Strings Equal**: You are given two strings `s1` and `s2` of equal length. A string `s` is a subsequence of string `t` if `s` can be obtained from `t` by deleting some (or no) characters without changing the order of the remaining characters. A string `s` is called a good string if `s` is a subsequence of `s1` and `s2`. Return `true` if `s1` and `s2` are good, otherwise, return `false`.
 
 
 ## How to Use

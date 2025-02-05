@@ -414,6 +414,18 @@ class neetcodeArraysAndHashingMedium{
         System.out.println("Maximum Ascending Subarray Sum: " + maxAscendingSum(nums19));
         System.out.println("\n\n");
 
+        // LeetCode: 1790. Check if One String Swap Can Make Strings Equal
+        System.out.println("LeetCode: 1790. Check if One String Swap Can Make Strings Equal");
+        String s4 = "bank";
+        String t = "kanb";
+        System.out.println("Input: " + s4 + " " + t);
+        System.out.println("Can Make Equal: " + areAlmostEqual(s4, t));
+        String s5 = "attack";
+        String t1 = "defend";
+        System.out.println("Input: " + s5 + " " + t1);
+        System.out.println("Can Make Equal: " + areAlmostEqual(s5, t1));
+        System.out.println("\n\n");
+
     }
 
     // Helper Method for printing list
@@ -1138,8 +1150,8 @@ class neetcodeArraysAndHashingMedium{
     // Space Complexity: O(1)
     public static int maxAscendingSum(int[] nums){
         int n = nums.length;
-        int maxSum = nums[0];
-        int sum = 0;
+        int maxSum = 0;
+        int sum = nums[0];
 
         for (int i = 1; i < n; i++ ){
             if (nums[i] > nums[i - 1]){
@@ -1151,6 +1163,29 @@ class neetcodeArraysAndHashingMedium{
             }
         }
         return Math.max(maxSum,sum);
+    }
+
+    // Date: 05/02/2025
+    // LeetCode: 1790. Check if One String Swap Can Make Strings Equal
+    // Time Complexity: O(n)
+    // Space Complexity: O(n)
+    public static boolean areAlmostEqual(String s1, String s2) {
+        int n = s1.length();
+        int count = 0;
+        int [] arr = new int[26];
+
+        for (int i = 0; i < n; i++){
+            char ch1 = s1.charAt(i);
+            char ch2 = s2.charAt(i);
+            if (ch1 != ch2) count++;
+            arr[ch1 - 'a']++;
+            arr[ch2 - 'a']--;
+        }
+        for ( int i = 0; i < 26; i++){
+            if ( arr[i] != 0 ) return false;
+        }
+
+        return count == 0 || count == 2;
     }
 
 }
