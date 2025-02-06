@@ -426,6 +426,18 @@ class neetcodeArraysAndHashingMedium{
         System.out.println("Can Make Equal: " + areAlmostEqual(s5, t1));
         System.out.println("\n\n");
 
+        // LeetCode: 1726. Tuple with Same Product
+        System.out.println("LeetCode: 1726. Tuple with Same Product");
+        int[] nums20 = {2, 3, 4, 6};
+        System.out.println("Input Array: ");
+        printArray(nums20);
+        System.out.println("Number of Tuples with Same Product: " + tupleSameProduct(nums20));
+        int[] nums21 = {1, 2, 4, 5, 10};
+        System.out.println("Input Array: ");
+        printArray(nums21);
+        System.out.println("Number of Tuples with Same Product: " + tupleSameProduct(nums21));
+        System.out.println("\n\n");
+
     }
 
     // Helper Method for printing list
@@ -1187,6 +1199,34 @@ class neetcodeArraysAndHashingMedium{
 
         return count == 0 || count == 2;
     }
+
+    // Date: 06/02/2025
+    // LeetCode: 1726. Tuple with Same Product
+    // Time Complexity: O(n^2)
+    // Space Complexity: O(n^2)
+    public static int tupleSameProduct(int[] nums) {
+        HashMap<Integer, Integer> productMap = new HashMap<>();
+        int n = nums.length;
+
+        for (int i = 0; i < n; i++){
+            for (int j = i + 1; j < n; j++){
+                int res = nums[i] * nums[j];
+                productMap.put(res,productMap.getOrDefault(res,0)+1);
+            }
+        }
+
+        int ans = 0;
+        for (Map.Entry<Integer, Integer> entry : productMap.entrySet() ){
+            int product = entry.getKey();
+            int count = entry.getValue();
+            if (count >= 2){
+                int comb = (count * (count - 1))/2;
+                ans += comb * 8;
+            }
+        }
+        return ans;
+    }
+
 
 }
 

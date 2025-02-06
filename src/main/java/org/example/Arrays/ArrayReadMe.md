@@ -159,7 +159,7 @@ This file contains solutions to medium-level array and hashing problems from the
 - **Longest Strictly Increasing or Strictly Decreasing Subarray**: Given an array `nums`, return the length of the longest subarray that is either strictly increasing or strictly decreasing.
 - **Maximum Ascending Subarray Sum**: Given an array of positive integers `nums`, return the maximum possible sum of an ascending subarray in `nums`.
 - **Check if One String Swap Can Make Strings Equal**: You are given two strings `s1` and `s2` of equal length. A string `s` is a subsequence of string `t` if `s` can be obtained from `t` by deleting some (or no) characters without changing the order of the remaining characters. A string `s` is called a good string if `s` is a subsequence of `s1` and `s2`. Return `true` if `s1` and `s2` are good, otherwise, return `false`.
-
+- **Tuple with Same Product**: Given an array `nums` of distinct positive integers, return the number of tuples `(a, b, c, d)` such that `a * b = c * d` where `a`, `b`, `c`, and `d` are elements of `nums`, and `a != b != c != d`.
 
 ## How to Use
 - Browse through each Java file to understand the code structure and problem-solving techniques.
