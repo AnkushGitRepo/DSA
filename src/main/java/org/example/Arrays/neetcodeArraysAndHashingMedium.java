@@ -438,6 +438,14 @@ class neetcodeArraysAndHashingMedium{
         System.out.println("Number of Tuples with Same Product: " + tupleSameProduct(nums21));
         System.out.println("\n\n");
 
+        // LeetCode: 110. Balanced Binary Tree
+        System.out.println("LeetCode: 110. Balanced Binary Tree");
+        TreeNode root4 = new TreeNode(3, new TreeNode(9), new TreeNode(20, new TreeNode(15), new TreeNode(7)));
+        System.out.println("Is Balanced: " + isBalanced(root4));
+        TreeNode root5 = new TreeNode(1, new TreeNode(2, new TreeNode(3, new TreeNode(4), new TreeNode(4)), new TreeNode(3)), new TreeNode(2));
+        System.out.println("Is Balanced: " + isBalanced(root5));
+        System.out.println("\n\n");
+
     }
 
     // Helper Method for printing list
@@ -1227,6 +1235,24 @@ class neetcodeArraysAndHashingMedium{
         return ans;
     }
 
+    // Date: 07/02/2025
+    // LeetCode: 110. Balanced Binary Tree
+    // Time Complexity: O(n)
+    // Space Complexity: O(n)
+    public static boolean isBalanced(TreeNode root) {
+        return height(root) != -1;
+    }
+
+    // Helper Method for height of tree
+    public static int height(TreeNode root){
+        if (root == null) return 0;
+        int left = height(root.left);
+        if (left == -1) return -1;
+        int right = height(root.right);
+        if (right == -1) return -1;
+        if (Math.abs(left - right) > 1) return -1;
+        return 1 + Math.max(left,right);
+    }
 
 }
 
