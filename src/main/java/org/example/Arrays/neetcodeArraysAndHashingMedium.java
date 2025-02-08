@@ -446,6 +446,14 @@ class neetcodeArraysAndHashingMedium{
         System.out.println("Is Balanced: " + isBalanced(root5));
         System.out.println("\n\n");
 
+        // LeetCode: 104. Maximum Depth of Binary Tree
+        System.out.println("LeetCode: 104. Maximum Depth of Binary Tree");
+        TreeNode root6 = new TreeNode(3, new TreeNode(9), new TreeNode(20, new TreeNode(15), new TreeNode(7)));
+        System.out.println("Maximum Depth: " + maxDepth(root6));
+        TreeNode root7 = new TreeNode(1, new TreeNode(2), null);
+        System.out.println("Maximum Depth: " + maxDepth(root7));
+        System.out.println("\n\n");
+
     }
 
     // Helper Method for printing list
@@ -1251,6 +1259,17 @@ class neetcodeArraysAndHashingMedium{
         int right = height(root.right);
         if (right == -1) return -1;
         if (Math.abs(left - right) > 1) return -1;
+        return 1 + Math.max(left,right);
+    }
+
+    // Date: 08/02/2025
+    // LeetCode: 104. Maximum Depth of Binary Tree
+    // Time Complexity: O(n)
+    // Space Complexity: O(n)
+    public static int maxDepth(TreeNode root) {
+        if (root == null) return 0;
+        int left = maxDepth(root.left);
+        int right = maxDepth(root.right);
         return 1 + Math.max(left,right);
     }
 

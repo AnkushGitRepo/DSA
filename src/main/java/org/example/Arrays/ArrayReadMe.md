@@ -161,6 +161,7 @@ This file contains solutions to medium-level array and hashing problems from the
 - **Check if One String Swap Can Make Strings Equal**: You are given two strings `s1` and `s2` of equal length. A string `s` is a subsequence of string `t` if `s` can be obtained from `t` by deleting some (or no) characters without changing the order of the remaining characters. A string `s` is called a good string if `s` is a subsequence of `s1` and `s2`. Return `true` if `s1` and `s2` are good, otherwise, return `false`.
 - **Tuple with Same Product**: Given an array `nums` of distinct positive integers, return the number of tuples `(a, b, c, d)` such that `a * b = c * d` where `a`, `b`, `c`, and `d` are elements of `nums`, and `a != b != c != d`.
 - **Balanced Binary Tree**: Given a binary tree, determine if it is height-balanced. A height-balanced binary tree is defined as a binary tree in which the left and right subtrees of every node differ in height by no more than `1`.
+- **Maximum Depth of Binary Tree**: Given the `root` of a binary tree, return its maximum depth. A binary tree's maximum depth is the number of nodes along the longest path from the root node down to the farthest leaf node.
 
 ## How to Use
 - Browse through each Java file to understand the code structure and problem-solving techniques.
