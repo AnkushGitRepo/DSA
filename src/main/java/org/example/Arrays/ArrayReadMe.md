@@ -162,6 +162,7 @@ This file contains solutions to medium-level array and hashing problems from the
 - **Tuple with Same Product**: Given an array `nums` of distinct positive integers, return the number of tuples `(a, b, c, d)` such that `a * b = c * d` where `a`, `b`, `c`, and `d` are elements of `nums`, and `a != b != c != d`.
 - **Balanced Binary Tree**: Given a binary tree, determine if it is height-balanced. A height-balanced binary tree is defined as a binary tree in which the left and right subtrees of every node differ in height by no more than `1`.
 - **Maximum Depth of Binary Tree**: Given the `root` of a binary tree, return its maximum depth. A binary tree's maximum depth is the number of nodes along the longest path from the root node down to the farthest leaf node.
+- **Excel Sheet Column Title**: Given an integer `columnNumber`, return its corresponding column title as it appears in an Excel sheet.
 
 ## How to Use
 - Browse through each Java file to understand the code structure and problem-solving techniques.

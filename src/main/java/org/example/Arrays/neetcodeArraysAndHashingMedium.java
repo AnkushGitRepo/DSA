@@ -454,6 +454,16 @@ class neetcodeArraysAndHashingMedium{
         System.out.println("Maximum Depth: " + maxDepth(root7));
         System.out.println("\n\n");
 
+        // LeetCode: 168. Excel Sheet Column Title
+        System.out.println("LeetCode: 168. Excel Sheet Column Title");
+        int n2 = 1;
+        System.out.println("Input: " + n2);
+        System.out.println("Output: " + convertToTitle(n2));
+        int n3 = 28;
+        System.out.println("Input: " + n3);
+        System.out.println("Output: " + convertToTitle(n3));
+        System.out.println("\n\n");
+
     }
 
     // Helper Method for printing list
@@ -1271,6 +1281,21 @@ class neetcodeArraysAndHashingMedium{
         int left = maxDepth(root.left);
         int right = maxDepth(root.right);
         return 1 + Math.max(left,right);
+    }
+
+    // Date: 09/02/2025
+    // LeetCode: 168. Excel Sheet Column Title
+    // Time Complexity: O(logn)
+    // Space Complexity: O(1)
+    public static String convertToTitle(int col) {
+        StringBuilder sb = new StringBuilder();
+
+        while (col > 0){
+            int r = ( col - 1 ) % 26;
+            sb.append((char)(r + 'A'));
+            col = ( col - 1 ) / 26;
+        }
+        return sb.reverse().toString();
     }
 
 }
