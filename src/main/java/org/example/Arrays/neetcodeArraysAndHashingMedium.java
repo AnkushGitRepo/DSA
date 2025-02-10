@@ -464,6 +464,15 @@ class neetcodeArraysAndHashingMedium{
         System.out.println("Output: " + convertToTitle(n3));
         System.out.println("\n\n");
 
+        // LeetCode: 171. Excel Sheet Column Number
+        System.out.println("LeetCode: 171. Excel Sheet Column Number");
+        String s6 = "A";
+        System.out.println("Input: " + s6);
+        System.out.println("Output: " + titleToNumber(s6));
+        String s7 = "AB";
+        System.out.println("Input: " + s7);
+        System.out.println("Output: " + titleToNumber(s7));
+        System.out.println("\n\n");
     }
 
     // Helper Method for printing list
@@ -1296,6 +1305,21 @@ class neetcodeArraysAndHashingMedium{
             col = ( col - 1 ) / 26;
         }
         return sb.reverse().toString();
+    }
+
+    // Date: 10/02/2025
+    // LeetCode: 171. Excel Sheet Column Number
+    // Time Complexity: O(n)
+    // Space Complexity: O(1)
+    public static int titleToNumber(String col) {
+        int sum = 0, p = 0;
+        int n = col.length();
+
+        for (int i = n - 1; i >= 0; i-- ){
+            int temp = col.charAt(i) - 64;
+            sum = sum + (int)Math.pow(26,p++) * temp;
+        }
+        return sum;
     }
 
 }
