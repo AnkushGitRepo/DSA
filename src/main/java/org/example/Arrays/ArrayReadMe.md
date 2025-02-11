@@ -164,6 +164,7 @@ This file contains solutions to medium-level array and hashing problems from the
 - **Maximum Depth of Binary Tree**: Given the `root` of a binary tree, return its maximum depth. A binary tree's maximum depth is the number of nodes along the longest path from the root node down to the farthest leaf node.
 - **Excel Sheet Column Title**: Given an integer `columnNumber`, return its corresponding column title as it appears in an Excel sheet.
 - **Excel Sheet Column Number**: Given a string `columnTitle` that represents the column title as it appears in an Excel sheet, return its corresponding column number.
+- **Reverse Bits**: Reverse bits of a given 32 bits unsigned integer.
 
 ## How to Use
 - Browse through each Java file to understand the code structure and problem-solving techniques.

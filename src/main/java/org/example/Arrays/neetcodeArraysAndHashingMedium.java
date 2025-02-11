@@ -473,6 +473,16 @@ class neetcodeArraysAndHashingMedium{
         System.out.println("Input: " + s7);
         System.out.println("Output: " + titleToNumber(s7));
         System.out.println("\n\n");
+
+        // LeetCode: 190. Reverse Bits
+        System.out.println("LeetCode: 190. Reverse Bits");
+        int n4 = 43261596;
+        System.out.println("Input: " + n4);
+        System.out.println("Output: " + reverseBits(n4));
+        int n5 = 429496729;
+        System.out.println("Input: " + n5);
+        System.out.println("Output: " + reverseBits(n5));
+        System.out.println("\n\n");
     }
 
     // Helper Method for printing list
@@ -1320,6 +1330,25 @@ class neetcodeArraysAndHashingMedium{
             sum = sum + (int)Math.pow(26,p++) * temp;
         }
         return sum;
+    }
+
+    // Date: 11/02/2025
+    // LeetCode: 190. Reverse Bits
+    // Time Complexity: O(1)
+    // Space Complexity: O(1)
+    public static int reverseBits(int n) {
+        boolean isSigned = false;
+        if(n < 0)
+            isSigned = true;
+        int result = 0;
+        int i = 0;
+        while (i < 31) {
+            result = result | (n & 1);
+            n = n >> 1;
+            result = result << 1;
+            i++;
+        }
+        return isSigned ? result | 1 : result;
     }
 
 }
