@@ -483,6 +483,18 @@ class neetcodeArraysAndHashingMedium{
         System.out.println("Input: " + n5);
         System.out.println("Output: " + reverseBits(n5));
         System.out.println("\n\n");
+
+        // LeetCode: 112. Path Sum
+        System.out.println("LeetCode: 112. Path Sum");
+        TreeNode root8 = new TreeNode(5, new TreeNode(4, new TreeNode(11, new TreeNode(7), new TreeNode(2)), null), new TreeNode(8, new TreeNode(13), new TreeNode(4, null, new TreeNode(1))));
+        int sum = 22;
+        System.out.println("Input: " + sum);
+        System.out.println("Has Path Sum: " + hasPathSum(root8, sum));
+        TreeNode root9 = new TreeNode(1, new TreeNode(2), new TreeNode(3));
+        int sum1 = 5;
+        System.out.println("Input: " + sum1);
+        System.out.println("Has Path Sum: " + hasPathSum(root9, sum1));
+        System.out.println("\n\n");
     }
 
     // Helper Method for printing list
@@ -1349,6 +1361,25 @@ class neetcodeArraysAndHashingMedium{
             i++;
         }
         return isSigned ? result | 1 : result;
+    }
+
+    // Date: 12/02/2025
+    // LeetCode: 112. Path Sum
+    // Time Complexity: O(n)
+    // Space Complexity: O(n)
+    static int target;
+    public static boolean hasPathSum(TreeNode root, int targetSum) {
+        target = targetSum;
+        return helper(root,0);
+    }
+
+    private static boolean helper(TreeNode root, int sum){
+        if ( root == null ) return false;
+        sum += root.val;
+        if (root.left == null && root.right == null ) return sum == target;
+        boolean leftAns = helper(root.left,sum);
+        boolean rightAns = helper(root.right,sum);
+        return leftAns || rightAns;
     }
 
 }

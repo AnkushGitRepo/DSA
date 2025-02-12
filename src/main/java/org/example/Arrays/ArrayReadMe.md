@@ -165,6 +165,7 @@ This file contains solutions to medium-level array and hashing problems from the
 - **Excel Sheet Column Title**: Given an integer `columnNumber`, return its corresponding column title as it appears in an Excel sheet.
 - **Excel Sheet Column Number**: Given a string `columnTitle` that represents the column title as it appears in an Excel sheet, return its corresponding column number.
 - **Reverse Bits**: Reverse bits of a given 32 bits unsigned integer.
+- **Path Sum**: Given the `root` of a binary tree and an integer `targetSum`, return `true` if the tree has a root-to-leaf path such that adding up all the values along the path equals `targetSum`.
 
 ## How to Use
 - Browse through each Java file to understand the code structure and problem-solving techniques.
