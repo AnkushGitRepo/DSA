@@ -495,6 +495,30 @@ class neetcodeArraysAndHashingMedium{
         System.out.println("Input: " + sum1);
         System.out.println("Has Path Sum: " + hasPathSum(root9, sum1));
         System.out.println("\n\n");
+
+        // LeetCode: 108. Convert Sorted Array to Binary Search Tree
+        System.out.println("LeetCode: 108. Convert Sorted Array to Binary Search Tree");
+        int[] nums22 = {-10, -3, 0, 5, 9};
+        System.out.println("Input Array: ");
+        printArray(nums22);
+        TreeNode result14 = sortedArrayToBST(nums22);
+        System.out.println("Inorder Traversal: ");
+        List<Integer> result15 = inorderTraversal(result14);
+        for (int num12 : result15){
+            System.out.print(num + " ");
+        }
+        System.out.println();
+        int[] nums23 = {1, 3};
+        System.out.println("Input Array: ");
+        printArray(nums23);
+        TreeNode result16 = sortedArrayToBST(nums23);
+        System.out.println("Inorder Traversal: ");
+        List<Integer> result17 = inorderTraversal(result16);
+        for (int num12 : result17){
+            System.out.print(num + " ");
+        }
+        System.out.println();
+        System.out.println("\n\n");
     }
 
     // Helper Method for printing list
@@ -513,6 +537,27 @@ class neetcodeArraysAndHashingMedium{
         }
         System.out.println();
     }
+
+    // Helper Method for inorderTraversal
+    public static List<Integer> inorderTraversal(TreeNode root) {
+        List<Integer> result = new ArrayList<>();
+        if (root == null){
+            return result;
+        }
+        Stack<TreeNode> stack = new Stack<>();
+        TreeNode current = root;
+        while (current != null || !stack.isEmpty()){
+            while (current != null){
+                stack.push(current);
+                current = current.left;
+            }
+            current = stack.pop();
+            result.add(current.val);
+            current = current.right;
+        }
+        return result;
+    }
+
 
     // Date : 01/01/2025
     // LeetCode : 912. Sort an Array
@@ -1380,6 +1425,24 @@ class neetcodeArraysAndHashingMedium{
         boolean leftAns = helper(root.left,sum);
         boolean rightAns = helper(root.right,sum);
         return leftAns || rightAns;
+    }
+
+    // Date: 13/02/2025
+    // LeetCode: 108. Convert Sorted Array to Binary Search Tree
+    // Time Complexity: O(n)
+    // Space Complexity: O(n)
+    public static TreeNode sortedArrayToBST(int[] nums) {
+        if ( nums.length == 0 ) return null;
+        return createTree(nums,0,nums.length - 1);
+    }
+
+    public static TreeNode createTree(int[] nums, int start, int end){
+        if ( start > end ) return null;
+        int mid = (start + end ) / 2;
+        TreeNode node = new TreeNode(nums[mid]);
+        node.left = createTree(nums,start,mid - 1);
+        node.right = createTree(nums,mid + 1,end);
+        return node;
     }
 
 }
