@@ -167,6 +167,7 @@ This file contains solutions to medium-level array and hashing problems from the
 - **Reverse Bits**: Reverse bits of a given 32 bits unsigned integer.
 - **Path Sum**: Given the `root` of a binary tree and an integer `targetSum`, return `true` if the tree has a root-to-leaf path such that adding up all the values along the path equals `targetSum`.
 - **Convert Sorted Array to Binary Search Tree**: Given an integer array `nums` where the elements are sorted in ascending order, convert it to a height-balanced binary search tree.
+- **Symmetric Tree**: Given the `root` of a binary tree, check whether it is a mirror of itself (i.e., symmetric around its center).
 
 ## How to Use
 - Browse through each Java file to understand the code structure and problem-solving techniques.

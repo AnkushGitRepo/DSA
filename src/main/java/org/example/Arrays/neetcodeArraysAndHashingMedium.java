@@ -519,6 +519,15 @@ class neetcodeArraysAndHashingMedium{
         }
         System.out.println();
         System.out.println("\n\n");
+
+        // LeetCode: 101. Symmetric Tree
+        System.out.println("LeetCode: 101. Symmetric Tree");
+        TreeNode root10 = new TreeNode(1, new TreeNode(2, new TreeNode(3), new TreeNode(4)), new TreeNode(2, new TreeNode(4), new TreeNode(3)));
+        System.out.println("Is Symmetric: " + isSymmetric(root10));
+        TreeNode root11 = new TreeNode(1, new TreeNode(2, null, new TreeNode(3)), new TreeNode(2, null, new TreeNode(3)));
+        System.out.println("Is Symmetric: " + isSymmetric(root11));
+        System.out.println("\n\n");
+
     }
 
     // Helper Method for printing list
@@ -1443,6 +1452,20 @@ class neetcodeArraysAndHashingMedium{
         node.left = createTree(nums,start,mid - 1);
         node.right = createTree(nums,mid + 1,end);
         return node;
+    }
+
+    // Date: 14/02/2025
+    // LeetCode: 101. Symmetric Tree
+    // Time Complexity: O(n)
+    // Space Complexity: O(n)
+    public static boolean isSymmetric(TreeNode root) {
+        return isMirror(root,root);
+    }
+
+    public static boolean isMirror(TreeNode a, TreeNode b){
+        if ( a == null && b == null ) return true;
+        if ( a == null || b == null ) return false;
+        return (a.val == b.val) && isMirror(a.left,b.right) && isMirror(a.right,b.left);
     }
 
 }
