@@ -528,6 +528,16 @@ class neetcodeArraysAndHashingMedium{
         System.out.println("Is Symmetric: " + isSymmetric(root11));
         System.out.println("\n\n");
 
+        // Leetcode: 70. Climbing Stairs
+        System.out.println("LeetCode: 70. Climbing Stairs");
+        int n6 = 2;
+        System.out.println("Input: " + n6);
+        System.out.println("Output: " + climbStairs(n6));
+        int n7 = 3;
+        System.out.println("Input: " + n7);
+        System.out.println("Output: " + climbStairs(n7));
+        System.out.println("\n\n");
+
     }
 
     // Helper Method for printing list
@@ -1466,6 +1476,22 @@ class neetcodeArraysAndHashingMedium{
         if ( a == null && b == null ) return true;
         if ( a == null || b == null ) return false;
         return (a.val == b.val) && isMirror(a.left,b.right) && isMirror(a.right,b.left);
+    }
+
+    // Date: 15/02/2025
+    // Leetcode: 70. Climbing Stairs
+    // Time Complexity: O(n)
+    // Space Complexity: O(1)
+    public static int climbStairs(int n) {
+        if ( n == 1 ) return 1;
+        int first = 1;
+        int second = 2;
+        for (int i = 3; i <= n; i++){
+            int third = first + second;
+            first = second;
+            second = third;
+        }
+        return second;
     }
 
 }
