@@ -169,6 +169,7 @@ This file contains solutions to medium-level array and hashing problems from the
 - **Convert Sorted Array to Binary Search Tree**: Given an integer array `nums` where the elements are sorted in ascending order, convert it to a height-balanced binary search tree.
 - **Symmetric Tree**: Given the `root` of a binary tree, check whether it is a mirror of itself (i.e., symmetric around its center).
 - **Climbing Stairs**: You are climbing a staircase. It takes `n` steps to reach the top. Each time you can either climb `1` or `2` steps. In how many distinct ways can you climb to the top?
+- **Add Binary**: Given two binary strings `a` and `b`, return their sum as a binary string.
 
 ## How to Use
 - Browse through each Java file to understand the code structure and problem-solving techniques.

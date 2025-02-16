@@ -538,6 +538,18 @@ class neetcodeArraysAndHashingMedium{
         System.out.println("Output: " + climbStairs(n7));
         System.out.println("\n\n");
 
+        // LeetCode: 67. Add Binary
+        System.out.println("LeetCode: 67. Add Binary");
+        String a2 = "11";
+        String b2 = "1";
+        System.out.println("Input: " + a2 + " " + b2);
+        System.out.println("Output: " + addBinary(a2, b2));
+        String a3 = "1010";
+        String b3 = "1011";
+        System.out.println("Input: " + a3 + " " + b3);
+        System.out.println("Output: " + addBinary(a3, b3));
+        System.out.println("\n\n");
+
     }
 
     // Helper Method for printing list
@@ -1492,6 +1504,38 @@ class neetcodeArraysAndHashingMedium{
             second = third;
         }
         return second;
+    }
+
+    // Date: 16/02/2025
+    // LeetCode: 67. Add Binary
+    // Time Complexity: O(n)
+    // Space Complexity: O(n)
+    public static String addBinary(String a, String b) {
+        int n1 = a.length() - 1;
+        int n2 = b.length() - 1;
+        int c = 0, base = 2;
+
+        StringBuilder res = new StringBuilder();
+        while ( n1 >= 0 || n2 >= 0) {
+            int t1 = 0, t2 = 0, sum;
+            if ( n1 >= 0 ){
+                t1 = a.charAt(n1--) - '0';
+            }
+            if ( n2 >= 0){
+                t2 = b.charAt(n2--) - '0';
+            }
+            sum = t1 + t2 + c;
+            if ( sum >= base ){
+                c = 1;
+                sum -= base;
+            }
+            else{
+                c = 0;
+            }
+            res.append(sum);
+        }
+        if ( c == 1 ) res.append(c);
+        return res.reverse().toString();
     }
 
 }
