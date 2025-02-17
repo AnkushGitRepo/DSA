@@ -170,6 +170,7 @@ This file contains solutions to medium-level array and hashing problems from the
 - **Symmetric Tree**: Given the `root` of a binary tree, check whether it is a mirror of itself (i.e., symmetric around its center).
 - **Climbing Stairs**: You are climbing a staircase. It takes `n` steps to reach the top. Each time you can either climb `1` or `2` steps. In how many distinct ways can you climb to the top?
 - **Add Binary**: Given two binary strings `a` and `b`, return their sum as a binary string.
+- **Minimum Depth of Binary Tree**: Given a binary tree, find its minimum depth. The minimum depth is the number of nodes along the shortest path from the root node down to the nearest leaf node.
 
 ## How to Use
 - Browse through each Java file to understand the code structure and problem-solving techniques.

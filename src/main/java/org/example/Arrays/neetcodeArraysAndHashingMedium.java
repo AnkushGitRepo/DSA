@@ -550,6 +550,14 @@ class neetcodeArraysAndHashingMedium{
         System.out.println("Output: " + addBinary(a3, b3));
         System.out.println("\n\n");
 
+        // LeetCode: 111. Minimum Depth of Binary Tree
+        System.out.println("LeetCode: 111.Minimum Depth of Binary Tree");
+        TreeNode root12 = new TreeNode(3, new TreeNode(9), new TreeNode(20, new TreeNode(15), new TreeNode(7)));
+        System.out.println("Minimum Depth: " + minDepth(root12));
+        TreeNode root13 = new TreeNode(2, null, new TreeNode(3, null, new TreeNode(4, null, new TreeNode(5, null, new TreeNode(6)))));
+        System.out.println("Minimum Depth: " + minDepth(root13));
+        System.out.println("\n\n");
+
     }
 
     // Helper Method for printing list
@@ -1536,6 +1544,20 @@ class neetcodeArraysAndHashingMedium{
         }
         if ( c == 1 ) res.append(c);
         return res.reverse().toString();
+    }
+
+    // Date: 17/02/2025
+    // LeetCode: 111. Minimum Depth of Binary Tree
+    // Time Complexity: O(n)
+    // Space Complexity: O(n)
+    public static int minDepth(TreeNode root) {
+        if ( root == null ) return 0;
+        if ( root.left == null && root.right == null ) return 1;
+
+        int ld = root.left == null ? Integer.MAX_VALUE : minDepth(root.left);
+        int rd = root.right == null ? Integer.MAX_VALUE : minDepth(root.right);
+
+        return Math.min(ld,rd) + 1;
     }
 
 }
