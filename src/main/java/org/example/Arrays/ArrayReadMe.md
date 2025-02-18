@@ -171,6 +171,7 @@ This file contains solutions to medium-level array and hashing problems from the
 - **Climbing Stairs**: You are climbing a staircase. It takes `n` steps to reach the top. Each time you can either climb `1` or `2` steps. In how many distinct ways can you climb to the top?
 - **Add Binary**: Given two binary strings `a` and `b`, return their sum as a binary string.
 - **Minimum Depth of Binary Tree**: Given a binary tree, find its minimum depth. The minimum depth is the number of nodes along the shortest path from the root node down to the nearest leaf node.
+- **Construct Smallest Number From DI String**: A permutation `perm` of `n + 1` integers of all the integers in the range `[0, n]` can be represented as a string `s` of length `n` where `s[i] == 'I'` if `perm[i] < perm[i + 1]`, and `s[i] == 'D'` if `perm[i] > perm[i + 1]`. Given a string `s`, reconstruct the permutation `perm` and return it. If there are multiple valid permutations perm, return any of them.
 
 ## How to Use
 - Browse through each Java file to understand the code structure and problem-solving techniques.

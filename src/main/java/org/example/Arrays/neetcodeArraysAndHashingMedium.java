@@ -558,6 +558,16 @@ class neetcodeArraysAndHashingMedium{
         System.out.println("Minimum Depth: " + minDepth(root13));
         System.out.println("\n\n");
 
+        // LeetCode: 2375. Construct Smallest Number From DI String
+        System.out.println("LeetCode: 2375. Construct Smallest Number From DI String");
+        String s8 = "DIDIDID";
+        System.out.println("Input: " + s8);
+        System.out.println("Output: " + smallestNumber(s8));
+        String s9 = "III";
+        System.out.println("Input: " + s9);
+        System.out.println("Output: " + smallestNumber(s9));
+        System.out.println("\n\n");
+
     }
 
     // Helper Method for printing list
@@ -1558,6 +1568,39 @@ class neetcodeArraysAndHashingMedium{
         int rd = root.right == null ? Integer.MAX_VALUE : minDepth(root.right);
 
         return Math.min(ld,rd) + 1;
+    }
+
+    // Date: 18/02/2025
+    // LeetCode: 2375. Construct Smallest Number From DI String
+    // Time Complexity: O(n)
+    // Space Complexity: O(n)
+    public static String smallestNumber(String pattern) {
+        int size = pattern.length();
+        int[] ans = new int[size+1];
+        for(int i=0;i<size+1;i++){
+            ans[i]=i+1;
+        }
+
+        for(int i=0;i<size;i++){
+            int t=i;
+            while(t<size && pattern.charAt(t)=='D'){
+                t++;
+            }
+
+            int left=i,right=t;
+            while(left<right){
+                int temp = ans[left];
+                ans[left]=ans[right];
+                ans[right]=temp;
+                left++;
+                right--;
+            }
+
+            if(t!=i) i = t-1;
+
+        }
+
+        return Arrays.toString(ans).replaceAll("\\[|\\]|,|\\s", "");
     }
 
 }
