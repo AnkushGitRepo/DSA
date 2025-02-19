@@ -568,6 +568,17 @@ class neetcodeArraysAndHashingMedium{
         System.out.println("Output: " + smallestNumber(s9));
         System.out.println("\n\n");
 
+        // LeetCode: 121. Best Time to Buy and Sell Stock
+        System.out.println("LeetCode: 121. Best Time to Buy and Sell Stock");
+        int[] prices2 = {7, 1, 5, 3, 6, 4};
+        System.out.println("Input Array: ");
+        printArray(prices2);
+        System.out.println("Max Profit: " + maxProfit1(prices2));
+        int[] prices3 = {7, 6, 4, 3, 1};
+        System.out.println("Input Array: ");
+        printArray(prices3);
+        System.out.println("Max Profit: " + maxProfit1(prices3));
+        System.out.println("\n\n");
     }
 
     // Helper Method for printing list
@@ -1601,6 +1612,26 @@ class neetcodeArraysAndHashingMedium{
         }
 
         return Arrays.toString(ans).replaceAll("\\[|\\]|,|\\s", "");
+    }
+
+    // Date: 19/02/2025
+    // LeetCode: 121. Best Time to Buy and Sell Stock
+    // Time Complexity: O(n)
+    // Space Complexity: O(1)
+    public static int maxProfit1(int[] prices) {
+        int buy_price = prices[0];
+        int profit = 0;
+
+        for ( int i = 1; i < prices.length; i++ ){
+            if ( prices[i] < buy_price ){
+                buy_price = prices[i];
+            }
+            else{
+                int current_profit = prices[i] - buy_price;
+                profit = Math.max(current_profit, profit);
+            }
+        }
+        return profit;
     }
 
 }
