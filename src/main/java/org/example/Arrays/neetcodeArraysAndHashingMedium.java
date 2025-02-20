@@ -579,6 +579,25 @@ class neetcodeArraysAndHashingMedium{
         printArray(prices3);
         System.out.println("Max Profit: " + maxProfit1(prices3));
         System.out.println("\n\n");
+
+        // LeetCode: 226. Invert Binary Tree
+        System.out.println("LeetCode: 226. Invert Binary Tree");
+        TreeNode root14 = new TreeNode(4, new TreeNode(2, new TreeNode(1), new TreeNode(3)), new TreeNode(7, new TreeNode(6), new TreeNode(9)));
+        System.out.println("Inorder Traversal: ");
+        List<Integer> result18 = inorderTraversal(invertTree(root14));
+        for (int num12 : result18){
+            System.out.print(num12 + " ");
+        }
+        System.out.println();
+        TreeNode root15 = new TreeNode(2, new TreeNode(1, new TreeNode(4), null), new TreeNode(3, new TreeNode(7), null));
+        System.out.println("Inorder Traversal: ");
+        List<Integer> result19 = inorderTraversal(invertTree(root15));
+        for (int num12 : result19){
+            System.out.print(num12 + " ");
+        }
+        System.out.println();
+        System.out.println("\n\n");
+
     }
 
     // Helper Method for printing list
@@ -1634,6 +1653,19 @@ class neetcodeArraysAndHashingMedium{
         return profit;
     }
 
+    // Date: 20/02/2025
+    // LeetCode: 226. Invert Binary Tree
+    // Time Complexity: O(n)
+    // Space Complexity: O(n)
+    public static TreeNode invertTree(TreeNode root) {
+        if ( root == null ) return null;
+
+        TreeNode right = invertTree(root.right);
+        TreeNode left = invertTree(root.left);
+        root.left = right;
+        root.right = left;
+        return root;
+    }
 }
 
 // Definition for a binary tree node.

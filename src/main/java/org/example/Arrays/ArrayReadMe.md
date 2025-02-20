@@ -173,6 +173,7 @@ This file contains solutions to medium-level array and hashing problems from the
 - **Minimum Depth of Binary Tree**: Given a binary tree, find its minimum depth. The minimum depth is the number of nodes along the shortest path from the root node down to the nearest leaf node.
 - **Construct Smallest Number From DI String**: A permutation `perm` of `n + 1` integers of all the integers in the range `[0, n]` can be represented as a string `s` of length `n` where `s[i] == 'I'` if `perm[i] < perm[i + 1]`, and `s[i] == 'D'` if `perm[i] > perm[i + 1]`. Given a string `s`, reconstruct the permutation `perm` and return it. If there are multiple valid permutations perm, return any of them.
 - **Best Time to Buy and Sell Stock**: You are given an array `prices` where `prices[i]` is the price of a given stock on the `ith` day. You want to maximize your profit by choosing a single day to buy one stock and choosing a different day in the future to sell that stock. Return the maximum profit you can achieve from this transaction. If you cannot achieve any profit, return `0`.
+- **Invert Binary Tree**: Given the `root` of a binary tree, invert the tree, and return its root.
 
 ## How to Use
 - Browse through each Java file to understand the code structure and problem-solving techniques.
