@@ -598,6 +598,23 @@ class neetcodeArraysAndHashingMedium{
         System.out.println();
         System.out.println("\n\n");
 
+        // LeetCode: 56. Merge Intervals
+        System.out.println("LeetCode: 56. Merge Intervals");
+        int[][] intervals = {{1, 3}, {2, 6}, {8, 10}, {15, 18}};
+        System.out.println("Input Intervals: ");
+        printMatrix(intervals);
+        int[][] result20 = merge(intervals);
+        System.out.println("Merged Intervals: ");
+        printMatrix(result20);
+        int[][] intervals1 = {{1, 4}, {4, 5}};
+        System.out.println("Input Intervals: ");
+        printMatrix(intervals1);
+        int[][] result21 = merge(intervals1);
+        System.out.println("Merged Intervals: ");
+        printMatrix(result21);
+        System.out.println("\n\n");
+
+
     }
 
     // Helper Method for printing list
@@ -635,6 +652,16 @@ class neetcodeArraysAndHashingMedium{
             current = current.right;
         }
         return result;
+    }
+
+    // Helper Method for printing matrix
+    public static void printMatrix(int[][] matrix) {
+        for (int[] row : matrix) {
+            for (int num : row) {
+                System.out.print(num + " ");
+            }
+            System.out.println();
+        }
     }
 
 
@@ -1665,6 +1692,34 @@ class neetcodeArraysAndHashingMedium{
         root.left = right;
         root.right = left;
         return root;
+    }
+
+    // Date: 21/02/2025
+    // LeetCode: 56. Merge Intervals
+    // Time Complexity: O(nlogn)
+    // Space Complexity: O(n)
+    public static int[][] merge(int[][] intervals) {
+        if (intervals.length == 0) return new int[0][];
+
+        // Step 1: Sort intervals by the start value
+        Arrays.sort(intervals, (a, b) -> a[0] - b[0]);
+
+        List<int[]> res = new ArrayList<>();
+        res.add(intervals[0]);
+
+        for (int i = 1; i < intervals.length; i++) {
+            int[] lastInterval = res.get(res.size() - 1);
+
+            if (intervals[i][0] <= lastInterval[1]) {
+                // Merge overlapping intervals
+                lastInterval[1] = Math.max(lastInterval[1], intervals[i][1]);
+            } else {
+                // Add non-overlapping interval
+                res.add(intervals[i]);
+            }
+        }
+
+        return res.toArray(new int[res.size()][]);
     }
 }
 
