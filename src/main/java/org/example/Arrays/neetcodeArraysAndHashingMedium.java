@@ -614,6 +614,15 @@ class neetcodeArraysAndHashingMedium{
         printMatrix(result21);
         System.out.println("\n\n");
 
+        // LeetCode: 232. Implement Queue using Stacks
+        System.out.println("LeetCode: 232. Implement Queue using Stacks");
+        MyQueue queue = new neetcodeArraysAndHashingMedium().new MyQueue();
+        queue.push(1);
+        queue.push(2);
+        System.out.println("Peek: " + queue.peek());
+        System.out.println("Pop: " + queue.pop());
+        System.out.println("Empty: " + queue.empty());
+        System.out.println("\n\n");
 
     }
 
@@ -1720,6 +1729,46 @@ class neetcodeArraysAndHashingMedium{
         }
 
         return res.toArray(new int[res.size()][]);
+    }
+
+    // Date: 22/02/2025
+    // LeetCode: 232. Implement Queue using Stacks
+    // Time Complexity: O(1)
+    // Space Complexity: O(n)
+    private class MyQueue {
+        Stack<Integer> stack1;
+        Stack<Integer> stack2;
+
+        public MyQueue() {
+            stack1 = new Stack<>();
+            stack2 = new Stack<>();
+        }
+
+        public void push(int x) {
+            stack1.push(x);
+        }
+
+        public int pop() {
+            if (stack2.isEmpty()){
+                while (!stack1.isEmpty()){
+                    stack2.push(stack1.pop());
+                }
+            }
+            return stack2.pop();
+        }
+
+        public int peek() {
+            if (stack2.isEmpty()){
+                while (!stack1.isEmpty()){
+                    stack2.push(stack1.pop());
+                }
+            }
+            return stack2.peek();
+        }
+
+        public boolean empty() {
+            return stack1.isEmpty() && stack2.isEmpty();
+        }
     }
 }
 

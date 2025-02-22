@@ -175,6 +175,7 @@ This file contains solutions to medium-level array and hashing problems from the
 - **Best Time to Buy and Sell Stock**: You are given an array `prices` where `prices[i]` is the price of a given stock on the `ith` day. You want to maximize your profit by choosing a single day to buy one stock and choosing a different day in the future to sell that stock. Return the maximum profit you can achieve from this transaction. If you cannot achieve any profit, return `0`.
 - **Invert Binary Tree**: Given the `root` of a binary tree, invert the tree, and return its root.
 - **Merge Intervals**: Given an array of intervals where `intervals[i] = [starti, endi]`, merge all overlapping intervals, and return an array of the non-overlapping intervals that cover all the intervals in the input.
+- **Implement Queue using Stacks**: Implement a first-in-first-out (FIFO) queue using only two stacks. The implemented queue should support all the functions of a normal queue (push, peek, pop, and empty).
 
 ## How to Use
 - Browse through each Java file to understand the code structure and problem-solving techniques.
