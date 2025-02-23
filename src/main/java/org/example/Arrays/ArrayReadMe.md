@@ -176,6 +176,7 @@ This file contains solutions to medium-level array and hashing problems from the
 - **Invert Binary Tree**: Given the `root` of a binary tree, invert the tree, and return its root.
 - **Merge Intervals**: Given an array of intervals where `intervals[i] = [starti, endi]`, merge all overlapping intervals, and return an array of the non-overlapping intervals that cover all the intervals in the input.
 - **Implement Queue using Stacks**: Implement a first-in-first-out (FIFO) queue using only two stacks. The implemented queue should support all the functions of a normal queue (push, peek, pop, and empty).
+- **Reverse String**: Write a function that reverses a string. The input string is given as an array of characters `s`.
 
 ## How to Use
 - Browse through each Java file to understand the code structure and problem-solving techniques.

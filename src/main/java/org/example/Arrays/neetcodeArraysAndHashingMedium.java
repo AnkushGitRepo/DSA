@@ -624,6 +624,22 @@ class neetcodeArraysAndHashingMedium{
         System.out.println("Empty: " + queue.empty());
         System.out.println("\n\n");
 
+        // LeetCode: 344. Reverse String
+        System.out.println("LeetCode: 344. Reverse String");
+        char[] s10 = {'h', 'e', 'l', 'l', 'o'};
+        System.out.println("Input Array: ");
+        printArray(s10);
+        reverseString(s10);
+        System.out.println("Output Array: ");
+        printArray(s10);
+        char[] s11 = {'H', 'a', 'n', 'n', 'a', 'h'};
+        System.out.println("Input Array: ");
+        printArray(s11);
+        reverseString(s11);
+        System.out.println("Output Array: ");
+        printArray(s11);
+        System.out.println("\n\n");
+
     }
 
     // Helper Method for printing list
@@ -638,6 +654,14 @@ class neetcodeArraysAndHashingMedium{
     // Helper Method for printing array
     public static void printArray(int[] nums) {
         for (int num : nums) {
+            System.out.print(num + " ");
+        }
+        System.out.println();
+    }
+
+    // Helper Method for printing array
+    public static void printArray(char[] nums) {
+        for (char num : nums) {
             System.out.print(num + " ");
         }
         System.out.println();
@@ -1768,6 +1792,21 @@ class neetcodeArraysAndHashingMedium{
 
         public boolean empty() {
             return stack1.isEmpty() && stack2.isEmpty();
+        }
+    }
+
+    // Date: 23/02/2025
+    // LeetCode: 344. Reverse String
+    // Time Complexity: O(n)
+    // Space Complexity: O(1)
+    public static void reverseString(char[] s) {
+        int start = 0, end = s.length - 1;
+        while (start < end){
+            char temp = s[start];
+            s[start] = s[end];
+            s[end] = temp;
+            start++;
+            end--;
         }
     }
 }
