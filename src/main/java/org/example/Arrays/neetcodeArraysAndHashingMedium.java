@@ -640,6 +640,28 @@ class neetcodeArraysAndHashingMedium{
         printArray(s11);
         System.out.println("\n\n");
 
+        // LeetCode: 228. Summary Ranges
+        System.out.println("LeetCode: 228. Summary Ranges");
+        int[] nums24 = {0, 1, 2, 4, 5, 7};
+        System.out.println("Input Array: ");
+        printArray(nums24);
+        List<String> result22 = summaryRanges(nums24);
+        System.out.println("Summary Ranges: ");
+        for (String temp3 : result22){
+            System.out.print(temp3 + " ");
+        }
+        System.out.println();
+        int[] nums25 = {0, 2, 3, 4, 6, 8, 9};
+        System.out.println("Input Array: ");
+        printArray(nums25);
+        List<String> result23 = summaryRanges(nums25);
+        System.out.println("Summary Ranges: ");
+        for (String temp3 : result23){
+            System.out.print(temp3 + " ");
+        }
+        System.out.println();
+        System.out.println("\n\n");
+
     }
 
     // Helper Method for printing list
@@ -1808,6 +1830,30 @@ class neetcodeArraysAndHashingMedium{
             start++;
             end--;
         }
+    }
+
+    // Date: 24/02/2025
+    // LeetCode: 228. Summary Ranges
+    // Time Complexity: O(n)
+    // Space Complexity: O(n)
+    public static List<String> summaryRanges(int[] nums) {
+        List<String> list=new ArrayList();
+        if(nums.length==1){
+            list.add(nums[0]+"");
+            return list;
+        }
+        for(int i=0;i<nums.length;i++){
+            int a=nums[i];
+            while(i+1<nums.length&&(nums[i+1]-nums[i])==1){
+                i++;
+            }
+            if(a!=nums[i]){
+                list.add(a+"->"+nums[i]);
+            }else{
+                list.add(a+"");
+            }
+        }
+        return list;
     }
 }
 
