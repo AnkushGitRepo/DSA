@@ -662,6 +662,16 @@ class neetcodeArraysAndHashingMedium{
         System.out.println();
         System.out.println("\n\n");
 
+        // LeetCode: 231. Power of Two
+        System.out.println("LeetCode: 231. Power of Two");
+        int n8 = 1;
+        System.out.println("Input: " + n8);
+        System.out.println("Is Power of Two: " + isPowerOfTwo(n8));
+        int n9 = 16;
+        System.out.println("Input: " + n9);
+        System.out.println("Is Power of Two: " + isPowerOfTwo(n9));
+        System.out.println("\n\n");
+
     }
 
     // Helper Method for printing list
@@ -1854,6 +1864,15 @@ class neetcodeArraysAndHashingMedium{
             }
         }
         return list;
+    }
+
+    // Date: 25/02/2025
+    // LeetCode: 231. Power of Two
+    // Time Complexity: O(1)
+    // Space Complexity: O(1)
+    public static boolean isPowerOfTwo(int n) {
+        if (n <= 0) return false;
+        return (n & (n - 1)) == 0;
     }
 }
 
