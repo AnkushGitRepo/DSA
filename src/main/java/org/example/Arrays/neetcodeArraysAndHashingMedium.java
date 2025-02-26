@@ -672,6 +672,18 @@ class neetcodeArraysAndHashingMedium{
         System.out.println("Is Power of Two: " + isPowerOfTwo(n9));
         System.out.println("\n\n");
 
+        // LeetCode: 234. Palindrome Linked List
+        System.out.println("LeetCode: 234. Palindrome Linked List");
+        ListNode head6 = new ListNode(1, new ListNode(2, new ListNode(2, new ListNode(1))));
+        System.out.println("Input List: ");
+        printList(head6);
+        System.out.println("Is Palindrome: " + isPalindrome1(head6));
+        ListNode head7 = new ListNode(1, new ListNode(2));
+        System.out.println("Input List: ");
+        printList(head7);
+        System.out.println("Is Palindrome: " + isPalindrome1(head7));
+        System.out.println("\n\n");
+
     }
 
     // Helper Method for printing list
@@ -1873,6 +1885,35 @@ class neetcodeArraysAndHashingMedium{
     public static boolean isPowerOfTwo(int n) {
         if (n <= 0) return false;
         return (n & (n - 1)) == 0;
+    }
+
+    // Date: 26/02/2025
+    // LeetCode: 234. Palindrome Linked List
+    // Time Complexity: O(n)
+    // Space Complexity: O(1)
+    public static boolean isPalindrome1(ListNode head) {
+        ListNode slow = head, fast = head;
+
+        while ( fast != null && fast.next != null ){
+            slow = slow.next;
+            fast = fast.next.next;
+        }
+
+        ListNode prev = null;
+        while ( slow != null ){
+            ListNode temp = slow.next;
+            slow.next = prev;
+            prev = slow;
+            slow = temp;
+        }
+
+        while ( prev != null ){
+            if (head.val != prev.val ) return false;
+            head = head.next;
+            prev = prev.next;
+        }
+        return true;
+
     }
 }
 

@@ -179,6 +179,7 @@ This file contains solutions to medium-level array and hashing problems from the
 - **Reverse String**: Write a function that reverses a string. The input string is given as an array of characters `s`.
 - **Summary Ranges**: You are given a sorted unique integer array `nums`. Return the smallest sorted list of ranges that cover all the numbers in the array exactly. That is, each element of `nums` is covered by exactly one of the ranges, and there is no integer `x` such that `x` is in one of the ranges but not in `nums`.
 - **Power of Two**: Given an integer `n`, return `true` if it is a power of two. Otherwise, return `false`.
+- **Palindrome Linked List**: Given the `head` of a singly linked list, return `true` if it is a palindrome.
 
 ## How to Use
 - Browse through each Java file to understand the code structure and problem-solving techniques.
