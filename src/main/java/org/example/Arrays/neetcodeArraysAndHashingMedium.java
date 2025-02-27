@@ -684,6 +684,26 @@ class neetcodeArraysAndHashingMedium{
         System.out.println("Is Palindrome: " + isPalindrome1(head7));
         System.out.println("\n\n");
 
+        // LeetCode: 257. Binary Tree Paths
+        System.out.println("LeetCode: 257. Binary Tree Paths");
+        TreeNode root16 = new TreeNode(1, new TreeNode(2, null, new TreeNode(5)), new TreeNode(3));
+        System.out.println("Input Tree: ");
+        List<String> result24 = binaryTreePaths(root16);
+        System.out.println("Binary Tree Paths: ");
+        for (String temp4 : result24){
+            System.out.print(temp4 + " ");
+        }
+        System.out.println();
+        TreeNode root17 = new TreeNode(1);
+        System.out.println("Input Tree: ");
+        List<String> result25 = binaryTreePaths(root17);
+        System.out.println("Binary Tree Paths: ");
+        for (String temp4 : result25){
+            System.out.print(temp4 + " ");
+        }
+        System.out.println();
+        System.out.println("\n\n");
+
     }
 
     // Helper Method for printing list
@@ -1914,6 +1934,23 @@ class neetcodeArraysAndHashingMedium{
         }
         return true;
 
+    }
+
+    // Date: 27/02/2025
+    // LeetCode: 257. Binary Tree Paths
+    // Time Complexity: O(n)
+    // Space Complexity: O(n)
+    public static List<String> binaryTreePaths(TreeNode root) {
+        List<String> res = new ArrayList<>();
+        if ( root == null ) return res;
+        helper(root, "",res);
+        return res;
+    }
+
+    public static void helper(TreeNode root, String path, List<String> res){
+        if (root.left == null && root.right == null ) res.add(path + root.val);
+        if (root.left != null ) helper(root.left, path + root.val + "->", res);
+        if (root.right != null) helper(root.right, path + root.val + "->", res);
     }
 }
 
