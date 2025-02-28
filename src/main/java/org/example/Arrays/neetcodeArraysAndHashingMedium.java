@@ -704,6 +704,16 @@ class neetcodeArraysAndHashingMedium{
         System.out.println();
         System.out.println("\n\n");
 
+        // LeetCode: 258. Add Digits
+        System.out.println("LeetCode: 258. Add Digits");
+        int num2 = 38;
+        System.out.println("Input: " + num2);
+        System.out.println("Output: " + addDigits(num2));
+        int num3 = 0;
+        System.out.println("Input: " + num3);
+        System.out.println("Output: " + addDigits(num3));
+        System.out.println("\n\n");
+
     }
 
     // Helper Method for printing list
@@ -1951,6 +1961,14 @@ class neetcodeArraysAndHashingMedium{
         if (root.left == null && root.right == null ) res.add(path + root.val);
         if (root.left != null ) helper(root.left, path + root.val + "->", res);
         if (root.right != null) helper(root.right, path + root.val + "->", res);
+    }
+
+    // Date: 28/02/2025
+    // LeetCode: 258. Add Digits
+    // Time Complexity: O(1)
+    // Space Complexity: O(1)
+    public static int addDigits(int num) {
+        return 1 + (num - 1) % 9;
     }
 }
 

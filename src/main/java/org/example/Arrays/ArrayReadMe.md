@@ -181,6 +181,7 @@ This file contains solutions to medium-level array and hashing problems from the
 - **Power of Two**: Given an integer `n`, return `true` if it is a power of two. Otherwise, return `false`.
 - **Palindrome Linked List**: Given the `head` of a singly linked list, return `true` if it is a palindrome.
 - **Binary Tree Paths**: Given the `root` of a binary tree, return all root-to-leaf paths in any order.
+- **Add Digits**: Given an integer `num`, repeatedly add all its digits until the result has only one digit, and return it.
 
 ## How to Use
 - Browse through each Java file to understand the code structure and problem-solving techniques.
