@@ -1,0 +1,80 @@
+# <span style="color:#2E86C1;">Two Pointers and Sliding Window Approach</span> 🚀
+
+Welcome to the collection of problems solved using the **Two Pointers** and **Sliding Window** techniques. This folder is dedicated to tackling algorithmic challenges from LeetCode that focus on optimizing problem-solving strategies by leveraging these powerful methods.
+
+## <span style="color:#28B463;">Overview</span> ✨
+
+In this folder, you will find:
+
+- **Two Pointers Problems:** Learn how to manipulate two indices to solve problems related to arrays, strings, and more.
+- **Sliding Window Problems:** Discover solutions that involve dynamically managing a window over data to achieve optimal performance.
+
+Each solution is accompanied by detailed explanations and code implementations that demonstrate the problem-solving process.
+
+## <span style="color:#F39C12;">Folder Structure</span> 📂
+
+- **README.md:** Provides an overview of the techniques and a tracking table for the problems solved.
+- **Solution Files:** Each problem solution is saved in a file or sub-folder, clearly labeled with the LeetCode problem number and name.
+
+## <span style="color:#C0392B;">How to Contribute</span> 🤝
+
+Contributions are welcome! If you have an alternative solution or an improvement, feel free to fork the repository and submit a pull request. Ensure your code is well-documented and follows the project’s style guidelines.
+
+## <span style="color:#8E44AD;">Problem Tracking Table</span> 📊
+
+Below is the table to track your progress. It includes details such as the date of solving the problem, question number, LeetCode question name, LeetCode link, solution link on GitHub, and the difficulty level of the question.
+
+| Date Solved | Q. Number | Question  | LeetCode Link | Solution Link on GitHub | Topics Used in Solution | Difficulty |
+|-------------|-----------|------------------------|---------------|-------------------------|-------------------------|------------|
+| 01-03-2025  | 325       |Max Sum Subarray of size K     | [Link](https://leetcode.com/problems/maximum-size-subarray-sum-equals-k/description/) | [Solution](https://github.com/AnkushGitRepo/DSA/blob/main/src/main/java/org/example/SlidingWindowsAndTwoPointersApproach/Q-325_MaxSubarrayOfSizeK.java) | Sliding Window | Easy |
+
+---
+# Instructions to Identify Sliding Window & Two Pointers Questions
+
+Follow these guidelines to quickly spot when to apply **Sliding Window** or **Two Pointers** techniques. Use these tips as a checklist when reading problem statements.
+
+---
+
+## 🔍 Sliding Window Technique
+
+- <span style="color: blue;">**Contiguous Segments:**</span> Look for problems that involve finding a subarray or substring that satisfies certain conditions (e.g., target sum, specific characters).
+    - **Emoji Hint:** 🏞️
+
+- <span style="color: green;">**Dynamic Window Size:**</span> The length of the required subarray/substring is not fixed. Problems might ask for the *longest* or *shortest* such segment.
+    - **Emoji Hint:** 📏
+
+- <span style="color: purple;">**Incremental Updates:**</span> When you can efficiently update the condition by adding a new element at one end and removing an element from the other.
+    - **Emoji Hint:** 🔄
+
+---
+
+## 🔍 Two Pointers Technique
+
+- <span style="color: orange;">**Bidirectional Scan:**</span> Problems that require scanning from both ends, especially in sorted arrays, to find pairs or triplets that meet specific criteria.
+    - **Emoji Hint:** ↔️
+
+- <span style="color: red;">**Finding Pairs/Groups:**</span> When the task involves identifying pairs or groups that sum up or match a given condition (e.g., two-sum problems).
+    - **Emoji Hint:** 👥
+
+---
+
+## ⚙️ How to Decide Which Technique to Use
+
+1. **Examine the Problem Statement:**
+    - If it mentions terms like **"window"**, **"subarray"**, or **"substring"**, then it likely calls for a **Sliding Window** approach.
+    - If it involves **sorted arrays** or asks you to find specific pairs or groups, then consider using **Two Pointers**.
+
+2. **Consider the Efficiency Requirement:**
+    - If the naive solution would be \(O(n^2)\), but a more efficient \(O(n)\) solution exists by scanning through the array or substring, then these techniques are a good fit.
+    - **Emoji Reminder:** ⏱️⚡
+
+3. **Plan Your Strategy:**
+    - **For Sliding Window:**  
+      Expand your window until the condition is violated, then shrink the window appropriately.
+    - **For Two Pointers:**  
+      Place one pointer at the beginning and the other at the end, then move them based on the condition (e.g., adjust based on sum comparisons).
+
+---
+
+
+Happy coding and continuous learning! 🎉
