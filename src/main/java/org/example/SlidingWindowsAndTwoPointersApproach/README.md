@@ -25,8 +25,10 @@ Contributions are welcome! If you have an alternative solution or an improvement
 Below is the table to track your progress. It includes details such as the date of solving the problem, question number, LeetCode question name, LeetCode link, solution link on GitHub, and the difficulty level of the question.
 
 | Date Solved | Q. Number | Question  | LeetCode Link | Solution Link on GitHub | Topics Used in Solution | Difficulty |
-|-------------|-----------|------------------------|---------------|-------------------------|-------------------------|------------|
-| 01-03-2025  | 325       |Max Sum Subarray of size K     | [Link](https://leetcode.com/problems/maximum-size-subarray-sum-equals-k/description/) | [Solution](https://github.com/AnkushGitRepo/DSA/blob/main/src/main/java/org/example/SlidingWindowsAndTwoPointersApproach/Q-325_MaxSubarrayOfSizeK.java) | Sliding Window | Easy |
+|-------------|-----------|------------------------|---------------|-------------------------|------------------|------------|
+| 01-03-2025  | 325       |Max Sum Subarray of size K     | [Link](https://leetcode.com/problems/maximum-size-subarray-sum-equals-k/description/) | [Solution](https://github.com/AnkushGitRepo/DSA/blob/main/src/main/java/org/example/SlidingWindowsAndTwoPointersApproach/Q-325_MaxSubarrayOfSizeK.java) | Sliding Window   | Easy |
+| 02-03-2025  | 643       |Maximum Average Subarray I     | [Link](https://leetcode.com/problems/maximum-average-subarray-i/description/) | [Solution](https://github.com/AnkushGitRepo/DSA/blob/main/src/main/java/org/example/SlidingWindowsAndTwoPointersApproach/Q-643_MaximumAverageSubarrayI.java) | Sliding Window   | Easy |
+| 02-03-2025  | 509       |Fibonacci Number      | [Link](https://leetcode.com/problems/fibonacci-number/description/) | [Solution](https://github.com/AnkushGitRepo/DSA/blob/main/src/main/java/org/example/SlidingWindowsAndTwoPointersApproach/Q-509_FibonacciNumber.java) | Two Pointers     | Easy |
 
 ---
 # Instructions to Identify Sliding Window & Two Pointers Questions
