@@ -29,6 +29,7 @@ Below is the table to track your progress. It includes details such as the date 
 | 01-03-2025  | 325       |Max Sum Subarray of size K     | [Link](https://leetcode.com/problems/maximum-size-subarray-sum-equals-k/description/) | [Solution](https://github.com/AnkushGitRepo/DSA/blob/main/src/main/java/org/example/SlidingWindowsAndTwoPointersApproach/Q-325_MaxSubarrayOfSizeK.java) | Sliding Window   | Easy |
 | 02-03-2025  | 643       |Maximum Average Subarray I     | [Link](https://leetcode.com/problems/maximum-average-subarray-i/description/) | [Solution](https://github.com/AnkushGitRepo/DSA/blob/main/src/main/java/org/example/SlidingWindowsAndTwoPointersApproach/Q-643_MaximumAverageSubarrayI.java) | Sliding Window   | Easy |
 | 02-03-2025  | 509       |Fibonacci Number      | [Link](https://leetcode.com/problems/fibonacci-number/description/) | [Solution](https://github.com/AnkushGitRepo/DSA/blob/main/src/main/java/org/example/SlidingWindowsAndTwoPointersApproach/Q-509_FibonacciNumber.java) | Two Pointers     | Easy |
+| 03-03-2025  | 242       |Valid Anagram     | [Link](https://leetcode.com/problems/valid-anagram/description/) | [Solution](https://github.com/AnkushGitRepo/DSA/blob/main/src/main/java/org/example/SlidingWindowsAndTwoPointersApproach/Q-242_Valid_Anagram.java) | Two Pointers     | Easy |
 
 ---
 # Instructions to Identify Sliding Window & Two Pointers Questions
